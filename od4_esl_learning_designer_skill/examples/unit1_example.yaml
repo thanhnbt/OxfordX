@@ -1,0 +1,19 @@
+unit:
+  number: 1
+  title: "Where are we in the universe?"
+  big_question: "Where are we in the universe?"
+  child_mission: "Build a space address and make one prediction about the future."
+learning_design:
+  core_concepts:
+    - universe
+    - galaxy
+    - solar system
+    - Earth/Moon
+    - space tools
+  concept_relationships:
+    - "universe contains galaxies"
+    - "galaxy contains solar systems"
+    - "astronomer uses telescope"
+  thinking_habit: "classify + predict"
+  language_tool: "will / won't for predictions"
+  recall_goal: "explain the space hierarchy and say one prediction without reading labels"

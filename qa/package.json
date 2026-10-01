@@ -1,0 +1,8 @@
+{
+  "name": "oxford-review-qa",
+  "private": true,
+  "scripts": {
+    "test": "cd .. && node qa/browser-check.cjs && node qa/v2-check.cjs && node qa/all-words-check.cjs && node qa/connect-check.cjs && node qa/classwork-check.cjs"
+  },
+  "devDependencies": {"playwright": "1.63.0"}
+}

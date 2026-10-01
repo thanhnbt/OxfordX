@@ -1,0 +1,2456 @@
+{
+  "source": {
+    "file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+    "sha256": "758dd68d8782fafa9bb38863d5d6a6ecdfc8fe18bbf766d6d616e061b7cfbd49",
+    "edition": "Oxford Discover 4, Second Edition, Teacher’s Guide (2019)",
+    "scope": "Book-based Units 1-3 with class diary supplements; Unit 4 entries excluded from core scope",
+    "pronunciation": "American-English learning transcription; sound-it-out is approximate; audio uses browser TTS, not book recordings."
+  },
+  "units": [
+    {
+      "id": 1,
+      "title": "Our place in space",
+      "subtitle": "Imagine a journey beyond Earth.",
+      "big_question": "Where are we in the universe?",
+      "color": "#4961b6",
+      "hero": "hero-bella",
+      "vocabulary": [
+        {
+          "word": "moon",
+          "pos": "n.",
+          "ipa": "/muːn/",
+          "sound_out": "MOON",
+          "english_meaning": "a round object in space that moves around a planet",
+          "vietnamese_support": "mặt trăng",
+          "concept_cluster": "Space objects",
+          "example": "The moon moves around Earth.",
+          "id": "u1-moon",
+          "visual": "u1-moon",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "asteroid",
+          "pos": "n.",
+          "ipa": "/ˈæs.tə.rɔɪd/",
+          "sound_out": "AS-tuh-royd",
+          "english_meaning": "a rocky object that travels around the Sun",
+          "vietnamese_support": "tiểu hành tinh",
+          "concept_cluster": "Space objects",
+          "example": "An asteroid is made of rock.",
+          "id": "u1-asteroid",
+          "visual": "u1-asteroid",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "comet",
+          "pos": "n.",
+          "ipa": "/ˈkɑː.mɪt/",
+          "sound_out": "KAH-mit",
+          "english_meaning": "an object of ice and dust that can have a bright tail",
+          "vietnamese_support": "sao chổi",
+          "concept_cluster": "Space objects",
+          "example": "The comet has a bright tail.",
+          "id": "u1-comet",
+          "visual": "u1-comet",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "meteorite",
+          "pos": "n.",
+          "ipa": "/ˈmiː.t̬i.ə.raɪt/",
+          "sound_out": "MEE-tee-uh-ryte",
+          "english_meaning": "a rock from space that reaches the ground",
+          "vietnamese_support": "thiên thạch",
+          "concept_cluster": "Space objects",
+          "example": "The scientist holds a meteorite.",
+          "id": "u1-meteorite",
+          "visual": "u1-meteorite",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "solar system",
+          "pos": "n.",
+          "ipa": "/ˈsoʊ.lɚ ˌsɪs.təm/",
+          "sound_out": "SOH-ler sis-tum",
+          "english_meaning": "the Sun and the objects that move around it",
+          "vietnamese_support": "hệ mặt trời",
+          "concept_cluster": "Our place in space",
+          "example": "Earth is in our solar system.",
+          "id": "u1-solar-system",
+          "visual": "u1-solar-system",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "stars",
+          "pos": "plural n.",
+          "ipa": "/stɑːrz/",
+          "sound_out": "STARZ",
+          "english_meaning": "huge balls of hot gas that give out light",
+          "vietnamese_support": "các ngôi sao",
+          "concept_cluster": "Space objects",
+          "example": "We can see stars at night.",
+          "id": "u1-stars",
+          "visual": "u1-stars",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "galaxy",
+          "pos": "n.",
+          "ipa": "/ˈɡæl.ək.si/",
+          "sound_out": "GAL-uk-see",
+          "english_meaning": "a huge group of stars, gas and dust",
+          "vietnamese_support": "thiên hà",
+          "concept_cluster": "Our place in space",
+          "example": "Our galaxy is the Milky Way.",
+          "id": "u1-galaxy",
+          "visual": "u1-galaxy",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "universe",
+          "pos": "n.",
+          "ipa": "/ˈjuː.nə.vɝːs/",
+          "sound_out": "YOO-nuh-vers",
+          "english_meaning": "all of space and everything in it",
+          "vietnamese_support": "vũ trụ",
+          "concept_cluster": "Our place in space",
+          "example": "There are many galaxies in the universe.",
+          "id": "u1-universe",
+          "visual": "u1-universe",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "spacecraft",
+          "pos": "n.",
+          "ipa": "/ˈspeɪs.kræft/",
+          "sound_out": "SPACE-kraft",
+          "english_meaning": "a vehicle made to travel in space",
+          "vietnamese_support": "tàu vũ trụ",
+          "concept_cluster": "Exploring space",
+          "example": "Bella imagines a journey in a spacecraft.",
+          "id": "u1-spacecraft",
+          "visual": "u1-spacecraft",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "telescope",
+          "pos": "n.",
+          "ipa": "/ˈtel.ə.skoʊp/",
+          "sound_out": "TEL-uh-skohp",
+          "english_meaning": "a tool that helps us see things far away",
+          "vietnamese_support": "kính thiên văn",
+          "concept_cluster": "Exploring space",
+          "example": "I use a telescope to look at the moon.",
+          "id": "u1-telescope",
+          "visual": "u1-telescope",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "observatory",
+          "pos": "n.",
+          "ipa": "/əbˈzɝː.və.tɔːr.i/",
+          "sound_out": "ub-ZER-vuh-tor-ee",
+          "english_meaning": "a place with tools for studying space",
+          "vietnamese_support": "đài thiên văn",
+          "concept_cluster": "Exploring space",
+          "example": "An observatory can have a large telescope.",
+          "id": "u1-observatory",
+          "visual": "u1-observatory",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 36,
+          "student_book_page": 8,
+          "visual_role": "exact-book-image"
+        }
+      ],
+      "contexts": [
+        [
+          "vast",
+          "very large",
+          "rộng lớn"
+        ],
+        [
+          "dwelled",
+          "lived in a place",
+          "đã sống"
+        ],
+        [
+          "speck",
+          "a very small spot",
+          "đốm nhỏ"
+        ],
+        [
+          "disk",
+          "a flat, round shape",
+          "hình đĩa"
+        ]
+      ],
+      "reading_title": "Bella’s Home",
+      "genre": "Science fiction · a poem",
+      "reading_strategy": "Picture the changes in your mind.",
+      "reading_pages": [
+        38,
+        39,
+        40
+      ],
+      "reading_chunks": [
+        [
+          "At home",
+          "Bella lives in Nome, Alaska. Her father uses a poem to help her imagine her place in the universe."
+        ],
+        [
+          "Farther away",
+          "In her imagination, Bella travels in a spacecraft. Her home looks smaller. Then she sees Earth, the solar system and galaxies."
+        ],
+        [
+          "Home again",
+          "Bella’s imaginary journey ends. She is back in her bedroom. She wants to imagine visiting those places again."
+        ]
+      ],
+      "thinking_prompt": "As Bella moves farther away, how does Earth look? Draw it near, then far.",
+      "thinking_frame": "At first, I picture ___. Later, I picture ___.",
+      "grammar_title": "Make a prediction",
+      "grammar_name": "Predictions with will",
+      "grammar_page": 41,
+      "grammar_pattern": "I think + subject + will + base verb",
+      "grammar_example": "I think we will learn more about space.",
+      "grammar_note": "Use will to say what you think will happen. After will, use the base verb.",
+      "grammar_frame": "I think I will ___ in the future.",
+      "grammar_checks": [
+        [
+          "I think people ___ visit more planets.",
+          [
+            "will",
+            "are",
+            "did"
+          ],
+          0,
+          "Use will for a prediction."
+        ],
+        [
+          "I will ___ the moon with a telescope.",
+          [
+            "studying",
+            "study",
+            "studied"
+          ],
+          1,
+          "After will, use the base verb: study."
+        ]
+      ],
+      "word_study": {
+        "title": "Words with ei",
+        "page": 43,
+        "note": "In these words, ei sounds like the long a in day.",
+        "words": [
+          "eighty",
+          "freight",
+          "reins",
+          "sleigh",
+          "veil",
+          "weigh"
+        ]
+      },
+      "listening_title": "Looking at the Stars",
+      "listening_goal": "Listen for reasons.",
+      "listening_page": 214,
+      "listening_script": "Andy and Jenny look at the stars at Grandpa’s farm. They can see the stars clearly because there are fewer bright city lights. Grandpa explains that the Milky Way is our galaxy. Its many stars look like a white belt in the sky.",
+      "listening_question": "Why are the stars easier to see at the farm?",
+      "listening_answer": "There is less light pollution: fewer bright city lights.",
+      "speaking_title": "Talk about differences",
+      "speaking_frame": "In the first picture, I see ___. In the second picture, I see ___.",
+      "speaking_page": 42,
+      "writing_title": "Write complete sentences",
+      "writing_tip": "Give a statement a subject and a verb. Begin with a capital letter. End with a full stop. A command can have an understood subject: you.",
+      "writing_example": "Earth moves around the Sun.",
+      "writing_page": 43,
+      "express_frames": [
+        "Earth is in ___.",
+        "Our solar system is in ___.",
+        "I think I will ___."
+      ],
+      "express_prompt": "Tell someone where we are in the universe.",
+      "quiz": [
+        [
+          "Which tool helps us see faraway space objects?",
+          [
+            "a telescope",
+            "a uniform",
+            "a tomb"
+          ],
+          0,
+          "A telescope helps us see things far away."
+        ],
+        [
+          "Where is our solar system?",
+          [
+            "in the Milky Way galaxy",
+            "inside the moon",
+            "inside an asteroid"
+          ],
+          0,
+          "Our solar system is in the Milky Way galaxy."
+        ],
+        [
+          "Bella’s journey in the poem is ___.",
+          [
+            "an imaginary journey",
+            "a school bus trip",
+            "an ancient battle"
+          ],
+          0,
+          "She imagines the journey and ends in her bedroom."
+        ],
+        [
+          "A rock from space that reaches the ground is a ___.",
+          [
+            "comet",
+            "meteorite",
+            "galaxy"
+          ],
+          1,
+          "A meteorite reaches the ground."
+        ],
+        [
+          "Choose a prediction.",
+          [
+            "Earth is a planet.",
+            "I will visit an observatory someday.",
+            "The moon has craters."
+          ],
+          1,
+          "Will shows what you think will happen."
+        ],
+        [
+          "When Bella travels farther away, Earth looks ___.",
+          [
+            "smaller",
+            "larger",
+            "exactly the same size"
+          ],
+          0,
+          "Things look smaller when we move farther away."
+        ]
+      ],
+      "hybrid": {
+        "title_vi": "Vị trí của chúng ta trong vũ trụ",
+        "subtitle_vi": "Tưởng tượng chuyến đi xa Trái Đất và kể lại điều em thấy.",
+        "question_vi": "Chúng ta ở đâu trong vũ trụ?",
+        "reading_vi": [
+          "Bella sống ở Nome, Alaska. Bố dùng một bài thơ để giúp em hình dung vị trí của mình trong vũ trụ.",
+          "Trong trí tưởng tượng, Bella đi bằng tàu vũ trụ. Ngôi nhà trông nhỏ dần. Sau đó em nhìn thấy Trái Đất, hệ mặt trời và các thiên hà.",
+          "Chuyến đi tưởng tượng kết thúc. Bella trở lại phòng ngủ. Em muốn tưởng tượng mình đến thăm những nơi ấy một lần nữa."
+        ],
+        "thinking_vi": "Khi Bella đi xa hơn, Trái Đất trông thế nào? Vẽ Trái Đất khi ở gần, rồi khi ở xa.",
+        "express_vi": "Giải thích cho một người nghe chúng ta ở đâu trong vũ trụ.",
+        "grammar": {
+          "tag": "WILL · DỰ ĐOÁN",
+          "title": "What do you think will happen?",
+          "title_vi": "Em nghĩ điều gì sẽ xảy ra?",
+          "purpose_vi": "Dùng will khi em dự đoán một điều trong tương lai. Em nghĩ điều đó sẽ xảy ra, nhưng đó chưa phải là một sự thật đã được xác nhận.",
+          "rule_vi": "Sau will, dùng động từ nguyên mẫu: visit, study, learn. Không thêm -s, -ed hay -ing vào động từ ngay sau will.",
+          "pattern": [
+            [
+              "subject",
+              "I / We / People",
+              "Ai?"
+            ],
+            [
+              "marker",
+              "will",
+              "dự đoán"
+            ],
+            [
+              "verb",
+              "visit / study / learn",
+              "động từ nguyên mẫu"
+            ],
+            [
+              "rest",
+              "…",
+              "ý còn lại"
+            ]
+          ],
+          "examples": [
+            {
+              "parts": [
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "visit"
+                ],
+                [
+                  "rest",
+                  "an observatory someday."
+                ]
+              ],
+              "vi": "Một ngày nào đó, em sẽ đến thăm một đài thiên văn."
+            },
+            {
+              "parts": [
+                [
+                  "subject",
+                  "We"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "learn"
+                ],
+                [
+                  "rest",
+                  "more about space in the future."
+                ]
+              ],
+              "vi": "Trong tương lai, chúng ta sẽ biết thêm về vũ trụ."
+            },
+            {
+              "parts": [
+                [
+                  "subject",
+                  "People"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "explore"
+                ],
+                [
+                  "rest",
+                  "more planets in the future."
+                ]
+              ],
+              "vi": "Trong tương lai, con người sẽ khám phá thêm nhiều hành tinh."
+            }
+          ],
+          "trap_wrong": "I will visited an observatory.",
+          "trap_right": "I will visit an observatory.",
+          "trap_explanation": "Sau will là visit, không phải visited. Will đã cho biết em đang nói về tương lai.",
+          "feedback_vi": [
+            "Dùng will để đưa ra dự đoán về tương lai.",
+            "Ngay sau will dùng study, không dùng studying hay studied."
+          ],
+          "builder": [
+            {
+              "text": "visit an observatory",
+              "verb": "visit",
+              "rest": "an observatory someday.",
+              "vi": "Một ngày nào đó, em sẽ đến thăm một đài thiên văn."
+            },
+            {
+              "text": "study the stars",
+              "verb": "study",
+              "rest": "the stars in the future.",
+              "vi": "Trong tương lai, em sẽ nghiên cứu các ngôi sao."
+            },
+            {
+              "text": "learn about the planets",
+              "verb": "learn",
+              "rest": "about the planets in the future.",
+              "vi": "Trong tương lai, em sẽ tìm hiểu về các hành tinh."
+            }
+          ]
+        }
+      },
+      "source_pages": {
+        "vocabulary": 36,
+        "scope": [
+          2,
+          3
+        ],
+        "reading": [
+          38,
+          39,
+          40
+        ],
+        "grammar": 41,
+        "word_study": 43,
+        "listening": 214,
+        "speaking": 42,
+        "writing": 43
+      }
+    },
+    {
+      "id": 2,
+      "title": "Traveling around the Sun",
+      "subtitle": "Compare planets. Find what makes Earth special.",
+      "big_question": "Where are we in the universe?",
+      "color": "#b76d2b",
+      "hero": "hero-space",
+      "vocabulary": [
+        {
+          "word": "astronomer",
+          "pos": "n.",
+          "ipa": "/əˈstrɑː.nə.mɚ/",
+          "sound_out": "uh-STRAH-nuh-mer",
+          "english_meaning": "a scientist who studies stars, planets and space",
+          "vietnamese_support": "nhà thiên văn học",
+          "concept_cluster": "Exploring space",
+          "example": "An astronomer studies the planets.",
+          "id": "u2-astronomer",
+          "visual": "u2-astronomer",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "supporting-book-image",
+          "recall_hint": "Name the scientist who studies space."
+        },
+        {
+          "word": "space probe",
+          "pos": "n.",
+          "ipa": "/ˈspeɪs ˌproʊb/",
+          "sound_out": "SPACE prohb",
+          "english_meaning": "a robot spacecraft that collects information",
+          "vietnamese_support": "tàu thăm dò vũ trụ",
+          "concept_cluster": "Exploring space",
+          "example": "A space probe collects information about Mars.",
+          "id": "u2-space-probe",
+          "visual": "u2-space-probe",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "authored-support-diagram",
+          "recall_hint": "Name this robot spacecraft."
+        },
+        {
+          "word": "core",
+          "pos": "n.",
+          "ipa": "/kɔːr/",
+          "sound_out": "KOR",
+          "english_meaning": "the center part of something",
+          "vietnamese_support": "lõi",
+          "concept_cluster": "Planet parts",
+          "example": "Earth has a core.",
+          "id": "u2-core",
+          "visual": "u2-core",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "supporting-book-image",
+          "recall_hint": "Name the center part of Earth."
+        },
+        {
+          "word": "gravity",
+          "pos": "n.",
+          "ipa": "/ˈɡræv.ə.t̬i/",
+          "sound_out": "GRAV-uh-tee",
+          "english_meaning": "the force that pulls things toward each other",
+          "vietnamese_support": "lực hấp dẫn",
+          "concept_cluster": "How space works",
+          "example": "Earth’s gravity pulls us toward the ground.",
+          "id": "u2-gravity",
+          "visual": "u2-gravity",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "authored-support-diagram",
+          "recall_hint": "What force pulls this object down?"
+        },
+        {
+          "word": "orbit",
+          "pos": "n.",
+          "ipa": "/ˈɔːr.bɪt/",
+          "sound_out": "OR-bit",
+          "english_meaning": "the path of an object around another object in space",
+          "vietnamese_support": "quỹ đạo",
+          "concept_cluster": "How space works",
+          "example": "Earth’s orbit goes around the Sun.",
+          "id": "u2-orbit",
+          "visual": "u2-orbit",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "supporting-book-image",
+          "recall_hint": "Name the path around the Sun."
+        },
+        {
+          "word": "matter",
+          "pos": "n.",
+          "ipa": "/ˈmæt̬.ɚ/",
+          "sound_out": "MAT-er",
+          "english_meaning": "the stuff that things are made of",
+          "vietnamese_support": "vật chất",
+          "concept_cluster": "How space works",
+          "example": "Rock, water and air are matter.",
+          "id": "u2-matter",
+          "visual": "u2-matter",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "authored-support-diagram",
+          "recall_hint": "What are rock, water and air examples of?"
+        },
+        {
+          "word": "distance",
+          "pos": "n.",
+          "ipa": "/ˈdɪs.təns/",
+          "sound_out": "DIS-tuns",
+          "english_meaning": "the space between two things or places",
+          "vietnamese_support": "khoảng cách",
+          "concept_cluster": "Measuring planets",
+          "example": "The distance between planets can be huge.",
+          "id": "u2-distance",
+          "visual": "u2-distance",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "authored-support-diagram",
+          "recall_hint": "What do we measure between these objects?"
+        },
+        {
+          "word": "diameter",
+          "pos": "n.",
+          "ipa": "/daɪˈæm.ə.t̬ɚ/",
+          "sound_out": "dye-AM-uh-ter",
+          "english_meaning": "the distance across a circle through its center",
+          "vietnamese_support": "đường kính",
+          "concept_cluster": "Measuring planets",
+          "example": "We can measure a planet’s diameter.",
+          "id": "u2-diameter",
+          "visual": "u2-diameter",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "authored-support-diagram",
+          "recall_hint": "Name the line across a circle through its center."
+        },
+        {
+          "word": "surface",
+          "pos": "n.",
+          "ipa": "/ˈsɝː.fɪs/",
+          "sound_out": "SER-fis",
+          "english_meaning": "the outside or top part of something",
+          "vietnamese_support": "bề mặt",
+          "concept_cluster": "Planet parts",
+          "example": "We can see craters on the moon’s surface.",
+          "id": "u2-surface",
+          "visual": "u2-surface",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "supporting-book-image",
+          "recall_hint": "Name the outside part we can see."
+        },
+        {
+          "word": "craters",
+          "pos": "plural n.",
+          "ipa": "/ˈkreɪ.t̬ɚz/",
+          "sound_out": "KRAY-terz",
+          "english_meaning": "large round hollows on a planet or moon",
+          "vietnamese_support": "các hố trên bề mặt",
+          "concept_cluster": "Planet parts",
+          "example": "The moon has many craters.",
+          "id": "u2-craters",
+          "visual": "u2-craters",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "supporting-book-image",
+          "recall_hint": "Name the large hollows on the Moon."
+        },
+        {
+          "word": "unique",
+          "pos": "adj.",
+          "ipa": "/juːˈniːk/",
+          "sound_out": "yoo-NEEK",
+          "english_meaning": "different from all the others; one of a kind",
+          "vietnamese_support": "độc đáo, duy nhất",
+          "concept_cluster": "Measuring planets",
+          "example": "Earth is unique in our solar system because it has people.",
+          "id": "u2-unique",
+          "visual": "u2-unique",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 44,
+          "student_book_page": 16,
+          "visual_role": "supporting-book-image",
+          "recall_hint": "Which word means different from all the others?"
+        }
+      ],
+      "contexts": [
+        [
+          "bodies",
+          "objects in space, such as planets",
+          "các thiên thể"
+        ],
+        [
+          "explore",
+          "travel or look carefully to learn more",
+          "khám phá"
+        ],
+        [
+          "inner",
+          "closer to the center",
+          "phía trong"
+        ],
+        [
+          "outer",
+          "farther from the center",
+          "phía ngoài"
+        ]
+      ],
+      "reading_title": "Traveling Together Around the Sun",
+      "genre": "Science article · nonfiction",
+      "reading_strategy": "Find what is the same and what is different.",
+      "reading_pages": [
+        46,
+        47,
+        48
+      ],
+      "reading_chunks": [
+        [
+          "Traveling together",
+          "The planets move around the Sun. Gravity keeps them in their orbits. The Sun gives Earth light and heat."
+        ],
+        [
+          "Compare two planets",
+          "Earth and Venus are almost the same size. Both have an iron and rock core. Venus is hotter and has thicker clouds."
+        ],
+        [
+          "Learning more",
+          "Astronomers study space. Space probes collect information. The article explains how Curiosity explored the surface of Mars."
+        ]
+      ],
+      "thinking_prompt": "Compare Earth and Venus. Name one similarity and one difference.",
+      "thinking_frame": "Both Earth and Venus ___. However, Venus ___.",
+      "grammar_title": "Link a possibility and a result",
+      "grammar_name": "Future real conditional",
+      "grammar_page": 49,
+      "grammar_pattern": "If + present simple, subject + will + base verb",
+      "grammar_example": "If I get a telescope, I will look at the moon.",
+      "grammar_note": "The if part gives a possible situation. The will part gives its future result.",
+      "grammar_frame": "If I ___, I will ___.",
+      "grammar_checks": [
+        [
+          "If I ___ a telescope, I will study the moon.",
+          [
+            "will get",
+            "get",
+            "got"
+          ],
+          1,
+          "Use present simple after if: get."
+        ],
+        [
+          "If we study space, we ___ learn new things.",
+          [
+            "will",
+            "were",
+            "did"
+          ],
+          0,
+          "Use will + base verb for the future result."
+        ]
+      ],
+      "word_study": {
+        "title": "Words with -ance and -ant",
+        "page": 51,
+        "note": "Compare the noun and adjective in each pair.",
+        "words": [
+          "fragrance → fragrant",
+          "abundance → abundant",
+          "ignorance → ignorant"
+        ]
+      },
+      "listening_title": "The Speed of Light",
+      "listening_goal": "Listen for the main idea and numbers.",
+      "listening_page": 214,
+      "listening_script": "This report is about the speed of light. Light moves very fast: almost three hundred thousand kilometers in one second. Light from the Sun takes about eight minutes to reach Earth. A light-year is the distance light travels in one year.",
+      "listening_question": "How long does light from the Sun take to reach Earth?",
+      "listening_answer": "About eight minutes.",
+      "speaking_title": "Ask about quantity",
+      "speaking_frame": "How many ___ are there? How much ___ is there?",
+      "speaking_page": 51,
+      "writing_title": "Ask a choice question",
+      "writing_tip": "Use or to offer choices. End your question with a question mark.",
+      "writing_example": "Is Mars a moon or a planet?",
+      "writing_page": 51,
+      "express_frames": [
+        "Both Earth and Venus ___.",
+        "However, Venus ___.",
+        "If I study space, I will ___."
+      ],
+      "express_prompt": "Compare Earth and Venus. Explain one similarity and one difference.",
+      "quiz": [
+        [
+          "Earth and Venus are almost the same ___.",
+          [
+            "size",
+            "temperature",
+            "color"
+          ],
+          0,
+          "The reading says they are almost the same size."
+        ],
+        [
+          "Which planet has thicker clouds in the reading?",
+          [
+            "Earth",
+            "Venus",
+            "both have no clouds"
+          ],
+          1,
+          "Venus is covered in thick clouds."
+        ],
+        [
+          "A space probe is used to ___.",
+          [
+            "collect information",
+            "make uniforms",
+            "bury treasure"
+          ],
+          0,
+          "A space probe collects information about space."
+        ],
+        [
+          "Choose the correct sentence.",
+          [
+            "If I will study, I learn.",
+            "If I study, I will learn.",
+            "If I studying, I will learn."
+          ],
+          1,
+          "Use present simple after if, then will + base verb."
+        ],
+        [
+          "A diameter goes across a circle through its ___.",
+          [
+            "center",
+            "outside only",
+            "top only"
+          ],
+          0,
+          "A diameter passes through the center."
+        ],
+        [
+          "Which question asks about things we can count?",
+          [
+            "How many planets are there?",
+            "How much water is there?",
+            "Why is Venus hot?"
+          ],
+          0,
+          "Use how many with countable things, such as planets."
+        ]
+      ],
+      "hybrid": {
+        "title_vi": "Cùng chuyển động quanh Mặt Trời",
+        "subtitle_vi": "So sánh các hành tinh và tìm điều làm Trái Đất đặc biệt.",
+        "question_vi": "Chúng ta ở đâu trong vũ trụ?",
+        "reading_vi": [
+          "Các hành tinh chuyển động quanh Mặt Trời. Lực hấp dẫn giữ chúng trên quỹ đạo. Mặt Trời mang ánh sáng và nhiệt đến Trái Đất.",
+          "Trái Đất và sao Kim có kích thước gần bằng nhau. Cả hai đều có lõi gồm sắt và đá. Sao Kim nóng hơn và có mây dày hơn.",
+          "Các nhà thiên văn học nghiên cứu vũ trụ. Tàu thăm dò thu thập thông tin. Bài đọc kể cách Curiosity khám phá bề mặt sao Hỏa."
+        ],
+        "thinking_vi": "So sánh Trái Đất và sao Kim. Nêu một điểm giống nhau và một điểm khác nhau.",
+        "express_vi": "Giải thích một điểm giống và một điểm khác giữa Trái Đất và sao Kim.",
+        "grammar": {
+          "tag": "IF … WILL · ĐIỀU KIỆN",
+          "title": "If this happens, what will follow?",
+          "title_vi": "Nếu điều này xảy ra, kết quả sẽ là gì?",
+          "purpose_vi": "Nối một điều có thể xảy ra với kết quả trong tương lai. Em có thể nghĩ theo hai phần: Nếu… thì…",
+          "rule_vi": "Trong mẫu câu này, phần If dùng hiện tại đơn. Phần kết quả dùng will + động từ nguyên mẫu. Không đặt will vào phần If.",
+          "pattern": [
+            [
+              "condition",
+              "If + present simple",
+              "điều kiện có thể xảy ra"
+            ],
+            [
+              "arrow",
+              "→",
+              "dẫn đến"
+            ],
+            [
+              "subject",
+              "I / we",
+              "ai?"
+            ],
+            [
+              "marker",
+              "will",
+              "kết quả tương lai"
+            ],
+            [
+              "verb",
+              "+ base verb",
+              "động từ nguyên mẫu"
+            ]
+          ],
+          "examples": [
+            {
+              "parts": [
+                [
+                  "condition",
+                  "If I get a telescope,"
+                ],
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "observe"
+                ],
+                [
+                  "rest",
+                  "the moon."
+                ]
+              ],
+              "vi": "Nếu em có một chiếc kính thiên văn, em sẽ quan sát mặt trăng."
+            },
+            {
+              "parts": [
+                [
+                  "condition",
+                  "If we study space,"
+                ],
+                [
+                  "subject",
+                  "we"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "learn"
+                ],
+                [
+                  "rest",
+                  "new things."
+                ]
+              ],
+              "vi": "Nếu chúng ta tìm hiểu về vũ trụ, chúng ta sẽ học được những điều mới."
+            },
+            {
+              "parts": [
+                [
+                  "condition",
+                  "If I become an astronomer,"
+                ],
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "study"
+                ],
+                [
+                  "rest",
+                  "the stars."
+                ]
+              ],
+              "vi": "Nếu trở thành nhà thiên văn học, em sẽ nghiên cứu các ngôi sao."
+            }
+          ],
+          "trap_wrong": "If I will get a telescope, I will study the moon.",
+          "trap_right": "If I get a telescope, I will study the moon.",
+          "trap_explanation": "Trong phần If của mẫu câu này, dùng get ở hiện tại đơn. Will thuộc về phần kết quả: I will study…",
+          "feedback_vi": [
+            "Phần If dùng hiện tại đơn: get. Không dùng will get ở đây.",
+            "Phần kết quả dùng will + động từ nguyên mẫu: will learn."
+          ],
+          "builder": [
+            {
+              "text": "I get a telescope",
+              "parts": [
+                [
+                  "condition",
+                  "If I get a telescope,"
+                ],
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "observe"
+                ],
+                [
+                  "rest",
+                  "the moon."
+                ]
+              ],
+              "vi": "Nếu em có một chiếc kính thiên văn, em sẽ quan sát mặt trăng."
+            },
+            {
+              "text": "we study space",
+              "parts": [
+                [
+                  "condition",
+                  "If we study space,"
+                ],
+                [
+                  "subject",
+                  "we"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "learn"
+                ],
+                [
+                  "rest",
+                  "new things."
+                ]
+              ],
+              "vi": "Nếu chúng ta tìm hiểu về vũ trụ, chúng ta sẽ học được những điều mới."
+            },
+            {
+              "text": "I become an astronomer",
+              "parts": [
+                [
+                  "condition",
+                  "If I become an astronomer,"
+                ],
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "marker",
+                  "will"
+                ],
+                [
+                  "verb",
+                  "study"
+                ],
+                [
+                  "rest",
+                  "the stars."
+                ]
+              ],
+              "vi": "Nếu trở thành nhà thiên văn học, em sẽ nghiên cứu các ngôi sao."
+            }
+          ]
+        }
+      },
+      "source_pages": {
+        "vocabulary": 44,
+        "scope": [
+          2,
+          3
+        ],
+        "reading": [
+          46,
+          47,
+          48
+        ],
+        "grammar": 49,
+        "word_study": 51,
+        "listening": 214,
+        "speaking": 51,
+        "writing": 51
+      }
+    },
+    {
+      "id": 3,
+      "title": "Clues from long ago",
+      "subtitle": "Look closely. What can old objects tell us?",
+      "big_question": "How do we know what happened long ago?",
+      "color": "#247e80",
+      "hero": "hero-history",
+      "vocabulary": [
+        {
+          "word": "army",
+          "pos": "n.",
+          "ipa": "/ˈɑːr.mi/",
+          "sound_out": "AR-mee",
+          "english_meaning": "a large group of soldiers",
+          "vietnamese_support": "quân đội",
+          "concept_cluster": "People",
+          "example": "The emperor had an army.",
+          "id": "u3-army",
+          "visual": "u3-army",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "soldiers",
+          "pos": "plural n.",
+          "ipa": "/ˈsoʊl.dʒɚz/",
+          "sound_out": "SOHL-jerz",
+          "english_meaning": "people who serve in an army",
+          "vietnamese_support": "những người lính",
+          "concept_cluster": "People",
+          "example": "The clay soldiers look different from each other.",
+          "id": "u3-soldiers",
+          "visual": "u3-soldiers",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "uniform",
+          "pos": "n.",
+          "ipa": "/ˈjuː.nə.fɔːrm/",
+          "sound_out": "YOO-nuh-form",
+          "english_meaning": "special clothes worn by people in the same group",
+          "vietnamese_support": "đồng phục",
+          "concept_cluster": "Things to wear",
+          "example": "A soldier wears a uniform.",
+          "id": "u3-uniform",
+          "visual": "u3-uniform",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "emperor",
+          "pos": "n.",
+          "ipa": "/ˈem.pɚ.ɚ/",
+          "sound_out": "EM-per-er",
+          "english_meaning": "a ruler of an empire",
+          "vietnamese_support": "hoàng đế",
+          "concept_cluster": "People",
+          "example": "The emperor ruled ancient China.",
+          "id": "u3-emperor",
+          "visual": "u3-emperor",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "armor",
+          "pos": "n.",
+          "ipa": "/ˈɑːr.mɚ/",
+          "sound_out": "AR-mer",
+          "english_meaning": "a strong covering that protects the body",
+          "vietnamese_support": "áo giáp",
+          "concept_cluster": "Things to wear",
+          "example": "Armor protects a soldier’s body.",
+          "id": "u3-armor",
+          "visual": "u3-armor",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "treasure",
+          "pos": "n.",
+          "ipa": "/ˈtreʒ.ɚ/",
+          "sound_out": "TREZH-er",
+          "english_meaning": "valuable things, such as gold or jewels",
+          "vietnamese_support": "kho báu",
+          "concept_cluster": "Clues from the past",
+          "example": "They found treasure in the tomb.",
+          "id": "u3-treasure",
+          "visual": "u3-treasure",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "archaeologist",
+          "pos": "n.",
+          "ipa": "/ˌɑːr.kiˈɑː.lə.dʒɪst/",
+          "sound_out": "ar-kee-AH-luh-jist",
+          "english_meaning": "a scientist who studies old objects to learn about the past",
+          "vietnamese_support": "nhà khảo cổ học",
+          "concept_cluster": "People",
+          "example": "An archaeologist studies the clay soldiers.",
+          "id": "u3-archaeologist",
+          "visual": "u3-archaeologist",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "tomb",
+          "pos": "n.",
+          "ipa": "/tuːm/",
+          "sound_out": "TOOM",
+          "english_meaning": "a place where a dead person is buried",
+          "vietnamese_support": "ngôi mộ",
+          "concept_cluster": "Clues from the past",
+          "example": "The emperor’s tomb is still closed in the reading.",
+          "id": "u3-tomb",
+          "visual": "u3-tomb",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "jade",
+          "pos": "n.",
+          "ipa": "/dʒeɪd/",
+          "sound_out": "JAYD",
+          "english_meaning": "a hard stone, often green, used to make beautiful things",
+          "vietnamese_support": "ngọc bích",
+          "concept_cluster": "Materials",
+          "example": "People made beautiful things from jade.",
+          "id": "u3-jade",
+          "visual": "u3-jade",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "clay",
+          "pos": "n.",
+          "ipa": "/kleɪ/",
+          "sound_out": "KLAY",
+          "english_meaning": "soft earth that can be shaped and made hard",
+          "vietnamese_support": "đất sét",
+          "concept_cluster": "Materials",
+          "example": "The soldiers were made from clay.",
+          "id": "u3-clay",
+          "visual": "u3-clay",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        },
+        {
+          "word": "peasant",
+          "pos": "n.",
+          "ipa": "/ˈpez.ənt/",
+          "sound_out": "PEZ-unt",
+          "english_meaning": "a poor farmer, especially in the past",
+          "vietnamese_support": "nông dân nghèo thời xưa",
+          "concept_cluster": "People",
+          "example": "The peasant works in a field.",
+          "id": "u3-peasant",
+          "visual": "u3-peasant",
+          "source_label": "CORE-BOOK",
+          "source_pdf_page": 56,
+          "student_book_page": 28,
+          "visual_role": "exact-book-image"
+        }
+      ],
+      "contexts": [
+        [
+          "battle",
+          "a fight between armies",
+          "trận chiến"
+        ],
+        [
+          "generals",
+          "leaders in an army",
+          "các tướng lĩnh"
+        ],
+        [
+          "varnish",
+          "a coating that protects a surface",
+          "lớp phủ bảo vệ"
+        ],
+        [
+          "coffin",
+          "a box in which a dead person is buried",
+          "quan tài"
+        ]
+      ],
+      "reading_title": "Hidden Army: Clay Soldiers of Ancient China",
+      "genre": "Magazine article · nonfiction",
+      "reading_strategy": "Ask why the author wrote each part.",
+      "reading_pages": [
+        58,
+        59,
+        60
+      ],
+      "reading_chunks": [
+        [
+          "An army made of clay",
+          "The article describes thousands of clay soldiers in ancient China. They were made more than two thousand years ago."
+        ],
+        [
+          "Look for clues",
+          "The soldiers do not all look the same. Their faces and uniforms give clues about real soldiers and their ranks."
+        ],
+        [
+          "Study and protect",
+          "Archaeologists study the soldiers. Scientists try to protect the remaining paint. In the reading, the emperor’s tomb has not been opened."
+        ]
+      ],
+      "thinking_prompt": "Find a fact in the summary. How does it help the author inform us?",
+      "thinking_frame": "The author informs us that ___. I know because ___.",
+      "grammar_title": "Say what you plan or hope to do",
+      "grammar_name": "Verbs followed by infinitives",
+      "grammar_page": 61,
+      "grammar_pattern": "want / plan / hope / decide / try + to + base verb",
+      "grammar_example": "I want to learn about the clay soldiers.",
+      "grammar_note": "An infinitive is to + a base verb. Some verbs are followed by an infinitive.",
+      "grammar_frame": "I want to ___. I plan to ___.",
+      "grammar_checks": [
+        [
+          "I want ___ an archaeologist.",
+          [
+            "be",
+            "to be",
+            "being"
+          ],
+          1,
+          "Want is followed by an infinitive: to be."
+        ],
+        [
+          "They decided to ___ the old objects.",
+          [
+            "study",
+            "studied",
+            "studying"
+          ],
+          0,
+          "After to, use the base verb: study."
+        ]
+      ],
+      "word_study": {
+        "title": "Words with -ist",
+        "page": 63,
+        "note": "In these words, -ist names a person who does an activity or job.",
+        "words": [
+          "cyclist",
+          "cartoonist",
+          "dentist",
+          "florist",
+          "tourist",
+          "pianist"
+        ]
+      },
+      "listening_title": "An Ancient Town",
+      "listening_goal": "Listen for similarities and differences.",
+      "listening_page": 214,
+      "listening_script": "Children describe an ancient town in Bulgaria. People there used salt bricks for trade. Salt helped keep food fresh. Today we often use refrigerators. The ancient town had houses with two floors. Many houses today also have two floors.",
+      "listening_question": "What is one similarity between the ancient town and towns today?",
+      "listening_answer": "Both can have houses with two floors.",
+      "speaking_title": "Give a reason",
+      "speaking_frame": "I would like to visit ___. I want to see ___ because ___.",
+      "speaking_page": 63,
+      "writing_title": "Keep verb tenses consistent",
+      "writing_tip": "When you describe a past event, use past-tense verbs together.",
+      "writing_example": "The archaeologist studied the tomb and found old objects.",
+      "writing_page": 63,
+      "express_frames": [
+        "The soldiers were made from ___.",
+        "We learn about the past by ___.",
+        "I want to ___ because ___."
+      ],
+      "express_prompt": "Explain how old objects help us learn about the past.",
+      "quiz": [
+        [
+          "The ancient soldiers in the article were made from ___.",
+          [
+            "clay",
+            "ice",
+            "paper"
+          ],
+          0,
+          "The terracotta soldiers were made from clay."
+        ],
+        [
+          "Who studies old objects to learn about the past?",
+          [
+            "an astronomer",
+            "an archaeologist",
+            "a tourist"
+          ],
+          1,
+          "An archaeologist studies objects from the past."
+        ],
+        [
+          "Which sentence tells a fact?",
+          [
+            "The soldiers were made of clay.",
+            "Please visit the museum!",
+            "Imagine a soldier waking up!"
+          ],
+          0,
+          "The material is a fact that informs us."
+        ],
+        [
+          "Choose the correct sentence.",
+          [
+            "I want learn about China.",
+            "I want to learn about China.",
+            "I want to learning about China."
+          ],
+          1,
+          "Use want + to + base verb."
+        ],
+        [
+          "Choose two past-tense verbs.",
+          [
+            "studies and found",
+            "studied and finds",
+            "studied and found"
+          ],
+          2,
+          "Keep the past tense consistent: studied and found."
+        ],
+        [
+          "What can uniforms help us learn about?",
+          [
+            "soldiers’ ranks",
+            "the speed of light",
+            "a planet’s diameter"
+          ],
+          0,
+          "The reading uses uniforms as clues about soldiers’ ranks."
+        ]
+      ],
+      "hybrid": {
+        "title_vi": "Dấu vết từ thời xa xưa",
+        "subtitle_vi": "Quan sát đồ vật cũ và tìm bằng chứng về cuộc sống ngày xưa.",
+        "question_vi": "Làm sao biết chuyện gì đã xảy ra từ lâu?",
+        "reading_vi": [
+          "Bài đọc miêu tả hàng nghìn tượng lính đất sét ở Trung Quốc cổ đại. Chúng được làm cách đây hơn hai nghìn năm.",
+          "Các tượng lính không giống hệt nhau. Khuôn mặt và đồng phục cho biết thêm về người lính thật và cấp bậc của họ.",
+          "Các nhà khảo cổ nghiên cứu những tượng lính. Các nhà khoa học cố bảo vệ lớp màu còn lại. Trong bài đọc, lăng mộ của hoàng đế vẫn chưa được mở."
+        ],
+        "thinking_vi": "Tìm một thông tin thực tế trong phần tóm tắt. Thông tin ấy giúp tác giả cung cấp kiến thức cho người đọc thế nào?",
+        "express_vi": "Giải thích cách đồ vật cũ giúp chúng ta tìm hiểu quá khứ.",
+        "grammar": {
+          "tag": "VERB + TO · DỰ ĐỊNH",
+          "title": "What do you want to discover?",
+          "title_vi": "Em muốn khám phá điều gì?",
+          "purpose_vi": "Nói về điều em muốn, dự định hoặc hy vọng làm. Trong các mẫu này, động từ thứ hai đi với to.",
+          "rule_vi": "Với want, plan, hope, decide hoặc try trong các mẫu đang học: thêm to rồi dùng động từ nguyên mẫu. Không áp dụng mẫu này cho mọi động từ tiếng Anh.",
+          "pattern": [
+            [
+              "subject",
+              "I",
+              "ai?"
+            ],
+            [
+              "intent",
+              "want / plan / hope",
+              "muốn / dự định / hy vọng"
+            ],
+            [
+              "marker",
+              "to",
+              "nối với việc muốn làm"
+            ],
+            [
+              "verb",
+              "learn / visit / study",
+              "động từ nguyên mẫu"
+            ],
+            [
+              "rest",
+              "…",
+              "ý còn lại"
+            ]
+          ],
+          "examples": [
+            {
+              "parts": [
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "intent",
+                  "want"
+                ],
+                [
+                  "marker",
+                  "to"
+                ],
+                [
+                  "verb",
+                  "learn"
+                ],
+                [
+                  "rest",
+                  "about ancient China."
+                ]
+              ],
+              "vi": "Em muốn tìm hiểu về Trung Quốc cổ đại."
+            },
+            {
+              "parts": [
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "intent",
+                  "plan"
+                ],
+                [
+                  "marker",
+                  "to"
+                ],
+                [
+                  "verb",
+                  "visit"
+                ],
+                [
+                  "rest",
+                  "a museum."
+                ]
+              ],
+              "vi": "Em dự định đến thăm một bảo tàng."
+            },
+            {
+              "parts": [
+                [
+                  "subject",
+                  "I"
+                ],
+                [
+                  "intent",
+                  "hope"
+                ],
+                [
+                  "marker",
+                  "to"
+                ],
+                [
+                  "verb",
+                  "study"
+                ],
+                [
+                  "rest",
+                  "old objects."
+                ]
+              ],
+              "vi": "Em hy vọng được nghiên cứu những đồ vật cũ."
+            }
+          ],
+          "trap_wrong": "I want learning about ancient China.",
+          "trap_right": "I want to learn about ancient China.",
+          "trap_explanation": "Trong mẫu đang học, want đi với to learn. Không bỏ to và không đổi learn thành learning.",
+          "feedback_vi": [
+            "Sau want trong mẫu này, dùng to be.",
+            "Sau to dùng động từ nguyên mẫu study, không dùng studied hay studying."
+          ],
+          "builder": [
+            {
+              "text": "learn about ancient China",
+              "verb": "learn",
+              "rest": "about ancient China.",
+              "vi": "tìm hiểu về Trung Quốc cổ đại"
+            },
+            {
+              "text": "visit a museum",
+              "verb": "visit",
+              "rest": "a museum.",
+              "vi": "đến thăm một bảo tàng"
+            },
+            {
+              "text": "study old objects",
+              "verb": "study",
+              "rest": "old objects.",
+              "vi": "nghiên cứu những đồ vật cũ"
+            }
+          ]
+        }
+      },
+      "source_pages": {
+        "vocabulary": 56,
+        "scope": [
+          2,
+          3
+        ],
+        "reading": [
+          58,
+          59,
+          60
+        ],
+        "grammar": 61,
+        "word_study": 63,
+        "listening": 214,
+        "speaking": 63,
+        "writing": 63
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "u1-moon",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        70.01530573202567,
+        131.56298939017364,
+        101.21676929180438,
+        167.54467445196107
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-moon.webp",
+      "width": 94,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for moon",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-asteroid",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        106.97703948745584,
+        131.56298939017364,
+        137.21845801462598,
+        167.54467445196107
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-asteroid.webp",
+      "width": 92,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for asteroid",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-comet",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        143.45875072658174,
+        131.56298939017364,
+        173.2201467374476,
+        167.54467445196107
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-comet.webp",
+      "width": 90,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for comet",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-meteorite",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        179.46043944940334,
+        131.56298939017364,
+        209.2218354602692,
+        167.54467445196107
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-meteorite.webp",
+      "width": 90,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for meteorite",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-solar-system",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        215.46212817222494,
+        131.56298939017364,
+        245.7035466993951,
+        167.54467445196107
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-solar-system.webp",
+      "width": 92,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for solar system",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-stars",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        251.94383941135084,
+        131.56298939017364,
+        281.7052354222167,
+        167.54467445196107
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-stars.webp",
+      "width": 91,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for stars",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-galaxy",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        71.45537328093853,
+        183.37661587914755,
+        107.93708452006442,
+        220.31781254258266
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-galaxy.webp",
+      "width": 110,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for galaxy",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-universe",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        115.13742226462874,
+        183.37661587914755,
+        151.61913350375465,
+        220.31781254258266
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-universe.webp",
+      "width": 110,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for universe",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-spacecraft",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        158.81947124831896,
+        183.37661587914755,
+        194.82115997114056,
+        220.31781254258266
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-spacecraft.webp",
+      "width": 109,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for spacecraft",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-telescope",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        202.0214977157049,
+        183.37661587914755,
+        238.98323147113507,
+        220.31781254258266
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-telescope.webp",
+      "width": 111,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for telescope",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u1-observatory",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        245.7035466993951,
+        183.37661587914755,
+        281.7052354222167,
+        220.31781254258266
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u1-observatory.webp",
+      "width": 109,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for observatory",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-army",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        70.01530573202567,
+        133.9617683942928,
+        101.21676929180438,
+        169.94345345608025
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-army.webp",
+      "width": 94,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for army",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-soldiers",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        106.97703948745584,
+        133.9617683942928,
+        137.21845801462598,
+        169.94345345608025
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-soldiers.webp",
+      "width": 92,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for soldiers",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-uniform",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        143.45875072658174,
+        133.9617683942928,
+        173.2201467374476,
+        169.94345345608025
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-uniform.webp",
+      "width": 90,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for uniform",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-emperor",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        179.46043944940334,
+        133.9617683942928,
+        209.2218354602692,
+        169.94345345608025
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-emperor.webp",
+      "width": 90,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for emperor",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-armor",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        215.46212817222494,
+        133.9617683942928,
+        245.7035466993951,
+        169.94345345608025
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-armor.webp",
+      "width": 92,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for armor",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-treasure",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        251.94383941135084,
+        133.9617683942928,
+        281.7052354222167,
+        169.94345345608025
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-treasure.webp",
+      "width": 91,
+      "height": 109,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for treasure",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-archaeologist",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        71.45537328093853,
+        185.2956390824429,
+        107.93708452006442,
+        221.75707994505416
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-archaeologist.webp",
+      "width": 110,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for archaeologist",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-tomb",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        115.13742226462874,
+        185.2956390824429,
+        151.61913350375465,
+        221.75707994505416
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-tomb.webp",
+      "width": 110,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for tomb",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-jade",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        158.81947124831896,
+        185.2956390824429,
+        194.82115997114056,
+        221.75707994505416
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-jade.webp",
+      "width": 109,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for jade",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-clay",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        202.0214977157049,
+        185.2956390824429,
+        238.98323147113507,
+        221.75707994505416
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-clay.webp",
+      "width": 111,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for clay",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u3-peasant",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 56,
+      "printed_teacher_page": 56,
+      "student_book_page": 28,
+      "bbox_pdf_points": [
+        245.7035466993951,
+        185.2956390824429,
+        281.7052354222167,
+        221.75707994505416
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u3-peasant.webp",
+      "width": 109,
+      "height": 111,
+      "match_status": "exact-book-image",
+      "alt": "Original book illustration for peasant",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-astronomer",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 36,
+      "printed_teacher_page": 36,
+      "student_book_page": 8,
+      "bbox_pdf_points": [
+        202.0214977157049,
+        183.37661587914755,
+        238.98323147113507,
+        220.31781254258266
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u2-astronomer.webp",
+      "width": 111,
+      "height": 111,
+      "match_status": "supporting-book-image",
+      "alt": "A person observing the sky through a telescope",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-core",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 44,
+      "printed_teacher_page": 44,
+      "student_book_page": 16,
+      "bbox_pdf_points": [
+        187.62082222657625,
+        280.76704344638557,
+        251.94383941135084,
+        343.13529755348384
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u2-core.webp",
+      "width": 194,
+      "height": 188,
+      "match_status": "supporting-book-image",
+      "alt": "A cutaway of Earth showing its center",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-orbit",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 44,
+      "printed_teacher_page": 44,
+      "student_book_page": 16,
+      "bbox_pdf_points": [
+        226.50264604722358,
+        173.7814998626709,
+        282.6652804548253,
+        207.844161721163
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u2-orbit.webp",
+      "width": 169,
+      "height": 103,
+      "match_status": "supporting-book-image",
+      "alt": "Planets on paths around the Sun",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-craters",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 44,
+      "printed_teacher_page": 44,
+      "student_book_page": 16,
+      "bbox_pdf_points": [
+        227.94271359613643,
+        217.43927773763969,
+        278.825100324391,
+        249.58291639283647
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u2-craters.webp",
+      "width": 154,
+      "height": 97,
+      "match_status": "supporting-book-image",
+      "alt": "Hollows on the surface of the Moon",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-surface",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 44,
+      "printed_teacher_page": 44,
+      "student_book_page": 16,
+      "bbox_pdf_points": [
+        227.94271359613643,
+        217.43927773763969,
+        278.825100324391,
+        249.58291639283647
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u2-surface.webp",
+      "width": 154,
+      "height": 97,
+      "match_status": "supporting-book-image",
+      "alt": "The visible outside of the Moon",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-unique",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 46,
+      "printed_teacher_page": 46,
+      "student_book_page": 19,
+      "bbox_pdf_points": [
+        421,
+        353,
+        463,
+        390
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/u2-unique.webp",
+      "width": 126,
+      "height": 111,
+      "match_status": "supporting-book-image",
+      "alt": "Earth pictured beside Venus in the book",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "hero-space",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 46,
+      "printed_teacher_page": 46,
+      "student_book_page": 18,
+      "bbox_pdf_points": [
+        44,
+        162,
+        294,
+        317
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/hero-space.webp",
+      "width": 750,
+      "height": 465,
+      "match_status": "supporting-book-image",
+      "alt": "A detail of the solar system illustration from the book",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "hero-history",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 58,
+      "printed_teacher_page": 58,
+      "student_book_page": 31,
+      "bbox_pdf_points": [
+        298,
+        72,
+        550,
+        166
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/hero-history.webp",
+      "width": 756,
+      "height": 282,
+      "match_status": "supporting-book-image",
+      "alt": "Rows of ancient clay soldiers",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "hero-bella",
+      "source_file": "778_7-Oxford Discover 4. Teacher's Guide_2019, 2nd, 232p.pdf",
+      "pdf_page_1based": 38,
+      "printed_teacher_page": 38,
+      "student_book_page": 10,
+      "bbox_pdf_points": [
+        44,
+        254,
+        294,
+        399
+      ],
+      "coordinate_system": "top-left; points; x0,y0,x1,y1",
+      "extraction_method": "PyMuPDF PDF region render, 3x",
+      "asset_path": "assets/images/hero-bella.webp",
+      "width": 750,
+      "height": 435,
+      "match_status": "supporting-book-image",
+      "alt": "Bella and her father pictured in the book",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-space-probe",
+      "source_file": null,
+      "pdf_page_1based": null,
+      "student_book_page": null,
+      "bbox_pdf_points": null,
+      "asset_path": "assets/images/u2-space-probe.svg",
+      "width": 320,
+      "height": 180,
+      "extraction_method": "authored SVG learning aid",
+      "match_status": "authored-support-diagram",
+      "alt": "A robot spacecraft with solar panels sends information from space",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-gravity",
+      "source_file": null,
+      "pdf_page_1based": null,
+      "student_book_page": null,
+      "bbox_pdf_points": null,
+      "asset_path": "assets/images/u2-gravity.svg",
+      "width": 320,
+      "height": 180,
+      "extraction_method": "authored SVG learning aid",
+      "match_status": "authored-support-diagram",
+      "alt": "An arrow points down as an object falls toward Earth",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-matter",
+      "source_file": null,
+      "pdf_page_1based": null,
+      "student_book_page": null,
+      "bbox_pdf_points": null,
+      "asset_path": "assets/images/u2-matter.svg",
+      "width": 320,
+      "height": 180,
+      "extraction_method": "authored SVG learning aid",
+      "match_status": "authored-support-diagram",
+      "alt": "A solid block, water and air are examples of matter",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-distance",
+      "source_file": null,
+      "pdf_page_1based": null,
+      "student_book_page": null,
+      "bbox_pdf_points": null,
+      "asset_path": "assets/images/u2-distance.svg",
+      "width": 320,
+      "height": 180,
+      "extraction_method": "authored SVG learning aid",
+      "match_status": "authored-support-diagram",
+      "alt": "A two-headed arrow measures the space between two objects",
+      "review_status": "visually-reviewed"
+    },
+    {
+      "id": "u2-diameter",
+      "source_file": null,
+      "pdf_page_1based": null,
+      "student_book_page": null,
+      "bbox_pdf_points": null,
+      "asset_path": "assets/images/u2-diameter.svg",
+      "width": 320,
+      "height": 180,
+      "extraction_method": "authored SVG learning aid",
+      "match_status": "authored-support-diagram",
+      "alt": "A line crosses a circle through its center from edge to edge",
+      "review_status": "visually-reviewed"
+    }
+  ],
+  "classwork": {
+    "1": {
+      "map": {
+        "title": "Present your will mind map",
+        "vi": "Trình bày sơ đồ will",
+        "source": "BTVN Tháng 82026!C52; 31.08-04.09!D10",
+        "steps": [
+          "Use: make a prediction. Form: subject + will + base verb.",
+          "Add examples and time expressions: someday, in the future, next year.",
+          "Point to each branch and say a whole sentence. Practise, then record your presentation if your teacher asks."
+        ],
+        "help": "Chia sơ đồ thành 4 nhánh: cách dùng, cấu trúc, ví dụ, dấu hiệu thời gian. Đây là phần ôn dự đoán; will còn có cách dùng khác.",
+        "prompt": "My mind map: use / form / examples / time expressions"
+      },
+      "express": {
+        "title": "Five word sentences → a short story",
+        "vi": "Viết câu với từ mới, rồi thử viết truyện ngắn",
+        "source": "BTVN Tháng 82026!C25,C44",
+        "steps": [
+          "Choose five picture words. Write one sentence for each.",
+          "Try a short imaginary space story using vast, dwelled, disk and speck.",
+          "Check that each sentence has a subject and a verb. Use dwelled for an action in the past."
+        ],
+        "help": "Viết 5 câu trước. Sau đó nối các ý thành truyện; dwell là dạng nguyên mẫu, dwelled là dạng quá khứ có trong bài đọc.",
+        "prompt": "My five sentences / my space story"
+      }
+    },
+    "2": {
+      "map": {
+        "title": "Earth · Both · Venus",
+        "vi": "Venn diagram: so sánh hai hành tinh",
+        "source": "07.09-11.09!D16; 14.09-18.09!D37",
+        "steps": [
+          "Draw two overlapping circles. Label the left Earth, the middle Both, and the right Venus.",
+          "Earth: cooler than Venus. Both: almost the same size; a core containing iron and rock. Venus: hotter; thicker clouds.",
+          "Say: Both planets ___. Earth ___, but Venus ___. Present your diagram or mind map."
+        ],
+        "help": "Giữa hai vòng là điểm giống nhau; hai bên là điểm khác nhau. Dùng thông tin bài đọc, không đoán số liệu.",
+        "prompt": "Earth only / Both / Venus only"
+      },
+      "language": {
+        "title": "First conditional: two clause orders",
+        "vi": "Câu điều kiện loại 1: đổi thứ tự hai vế",
+        "source": "07.09-11.09!C28,C36,D36",
+        "steps": [
+          "If I get a telescope, I will observe the Moon.",
+          "I will observe the Moon if I get a telescope. The meaning stays the same.",
+          "A simple sentence: I observe the Moon. A complex sentence: If I get a telescope, I will observe the Moon. Find the condition and result."
+        ],
+        "help": "Vẽ mind map gồm điều kiện, kết quả, cấu trúc và ví dụ. Vế if dùng hiện tại đơn; vế kết quả dùng will + động từ nguyên mẫu. Khi vế if đứng đầu, dùng dấu phẩy.",
+        "prompt": "My first conditional mind map and two sentence orders"
+      },
+      "reading": {
+        "title": "What did you learn? At least seven lines",
+        "vi": "Viết ít nhất 7 dòng theo bài lớp giao",
+        "source": "07.09-11.09!D23",
+        "steps": [
+          "Start with the article topic. Write two similarities between Earth and Venus.",
+          "Write two differences. Add something you learned about exploring space.",
+          "Finish with your own thought. Write at least seven lines in your notebook; screen wrapping does not count the lines for you."
+        ],
+        "help": "Dùng bài đọc để kiểm tra thông tin. Viết ý bằng câu của em; không chép nguyên đoạn. Ô nhập dưới đây lưu bản nháp.",
+        "prompt": "I learned that… / Both planets… / Earth…, but Venus… / I think…"
+      },
+      "express": {
+        "title": "My favourite planet + solar-system model",
+        "vi": "Đoạn văn về hành tinh yêu thích và mô hình hệ Mặt Trời",
+        "source": "07.09-11.09!D36; 28.09-02.10!C28,C29",
+        "steps": [
+          "Name your favourite planet. Give a reason and two facts you can check in the book.",
+          "For the class project, label the Sun and eight planets in order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+          "Explain that a classroom model may not show real sizes or distances. Tell someone how gravity keeps planets in orbit."
+        ],
+        "help": "Project được ghi trong Excel tuần 28/09–02/10; đặt ở đây vì liên quan hệ Mặt Trời. Không coi kích thước mô hình là tỉ lệ thật.",
+        "prompt": "My favourite planet is… / My reason is… / My model shows…"
+      }
+    },
+    "3": {
+      "language": {
+        "title": "Verb patterns: -ing / to / both",
+        "vi": "Bài mở rộng trên lớp: phân loại động từ",
+        "source": "21.09-25.09!D23; 28.09-02.10!C36",
+        "steps": [
+          "-ing: enjoy learning; finish drawing; avoid touching.",
+          "to + base verb: want to learn; plan to visit; hope to discover; decide to study.",
+          "Both: like learning / like to learn; love drawing / love to draw. Make three branches and add your own examples."
+        ],
+        "help": "Đây là bài mở rộng từ nhật ký lớp, không phải toàn bộ grammar của Unit 3. Không phải mọi động từ đều đi với cả hai dạng. Một số động từ như stop hoặc remember đổi nghĩa khi đổi dạng; chưa đưa vào bài phân loại cơ bản này.",
+        "prompt": "My three branches: -ing / to + base verb / both"
+      },
+      "express": {
+        "title": "Why teamwork is important",
+        "vi": "Viết đoạn: câu chủ đề → ý hỗ trợ → kết luận",
+        "source": "14.09-18.09!C36,D36; 21.09-25.09!D36; 28.09-02.10!C37",
+        "steps": [
+          "Topic sentence: Teamwork is important because people can help one another.",
+          "Supporting idea 1: explain a reason, then give an example. Try sharing jobs when making a model.",
+          "Supporting idea 2: explain a different reason, then give an example. Try checking one another’s labels.",
+          "Concluding sentence: restate your main idea. Check present tense for general ideas and past tense for a past example."
+        ],
+        "help": "Bài lớp yêu cầu ít nhất 2 ý hỗ trợ; mỗi ý có giải thích và ví dụ. Câu mẫu là gợi ý tự soạn, không phải đáp án bắt buộc.",
+        "prompt": "Topic sentence / Reason 1 + explanation + example / Reason 2 + explanation + example / Conclusion"
+      }
+    }
+  }
+}

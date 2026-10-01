@@ -1,0 +1,19 @@
+node_modules/
+tmp/
+__pycache__/
+*.pyc
+.venv/
+# Local source books and class diaries, including personal information.
+/*.pdf
+/*.xlsx
+/*.xls
+/*.csv
+data/timetable-extracted.json
+# Historical and generated visual QA artifacts are reproducible.
+versions/
+qa/*.png
+qa/*.jpg
+qa/*.pdf
+qa/*results.json
+.DS_Store
+Thumbs.db

@@ -1,0 +1,80 @@
+{
+  "1": {
+    "title_vi": "Vị trí của chúng ta trong vũ trụ",
+    "subtitle_vi": "Tưởng tượng chuyến đi xa Trái Đất và kể lại điều em thấy.",
+    "question_vi": "Chúng ta ở đâu trong vũ trụ?",
+    "reading_vi": ["Bella sống ở Nome, Alaska. Bố dùng một bài thơ để giúp em hình dung vị trí của mình trong vũ trụ.", "Trong trí tưởng tượng, Bella đi bằng tàu vũ trụ. Ngôi nhà trông nhỏ dần. Sau đó em nhìn thấy Trái Đất, hệ mặt trời và các thiên hà.", "Chuyến đi tưởng tượng kết thúc. Bella trở lại phòng ngủ. Em muốn tưởng tượng mình đến thăm những nơi ấy một lần nữa."],
+    "thinking_vi": "Khi Bella đi xa hơn, Trái Đất trông thế nào? Vẽ Trái Đất khi ở gần, rồi khi ở xa.",
+    "express_vi": "Giải thích cho một người nghe chúng ta ở đâu trong vũ trụ.",
+    "grammar": {
+      "tag": "WILL · DỰ ĐOÁN",
+      "title": "What do you think will happen?",
+      "title_vi": "Em nghĩ điều gì sẽ xảy ra?",
+      "purpose_vi": "Dùng will khi em dự đoán một điều trong tương lai. Em nghĩ điều đó sẽ xảy ra, nhưng đó chưa phải là một sự thật đã được xác nhận.",
+      "rule_vi": "Sau will, dùng động từ nguyên mẫu: visit, study, learn. Không thêm -s, -ed hay -ing vào động từ ngay sau will.",
+      "pattern": [["subject", "I / We / People", "Ai?"], ["marker", "will", "dự đoán"], ["verb", "visit / study / learn", "động từ nguyên mẫu"], ["rest", "…", "ý còn lại"]],
+      "examples": [
+        {"parts": [["subject", "I"], ["marker", "will"], ["verb", "visit"], ["rest", "an observatory someday."]], "vi": "Một ngày nào đó, em sẽ đến thăm một đài thiên văn."},
+        {"parts": [["subject", "We"], ["marker", "will"], ["verb", "learn"], ["rest", "more about space in the future."]], "vi": "Trong tương lai, chúng ta sẽ biết thêm về vũ trụ."},
+        {"parts": [["subject", "People"], ["marker", "will"], ["verb", "explore"], ["rest", "more planets in the future."]], "vi": "Trong tương lai, con người sẽ khám phá thêm nhiều hành tinh."}
+      ],
+      "trap_wrong": "I will visited an observatory.",
+      "trap_right": "I will visit an observatory.",
+      "trap_explanation": "Sau will là visit, không phải visited. Will đã cho biết em đang nói về tương lai.",
+      "feedback_vi": ["Dùng will để đưa ra dự đoán về tương lai.", "Ngay sau will dùng study, không dùng studying hay studied."],
+      "builder": [{"text": "visit an observatory", "verb": "visit", "rest": "an observatory someday.", "vi": "Một ngày nào đó, em sẽ đến thăm một đài thiên văn."}, {"text": "study the stars", "verb": "study", "rest": "the stars in the future.", "vi": "Trong tương lai, em sẽ nghiên cứu các ngôi sao."}, {"text": "learn about the planets", "verb": "learn", "rest": "about the planets in the future.", "vi": "Trong tương lai, em sẽ tìm hiểu về các hành tinh."}]
+    }
+  },
+  "2": {
+    "title_vi": "Cùng chuyển động quanh Mặt Trời",
+    "subtitle_vi": "So sánh các hành tinh và tìm điều làm Trái Đất đặc biệt.",
+    "question_vi": "Chúng ta ở đâu trong vũ trụ?",
+    "reading_vi": ["Các hành tinh chuyển động quanh Mặt Trời. Lực hấp dẫn giữ chúng trên quỹ đạo. Mặt Trời mang ánh sáng và nhiệt đến Trái Đất.", "Trái Đất và sao Kim có kích thước gần bằng nhau. Cả hai đều có lõi gồm sắt và đá. Sao Kim nóng hơn và có mây dày hơn.", "Các nhà thiên văn học nghiên cứu vũ trụ. Tàu thăm dò thu thập thông tin. Bài đọc kể cách Curiosity khám phá bề mặt sao Hỏa."],
+    "thinking_vi": "So sánh Trái Đất và sao Kim. Nêu một điểm giống nhau và một điểm khác nhau.",
+    "express_vi": "Giải thích một điểm giống và một điểm khác giữa Trái Đất và sao Kim.",
+    "grammar": {
+      "tag": "IF … WILL · ĐIỀU KIỆN",
+      "title": "If this happens, what will follow?",
+      "title_vi": "Nếu điều này xảy ra, kết quả sẽ là gì?",
+      "purpose_vi": "Nối một điều có thể xảy ra với kết quả trong tương lai. Em có thể nghĩ theo hai phần: Nếu… thì…",
+      "rule_vi": "Trong mẫu câu này, phần If dùng hiện tại đơn. Phần kết quả dùng will + động từ nguyên mẫu. Không đặt will vào phần If.",
+      "pattern": [["condition", "If + present simple", "điều kiện có thể xảy ra"], ["arrow", "→", "dẫn đến"], ["subject", "I / we", "ai?"], ["marker", "will", "kết quả tương lai"], ["verb", "+ base verb", "động từ nguyên mẫu"]],
+      "examples": [
+        {"parts": [["condition", "If I get a telescope,"], ["subject", "I"], ["marker", "will"], ["verb", "observe"], ["rest", "the moon."]], "vi": "Nếu em có một chiếc kính thiên văn, em sẽ quan sát mặt trăng."},
+        {"parts": [["condition", "If we study space,"], ["subject", "we"], ["marker", "will"], ["verb", "learn"], ["rest", "new things."]], "vi": "Nếu chúng ta tìm hiểu về vũ trụ, chúng ta sẽ học được những điều mới."},
+        {"parts": [["condition", "If I become an astronomer,"], ["subject", "I"], ["marker", "will"], ["verb", "study"], ["rest", "the stars."]], "vi": "Nếu trở thành nhà thiên văn học, em sẽ nghiên cứu các ngôi sao."}
+      ],
+      "trap_wrong": "If I will get a telescope, I will study the moon.",
+      "trap_right": "If I get a telescope, I will study the moon.",
+      "trap_explanation": "Trong phần If của mẫu câu này, dùng get ở hiện tại đơn. Will thuộc về phần kết quả: I will study…",
+      "feedback_vi": ["Phần If dùng hiện tại đơn: get. Không dùng will get ở đây.", "Phần kết quả dùng will + động từ nguyên mẫu: will learn."],
+      "builder": [{"text": "I get a telescope", "parts": [["condition", "If I get a telescope,"], ["subject", "I"], ["marker", "will"], ["verb", "observe"], ["rest", "the moon."]], "vi": "Nếu em có một chiếc kính thiên văn, em sẽ quan sát mặt trăng."}, {"text": "we study space", "parts": [["condition", "If we study space,"], ["subject", "we"], ["marker", "will"], ["verb", "learn"], ["rest", "new things."]], "vi": "Nếu chúng ta tìm hiểu về vũ trụ, chúng ta sẽ học được những điều mới."}, {"text": "I become an astronomer", "parts": [["condition", "If I become an astronomer,"], ["subject", "I"], ["marker", "will"], ["verb", "study"], ["rest", "the stars."]], "vi": "Nếu trở thành nhà thiên văn học, em sẽ nghiên cứu các ngôi sao."}]
+    }
+  },
+  "3": {
+    "title_vi": "Dấu vết từ thời xa xưa",
+    "subtitle_vi": "Quan sát đồ vật cũ và tìm bằng chứng về cuộc sống ngày xưa.",
+    "question_vi": "Làm sao biết chuyện gì đã xảy ra từ lâu?",
+    "reading_vi": ["Bài đọc miêu tả hàng nghìn tượng lính đất sét ở Trung Quốc cổ đại. Chúng được làm cách đây hơn hai nghìn năm.", "Các tượng lính không giống hệt nhau. Khuôn mặt và đồng phục cho biết thêm về người lính thật và cấp bậc của họ.", "Các nhà khảo cổ nghiên cứu những tượng lính. Các nhà khoa học cố bảo vệ lớp màu còn lại. Trong bài đọc, lăng mộ của hoàng đế vẫn chưa được mở."],
+    "thinking_vi": "Tìm một thông tin thực tế trong phần tóm tắt. Thông tin ấy giúp tác giả cung cấp kiến thức cho người đọc thế nào?",
+    "express_vi": "Giải thích cách đồ vật cũ giúp chúng ta tìm hiểu quá khứ.",
+    "grammar": {
+      "tag": "VERB + TO · DỰ ĐỊNH",
+      "title": "What do you want to discover?",
+      "title_vi": "Em muốn khám phá điều gì?",
+      "purpose_vi": "Nói về điều em muốn, dự định hoặc hy vọng làm. Trong các mẫu này, động từ thứ hai đi với to.",
+      "rule_vi": "Với want, plan, hope, decide hoặc try trong các mẫu đang học: thêm to rồi dùng động từ nguyên mẫu. Không áp dụng mẫu này cho mọi động từ tiếng Anh.",
+      "pattern": [["subject", "I", "ai?"], ["intent", "want / plan / hope", "muốn / dự định / hy vọng"], ["marker", "to", "nối với việc muốn làm"], ["verb", "learn / visit / study", "động từ nguyên mẫu"], ["rest", "…", "ý còn lại"]],
+      "examples": [
+        {"parts": [["subject", "I"], ["intent", "want"], ["marker", "to"], ["verb", "learn"], ["rest", "about ancient China."]], "vi": "Em muốn tìm hiểu về Trung Quốc cổ đại."},
+        {"parts": [["subject", "I"], ["intent", "plan"], ["marker", "to"], ["verb", "visit"], ["rest", "a museum."]], "vi": "Em dự định đến thăm một bảo tàng."},
+        {"parts": [["subject", "I"], ["intent", "hope"], ["marker", "to"], ["verb", "study"], ["rest", "old objects."]], "vi": "Em hy vọng được nghiên cứu những đồ vật cũ."}
+      ],
+      "trap_wrong": "I want learning about ancient China.",
+      "trap_right": "I want to learn about ancient China.",
+      "trap_explanation": "Trong mẫu đang học, want đi với to learn. Không bỏ to và không đổi learn thành learning.",
+      "feedback_vi": ["Sau want trong mẫu này, dùng to be.", "Sau to dùng động từ nguyên mẫu study, không dùng studied hay studying."],
+      "builder": [{"text": "learn about ancient China", "verb": "learn", "rest": "about ancient China.", "vi": "tìm hiểu về Trung Quốc cổ đại"}, {"text": "visit a museum", "verb": "visit", "rest": "a museum.", "vi": "đến thăm một bảo tàng"}, {"text": "study old objects", "verb": "study", "rest": "old objects.", "vi": "nghiên cứu những đồ vật cũ"}]
+    }
+  }
+}

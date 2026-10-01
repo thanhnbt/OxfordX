@@ -1,0 +1,182 @@
+{
+  "u1-moon": {
+    "sha256": "249d92ec8d332d9cfe52495e866ca99462cdf5741a53bbbaec0f7d91893303e9",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-asteroid": {
+    "sha256": "867de9f169f2b93d1b31cd603c1fa6bf957b43eb1d3bb312e54a0eed87050899",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-comet": {
+    "sha256": "1b7cf0269cad16eb6c2acf2febeb37527327352e2530dfb1a9a8993b76d75bd4",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-meteorite": {
+    "sha256": "5ee8e09eee1329ee211b188cccfe5c73acf0b510a09715d092867954f0204298",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-solar-system": {
+    "sha256": "a6f777f25aa74182a157ee9abe6fd9257f16abb5448bba58a422a20535e6ba6c",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-stars": {
+    "sha256": "444f942975789eb26a60944f48927a11de6b1dfedaab62bdd94767b298a6ff22",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-galaxy": {
+    "sha256": "e757eec81fa4639c2acce76fe75ccfdc5b12c36d0dfabb5c868ae4fbe443ab4f",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-universe": {
+    "sha256": "ad60c953cdf6d858796fdf02a19601501821c2973e7e1efebbaa4e94ffc26e1d",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-spacecraft": {
+    "sha256": "2881dcc48fb9fe54abeb32f8a442562fa75375d972a57b9d43dda7ae65a6ad25",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-telescope": {
+    "sha256": "e16c91421694548ac20a182082b32099ac3a1aa259d4f05dea40f1239800f28b",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u1-observatory": {
+    "sha256": "e0645bd5d4e0c822940177cf47ea155897af8500ebe449b3626d71f11f821838",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-army": {
+    "sha256": "67761794139938617dd3db4307dd6ad648485a52be28db25639951bbd64b7467",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-soldiers": {
+    "sha256": "75885343994bf4cbf99daeab9adde734913e9cf2dcf420ba67eff5f75e797b2f",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-uniform": {
+    "sha256": "22058e4f8505ab84e07ca1e7f0b6ab3eeef663d7215a092715b656062081c37b",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-emperor": {
+    "sha256": "16805a71fcfd3569f80794c086cc403526b4789e1a57e9e72c1e59a975bf80e4",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-armor": {
+    "sha256": "bb0546af5039a50c08e847bb8c834335bf16128423f511feff1dbbf4e0322118",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-treasure": {
+    "sha256": "06fda0cd9fed755461cd7a7c6b3dcc6ce986eb0bf2490697286403a2fd3492cb",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-archaeologist": {
+    "sha256": "caddd5dae3aa87daddda973e279df9ff0b19f08a4f12e2b7abdbdfe204453875",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-tomb": {
+    "sha256": "11b06df4ca26c5e31895de32a814b839e58e49401012b06e151ef9d4460e4dd4",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-jade": {
+    "sha256": "d3313bc7454409a55341c0a9a785ab8bde448641b0d1403288437274e6ad32a3",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-clay": {
+    "sha256": "837b5bec517e828b969e6b2150c425f4a3aad0a173bcf046261d17f72fa87c70",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u3-peasant": {
+    "sha256": "e079547413a5667b4f1f0284bbe4e81cdea03796dfeccad32254693f8ae13c97",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-astronomer": {
+    "sha256": "e16c91421694548ac20a182082b32099ac3a1aa259d4f05dea40f1239800f28b",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-core": {
+    "sha256": "c4a5986d610b6c42d571782d81da2c4b36962415664f34d6e847e870f843763a",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-orbit": {
+    "sha256": "c7e23245e9aa90f9e43ea304972c280193eb0535ef4a2bc4b67bf6f33c02f2f0",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-craters": {
+    "sha256": "f6f1a5fa60b7789273a94122495532152541201a226cb05cc52c9f94de57e034",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-surface": {
+    "sha256": "f6f1a5fa60b7789273a94122495532152541201a226cb05cc52c9f94de57e034",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-unique": {
+    "sha256": "5cd60dc5f9ebee8aeb0416997f485718e39f3e5b0cdfd9f005782a3bfbf98658",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "hero-space": {
+    "sha256": "bd635d0d779ab53378fb01aa56ffd69bc69d28eae10b508782f2bec8d109e520",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "hero-history": {
+    "sha256": "323a633c9271ec2b3bfea499c80da630bf702de3f46329024a5cd5a1e7d81580",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-space-probe": {
+    "sha256": "7388a00a6ed83f640183c0bcfc3a9ed94a04abfbb235f2b9f77a2be2fa04777e",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-gravity": {
+    "sha256": "8af50121c1c7f431bb96155723e4ef43e7ebbde7eb93c2c883e5ef86e6945c76",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-matter": {
+    "sha256": "c72c356a7b2bd23c5d6b5eb48d0bbe4432f0c9b86fcae206573986fa4d3b68c0",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-distance": {
+    "sha256": "cd33e9bcd92a9db6323687f3d5e1c4d7880eeaff43533868027945f54950eca8",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "u2-diameter": {
+    "sha256": "2b46d8d17e68abd7d01568135814c1d271586954e428efd5bef53212b7466cce",
+    "status": "visually-reviewed",
+    "evidence": "book-image-contact-sheet.jpg plus original source page renders; authored diagrams checked in desktop/print renders"
+  },
+  "hero-bella": {
+    "sha256": "e5474d0aeb2046600f90d381f5dabf894cd22a23783bbd18a1de1527c85b1bea",
+    "status": "visually-reviewed",
+    "evidence": "Direct crop inspection and v2 desktop/mobile home screenshots; Bella and father illustration from PDF page 38"
+  }
+}

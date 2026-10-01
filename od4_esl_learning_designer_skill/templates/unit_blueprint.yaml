@@ -1,0 +1,43 @@
+unit:
+  number: ""
+  title: ""
+  big_question: ""
+  child_mission: ""
+
+source_provenance:
+  core_book: []
+  core_class: []
+  supporting: []
+  extension: []
+  conflicts_to_verify: []
+
+learning_design:
+  core_concepts: []
+  concept_relationships: []
+  vocabulary_clusters:
+    - cluster: ""
+      why_together: ""
+      words: []
+  thinking_habit: ""
+  thinking_routine: ""
+  language_tool: ""
+  reading_goal: ""
+  listening_goal: ""
+  speaking_goal: ""
+  writing_goal: ""
+  recall_goal: ""
+
+child_journey:
+  wonder: ""
+  map_start: ""
+  explore: ""
+  discover_words: ""
+  think: ""
+  language_tool: ""
+  map_build: ""
+  express_options: []
+  recall_prompts: []
+
+extensions:
+  wonders_style: []
+  clc_transfer: []

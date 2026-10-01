@@ -1,0 +1,1763 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Semantic HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Colors */
+            --bg-body: #222;
+            --bg-slide: #f4f1eb;
+            
+            --text-main: #111;
+            --text-navy: #1f375b;
+            --text-orange: #d15d31;
+            --text-gray: #666;
+            --text-red: #c90b0b;
+            --text-yellow: #f2ba49;
+            
+            --card-white: #ffffff;
+            --card-beige: #e9e4d6;
+            --card-navy: #243e5f;
+            
+            /* Typography */
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            
+            /* Sizing via cqw */
+            --padding-slide: 4cqw;
+            --header-h: 3cqw;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            margin: 0;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4vw;
+            /* Tăng cường độ sắc nét chữ */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .slide {
+            width: 100%;
+            max-width: 1400px;
+            aspect-ratio: 16 / 9;
+            container-type: inline-size;
+            background-color: var(--bg-slide);
+            box-shadow: 0 1cqw 3cqw rgba(0,0,0,0.5);
+            position: relative;
+            box-sizing: border-box;
+            padding: var(--padding-slide);
+            font-family: var(--font-sans);
+            color: var(--text-main);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header Area */
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9cqw;
+            color: var(--text-gray);
+            letter-spacing: 0.1cqw;
+            border-bottom: 0.1cqw solid #ccc;
+            padding-bottom: 1cqw;
+            margin-bottom: 2cqw;
+            font-family: monospace;
+        }
+
+        /* Bottom Footer Area */
+        .bottom-footer {
+            margin-top: auto;
+            padding-top: 2cqw;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8cqw;
+            color: var(--text-gray);
+            font-family: monospace;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Typography Utilities */
+        .badge-black {
+            background: #111;
+            color: #fff;
+            display: inline-block;
+            padding: 0.5cqw 1.5cqw;
+            font-size: 0.9cqw;
+            letter-spacing: 0.2cqw;
+            margin-bottom: 2cqw;
+            font-family: monospace;
+        }
+        
+        .section-divider {
+            border-top: 0.1cqw solid #bbb;
+            margin: 1.5cqw 0;
+            width: 100%;
+        }
+        
+        .subtitle-orange {
+            color: var(--text-orange);
+            font-size: 1.2cqw;
+            letter-spacing: 0.1cqw;
+            margin-bottom: 0.5cqw;
+            font-family: var(--font-sans);
+        }
+
+        .main-title {
+            font-family: var(--font-serif);
+            font-size: 6.5cqw;
+            line-height: 1.1;
+            margin: 0 0 1.5cqw 0;
+            color: var(--text-main);
+        }
+        
+        .main-title.small {
+            font-size: 4cqw;
+        }
+
+        .title-italic-navy {
+            font-style: italic;
+            color: var(--text-navy);
+        }
+        
+        .title-italic-orange {
+            font-style: italic;
+            color: var(--text-orange);
+            text-decoration: underline;
+            text-decoration-color: var(--text-orange);
+        }
+
+        .date-text {
+            color: var(--text-orange);
+            font-size: 1cqw;
+            letter-spacing: 0.05cqw;
+            margin-bottom: 2cqw;
+        }
+
+        .text-block-bottom {
+            font-size: 1.3cqw;
+            line-height: 1.6;
+            color: #444;
+            max-width: 50cqw;
+            margin-top: auto;
+            margin-bottom: 2cqw;
+        }
+
+        .orange-line {
+            width: 5cqw;
+            height: 0.2cqw;
+            background: var(--text-orange);
+            margin-bottom: 1cqw;
+        }
+
+        /* Grid Layouts */
+        .grid-60-40 {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2cqw;
+            flex-grow: 1;
+            margin-bottom: 2cqw;
+        }
+
+        .grid-50-50 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2cqw;
+            flex-grow: 1;
+            margin-bottom: 3cqw;
+            position: relative;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3cqw;
+            margin-bottom: 2cqw;
+        }
+        
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1.5cqw;
+            margin-bottom: 2cqw;
+        }
+
+        /* Cards */
+        .card-white {
+            background: var(--card-white);
+            border: 0.1cqw solid #ddd;
+            padding: 2cqw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .card-beige {
+            background: var(--card-beige);
+            padding: 2cqw;
+        }
+        
+        .card-navy {
+            background: var(--card-navy);
+            padding: 2cqw;
+            color: white;
+        }
+        
+        /* Specific content styles */
+        .quote-text {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 2cqw;
+            line-height: 1.4;
+            color: var(--text-main);
+        }
+        
+        .card-meta {
+            font-family: monospace;
+            font-size: 0.8cqw;
+            color: var(--text-gray);
+            margin-bottom: 2cqw;
+            letter-spacing: 0.1cqw;
+        }
+        
+        .navy-meta { color: #8ba4c7; }
+        .beige-meta { color: #8a8370; }
+        
+        .feature-item {
+            font-size: 1.1cqw;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .feature-item .num {
+            color: var(--text-orange);
+            font-size: 0.9cqw;
+            margin-right: 0.5cqw;
+        }
+        
+        .list-item {
+            font-size: 1.2cqw;
+            margin-bottom: 1.5cqw;
+            display: flex;
+            gap: 0.5cqw;
+        }
+        
+        .list-item strong {
+            min-width: 10cqw;
+        }
+        
+        .list-item span {
+            color: inherit;
+            opacity: 0.8;
+        }
+        
+        .absolute-img {
+            position: absolute;
+            right: var(--padding-slide);
+            bottom: calc(var(--padding-slide) + 2cqw);
+            width: 32cqw;
+            box-shadow: 0 0.5cqw 1cqw rgba(0,0,0,0.1);
+        }
+        
+        .middle-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--text-orange);
+            font-size: 2.5cqw;
+            font-weight: bold;
+            background: var(--bg-slide);
+            padding: 1cqw;
+        }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 768px) {
+            .slide {
+                aspect-ratio: auto;
+                height: auto;
+                min-height: 100vh;
+                padding: 6vw;
+                gap: 6vw;
+                justify-content: flex-start;
+            }
+
+            .grid-60-40, .grid-50-50, .grid-3, .grid-4 {
+                grid-template-columns: 1fr !important;
+                gap: 6vw;
+                margin-bottom: 6vw;
+            }
+
+            /* Responsive typography sizes using vw for natural scaling on mobile */
+            .main-title { font-size: 8vw !important; margin-bottom: 4vw !important; line-height: 1.2 !important; }
+            .main-title.small { font-size: 6.5vw !important; }
+            .subtitle-orange { font-size: 4vw !important; margin-bottom: 2vw !important; }
+            .badge-black { font-size: 3.5vw !important; padding: 2vw 4vw !important; margin-bottom: 4vw !important; }
+            
+            .top-header { font-size: 3.5vw !important; margin-bottom: 6vw !important; padding-bottom: 3vw !important; border-bottom: 1px solid #ccc !important; }
+            .bottom-footer { font-size: 3vw !important; padding-top: 5vw !important; flex-direction: column; gap: 3vw; margin-top: 8vw !important; border-top: 1px solid #ddd !important; }
+            
+            .date-text { font-size: 4vw !important; margin-bottom: 6vw !important; }
+            .text-block-bottom { font-size: 4.5vw !important; max-width: 100% !important; margin-bottom: 6vw !important; margin-top: 6vw !important; line-height: 1.6 !important; }
+            .quote-text { font-size: 5.5vw !important; line-height: 1.5 !important; }
+            
+            .feature-item, .list-item { font-size: 4vw !important; margin-bottom: 4vw !important; line-height: 1.5 !important; }
+            .list-item strong { min-width: auto; flex: 1; }
+            .list-item span { flex: 2; }
+            .feature-item .num { font-size: 3.5vw !important; margin-right: 2vw !important; }
+            .card-meta { font-size: 3.5vw !important; margin-bottom: 3vw !important; }
+            
+            /* Overrides for text sizes defined inline in cqw */
+            div[style*="font-size:"] {
+                font-size: 4vw !important;
+                line-height: 1.5 !important;
+            }
+            div[style*="font-size: 2"], div[style*="font-size: 3"], div[style*="font-size: 1.5"] {
+                font-size: 5vw !important;
+            }
+            div[style*="font-size: 6cqw"], div[style*="font-size: 7cqw"] {
+                font-size: 10vw !important;
+            }
+            
+            .card-white, .card-beige, .card-navy {
+                padding: 6vw !important;
+            }
+
+            .absolute-img {
+                position: relative !important;
+                right: auto !important; bottom: auto !important;
+                width: 100% !important;
+                margin: 6vw 0 !important;
+                box-shadow: 0 2vw 4vw rgba(0,0,0,0.1) !important;
+            }
+            .middle-icon {
+                display: none !important;
+            }
+            .section-divider {
+                margin: 6vw 0 !important;
+            }
+            .orange-line {
+                width: 15vw !important;
+                height: 1vw !important;
+                margin-bottom: 4vw !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Báo cáo phân tích chuyên sâu • 2026</span>
+            <span>01 / 17</span>
+        </div>
+        
+        <div>
+            <div class="badge-black">AI • Kinh tế học • 2026</div>
+            <div class="subtitle-orange">Vibe Coding • Kinh tế học Token • Kiến trúc tối ưu</div>
+            
+            <h1 class="main-title">
+                Khi mỗi token<br>
+                <span class="title-italic-navy">là một đồng chi phí.</span>
+            </h1>
+            
+            <div class="date-text">27/07/2026 – TRẠM COFFEE</div>
+        </div>
+        
+        <img src="file:///f:/DigiIn/lab/AI/Gemini/ocrx_token/slide_01_diagram.jpg" class="absolute-img" alt="Token Diagram">
+        
+        <div class="text-block-bottom">
+            <div class="orange-line"></div>
+            (i) Từ "lập trình theo cảm xúc" của Andrej Karpathy đến kỷ luật quản trị chi phí AI.<br>
+            (ii) Phân tích 13 repository mã nguồn mở, 15 kỹ thuật tối ưu, và landscape các model miễn phí đang định hình lại nền công nghiệp phần mềm.
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Dựa trên báo cáo "Hệ sinh thái Vibe Coding" • Đã kiểm chứng nguồn</span>
+            <span>17 slides • 6 phần</span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 1 • Dẫn nhập</span>
+            <span>02 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Định nghĩa • Nguồn gốc</div>
+        <h1 class="main-title small" style="margin-bottom: 1cqw">
+            <span style="color: var(--text-red)">"Vibe coding"</span><br>
+            Lập trình theo cảm xúc
+        </h1>
+        
+        <div class="grid-60-40" style="margin-bottom: 1cqw">
+            <div class="card-white">
+                <div class="card-meta">--- Andrej Karpathy • X.com • 02/02/2025</div>
+                <div class="quote-text">
+                    "There's a new kind of coding I call <span class="title-italic-navy" style="font-weight:bold">vibe coding</span>, where you fully give into the vibes, embrace exponentials, and forget that the code even exists."
+                </div>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:0">
+                <div class="card-beige" style="flex:1">
+                    <div class="card-meta beige-meta">Người khởi xướng</div>
+                    <div style="font-size: 2.5cqw; font-weight: 600; margin-bottom: 1cqw">Andrej Karpathy</div>
+                    <div style="font-size: 0.9cqw; color: #555">Đồng sáng lập OpenAI • Cựu Giám đốc AI Tesla</div>
+                </div>
+                <div class="card-navy" style="flex:1">
+                    <div class="card-meta navy-meta">Cập nhật • 2026</div>
+                    <div style="font-size: 1.6cqw; font-family: var(--font-serif); line-height:1.4">
+                        Karpathy đề xuất đổi tên thành<br>
+                        <span style="color: var(--text-yellow); font-style:italic">"Agentic Engineering"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); margin-bottom: 0.5cqw">3 đặc trưng cốt lõi</div>
+        <div class="section-divider" style="margin-top: 0"></div>
+        <div class="grid-3" style="margin-bottom: 1cqw">
+            <div class="feature-item"><span class="num">01</span> <strong>Ngôn ngữ tự nhiên</strong><br>thay thế cú pháp lập trình — mô tả ý định thay vì viết code.</div>
+            <div class="feature-item"><span class="num">02</span> <strong>Vòng lặp hội thoại</strong><br>với AI thay thế vòng lặp compile-debug truyền thống.</div>
+            <div class="feature-item"><span class="num">03</span> <strong>Vai trò lập trình viên</strong><br>chuyển từ người viết code sang giám sát kết quả của AI.</div>
+        </div>
+        <div class="section-divider" style="margin-bottom: 1cqw"></div>
+        
+        <div style="display: flex; justify-content: space-between; font-size: 0.8cqw; color: var(--text-gray); font-family: monospace;">
+            <span>Nguồn: Karpathy trên X (02/2025) • Business Insider • SDTimes (2026)</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 1 • Dẫn nhập</span>
+            <span>03 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange" style="margin-bottom: 3cqw">Chuyển dịch paradigm</div>
+        <h1 class="main-title small" style="margin-bottom: 4cqw">
+            Từ viết <span class="title-italic-orange">code</span> sang <span class="title-italic-navy" style="text-decoration: underline; text-decoration-color: var(--text-navy)">mô tả (prompt)</span> —định nghĩa lại vai trò của lập trình viên.
+        </h1>
+        
+        <div class="grid-50-50">
+            <div class="middle-icon">Π</div>
+            
+            <div class="card-beige">
+                <div class="card-meta beige-meta">--- Trước 2025 • Truyền thống</div>
+                <div style="font-size: 2.8cqw; font-family: var(--font-sans); font-weight:500; margin-bottom: 3cqw">
+                    Programmer as <span class="title-italic-orange">Author</span>
+                </div>
+                
+                <div class="list-item"><strong>Đầu vào</strong> <span>• Cú pháp ngôn ngữ lập trình</span></div>
+                <div class="list-item"><strong>Vòng lặp</strong> <span>• Write → Compile → Debug → Ship</span></div>
+                <div class="list-item"><strong>Kỹ năng cốt lõi</strong> <span>• Thuộc syntax, thuật toán, memory management</span></div>
+                <div class="list-item"><strong>Đơn vị năng suất</strong> <span>• Lines of Code / commit / feature</span></div>
+                <div class="list-item"><strong>Chi phí</strong> <span>• Thời gian của developer (man-hour)</span></div>
+            </div>
+            
+            <div class="card-navy">
+                <div class="card-meta navy-meta">--- Sau 2025 • Vibe Coding</div>
+                <div style="font-size: 2.8cqw; font-family: var(--font-sans); font-weight:500; margin-bottom: 3cqw">
+                    Programmer as <span class="title-italic-orange" style="color:var(--text-yellow); text-decoration:none">Curator</span>
+                </div>
+                
+                <div class="list-item"><strong>Đầu vào</strong> <span style="color:#ddd">• Ngôn ngữ tự nhiên (prompt)</span></div>
+                <div class="list-item"><strong>Vòng lặp</strong> <span style="color:#ddd">• Prompt → Review → Accept/Reject → Iterate</span></div>
+                <div class="list-item"><strong>Kỹ năng cốt lõi</strong> <span style="color:#ddd">• Context engineering, kiến trúc, xét duyệt</span></div>
+                <div class="list-item"><strong>Đơn vị năng suất</strong> <span style="color:#ddd">• Tokens • Cost per feature</span></div>
+                <div class="list-item"><strong>Chi phí</strong> <span style="color:#ddd">• Token API + review time</span></div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: Karpathy (2025) • LinkedIn / Codemotion phân tích chuyển dịch paradigm</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 2 • Kinh tế học Token</span>
+            <span>04 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Cơ chế định giá</div>
+        <h1 class="main-title small" style="margin-bottom: 1.5cqw">
+            Output đắt gấp <span style="color: var(--text-orange)">5×</span> Input — chi phí token là bất đối xứng.
+        </h1>
+        <div style="width: 5cqw; height: 0.3cqw; background-color: var(--text-orange); margin-bottom: 2cqw;"></div>
+        
+        <div style="font-size: 1.1cqw; line-height: 1.6; color: #444; max-width: 65cqw; margin-bottom: 4cqw;">
+            Các nhà cung cấp LLM hàng đầu đều áp dụng cơ chế tính phí song song: một mức giá cho token đầu vào (input/context) và một mức giá cao hơn cho token đầu ra (output). Sự bất đối xứng này định hình mọi chiến lược tối ưu chi phí.
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3cqw; flex-grow: 1; margin-bottom: 2cqw;">
+            <!-- Left side: Horizontal Bar Chart -->
+            <div style="display: flex; flex-direction: column;">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); margin-bottom: 2cqw; letter-spacing: 0.1cqw;">
+                    Claude Sonnet 4.5 • Giá chuẩn USD / 1M tokens
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 8cqw 1fr; gap: 1cqw; align-items: center; margin-bottom: 2cqw;">
+                    <div style="font-family: monospace; font-size: 1cqw;">Input</div>
+                    <div style="background: var(--text-navy); color: white; padding: 1.2cqw 1.5cqw; font-size: 1.6cqw; font-weight: bold; width: 25%;">
+                        $3
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 8cqw 1fr; gap: 1cqw; align-items: center; margin-bottom: 2cqw;">
+                    <div style="font-family: monospace; font-size: 1cqw;">Output</div>
+                    <div style="background: #c36124; color: white; padding: 1.2cqw 1.5cqw; font-size: 1.6cqw; font-weight: bold; width: 100%; display: flex; align-items: center; gap: 1.5cqw;">
+                        <span>$15</span>
+                        <span style="font-family: monospace; font-size: 0.9cqw; color: rgba(255,255,255,0.8); font-weight: normal; margin-top: 0.3cqw;">— 5× INPUT</span>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 8cqw 1fr; gap: 1cqw; align-items: center;">
+                    <div style="font-family: monospace; font-size: 1cqw;">Cache read</div>
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <div style="background: #6a8c54; color: white; padding: 1.2cqw 1.5cqw; font-size: 1.6cqw; font-weight: bold; width: 8%;">
+                            $0.30
+                        </div>
+                        <div style="font-family: monospace; font-size: 0.9cqw; color: #6a8c54; margin-left: 1cqw; white-space: nowrap;">
+                            — 10× RẺ HƠN INPUT (tiết kiệm 90%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right side: Black Card with missing text -->
+            <div style="background: #111; color: white; padding: 3cqw; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 0.5cqw 1cqw rgba(0,0,0,0.1);">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-orange); margin-bottom: 3cqw; letter-spacing: 0.1cqw;">Bài học kiến trúc</div>
+                <div style="font-size: 2.2cqw; line-height: 1.2; margin-bottom: 2cqw;">
+                    Cắt <span style="font-style: italic; color: var(--text-orange);">output</span> trước, cắt input sau.
+                </div>
+                <div style="font-size: 1.05cqw; line-height: 1.6; color: #ccc;">
+                    Yêu cầu AI trả lời "concise", dùng structured output với field names ngắn, đặt max_tokens chặt — đây là "đòn bẩy 5x" của mọi ngân sách API.
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: Anthropic Pricing Docs • CloudZero API Pricing Analysis 2026</span>
+            <span>04 / 17</span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 2 • Kinh tế học Token</span>
+            <span>05 / 17</span>
+        </div>
+        
+        <div style="font-family: monospace; font-size: 1cqw; color: var(--text-orange); letter-spacing: 0.1cqw; margin-bottom: 1.5cqw">Hai mô hình phổ biến trên thế giới</div>
+        
+        <h1 class="main-title" style="font-size: 4cqw; margin-bottom: 2cqw; font-weight: normal; color: var(--text-navy)">
+            <span class="title-italic-navy" style="color: var(--text-navy)">Model-as-a-Service</span> <span style="color: #222;">hay</span> <span style="color: var(--text-orange); font-style: italic;">Token Factory?</span>
+        </h1>
+        
+        <div style="font-size: 1.2cqw; color: #555; margin-bottom: 3cqw;">Hai kiến trúc hạ tầng đang cạnh tranh trên giá thành của <strong>token/s</strong>.</div>
+        
+        <div class="grid-50-50" style="gap: 1.5cqw; flex: 1; align-items: stretch; margin-bottom: 1.5cqw;">
+            <!-- Left Card -->
+            <div style="background: white; border-top: 0.4cqw solid var(--text-navy); padding: 2cqw; display: flex; flex-direction: column;">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-navy); margin-bottom: 1cqw;">Pattern 01 • Software layer</div>
+                <div style="font-size: 2.5cqw; font-weight: bold; font-family: var(--font-serif); margin-bottom: 1.5cqw;">Model-as-a-Service</div>
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #666; margin-bottom: 2cqw;">MaaS • "Bán quyền truy cập trí thông minh"</div>
+                
+                <div style="font-size: 1.1cqw; line-height: 1.5; color: #333; margin-bottom: 3cqw; border-bottom: 1px solid #ddd; padding-bottom: 2cqw;">
+                    Nhà cung cấp <strong>sở hữu và host</strong> model độc quyền/mở, đóng gói qua REST API. Đơn vị bán = access + capability. Hạ tầng GPU chỉ là chi tiết ẩn.
+                </div>
+                
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #888; margin-bottom: 1cqw;">Đặc trưng</div>
+                
+                <div style="display: grid; grid-template-columns: 8cqw 1fr; gap: 1cqw; row-gap: 1.5cqw; font-size: 1cqw; margin-bottom: 3cqw;">
+                    <div style="color: var(--text-navy); font-family: monospace; font-size: 0.85cqw;">TÍNH PHÍ</div><div>Per-token, phân biệt input/output</div>
+                    <div style="color: var(--text-navy); font-family: monospace; font-size: 0.85cqw;">TỐI ƯU</div><div>Chất lượng output, đa năng, context dài</div>
+                    <div style="color: var(--text-navy); font-family: monospace; font-size: 0.85cqw;">THÔNG LƯỢNG</div><div>50–200 tokens/s (GPT-4o, Sonnet 4.5)</div>
+                    <div style="color: var(--text-navy); font-family: monospace; font-size: 0.85cqw;">HẠ TẦNG</div><div>Ẩn — NVIDIA H100/H200 GPU cluster</div>
+                </div>
+                
+                <div style="margin-top: auto;">
+                    <div style="font-family: monospace; font-size: 0.9cqw; color: #888; margin-bottom: 0.5cqw;">Người chơi tiêu biểu</div>
+                    <div style="font-size: 1.1cqw;">OpenAI • Anthropic • Google DeepMind • Mistral • DeepSeek</div>
+                </div>
+            </div>
+            
+            <!-- Right Card -->
+            <div style="background: #c36124; color: white; padding: 2cqw; display: flex; flex-direction: column;">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #f2e2d9; margin-bottom: 1cqw;">Pattern 02 • Hardware layer</div>
+                <div style="font-size: 2.5cqw; font-weight: bold; margin-bottom: 1.5cqw;">Token Factory</div>
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #f2e2d9; margin-bottom: 2cqw;">"Sản xuất token với chi phí thấp nhất"</div>
+                
+                <div style="font-size: 1.1cqw; line-height: 1.5; color: white; margin-bottom: 3cqw; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2cqw;">
+                    Hạ tầng <strong>chuyên dụng cho inference</strong> — silicon custom (LPU, WSE), tối ưu throughput/watt. Chạy được nhiều model open-source, đơn vị bán = tốc độ + volume.
+                </div>
+                
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #f2e2d9; margin-bottom: 1cqw;">Đặc trưng</div>
+                
+                <div style="display: grid; grid-template-columns: 8cqw 1fr; gap: 1cqw; row-gap: 1.5cqw; font-size: 1cqw; margin-bottom: 3cqw;">
+                    <div style="color: #f2e2d9; font-family: monospace; font-size: 0.85cqw;">TÍNH PHÍ</div><div>Rẻ hơn/token • gói theo throughput tier</div>
+                    <div style="color: #f2e2d9; font-family: monospace; font-size: 0.85cqw;">TỐI ƯU</div><div>Latency cực thấp, tokens/second cực cao</div>
+                    <div style="color: #f2e2d9; font-family: monospace; font-size: 0.85cqw;">THÔNG LƯỢNG</div><div><strong>Groq 476 t/s • Cerebras 3,000 t/s</strong></div>
+                    <div style="color: #f2e2d9; font-family: monospace; font-size: 0.85cqw;">HẠ TẦNG</div><div>Lộ diện — LPU, Wafer-Scale Engine</div>
+                </div>
+                
+                <div style="margin-top: auto;">
+                    <div style="font-family: monospace; font-size: 0.9cqw; color: #f2e2d9; margin-bottom: 0.5cqw;">Người chơi tiêu biểu</div>
+                    <div style="font-size: 1.1cqw;">Groq (LPU) • Cerebras (WSE-3) • SambaNova • NVIDIA AI Factory</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Banner -->
+        <div style="background: #111; color: white; padding: 1cqw; text-align: center; font-style: italic; font-size: 1cqw; margin-bottom: 1.5cqw;">
+            Kinh tế học hội tụ: MaaS chạy trên Token Factory • Token Factory host MaaS • và biên giới đang mờ dần.
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: Red Hat MaaS docs • Cerebras • Groq • NeuReality • NVIDIA AI Factory • SemiAnalysis</span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 2 • Kinh tế học Token</span>
+            <span>06 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Chiến lược TỐI THƯỢNG • Subscription</div>
+        <h1 class="main-title small" style="margin-bottom: 3cqw; font-family: var(--font-serif); font-weight: normal;">
+            Khi nhà cung cấp <span style="color: var(--text-red); font-style: italic;">cắt máu để nuôi</span> bạn.
+        </h1>
+        
+        <div class="card-white" style="margin-bottom: 3cqw; border-left: 0.4cqw solid var(--text-navy); display: none;">
+            <!-- Removed bad OCR block to replace with correct structure -->
+        </div>
+        
+        <!-- Top Section: Black and White Boxes -->
+        <div class="grid-50-50" style="gap: 3cqw; margin-bottom: 3cqw; align-items: stretch;">
+            <!-- Black Box -->
+            <div style="background: #111; color: white; padding: 2.5cqw; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #888; margin-bottom: 1.5cqw;">--- TechSpot • 14/06/2026</div>
+                <div class="quote-text" style="color: white; font-size: 2.2cqw; margin-bottom: 2cqw;">
+                    "A $200 ChatGPT subscription could cost OpenAI <span style="color: var(--text-yellow)">$14,000</span> if you actually used it to its full potential."
+                </div>
+                <div style="font-family: monospace; font-size: 0.85cqw; color: #888;">OpenAI lỗ trên ChatGPT Plus khi usage > 11% • Claude cũng vậy</div>
+            </div>
+            
+            <!-- White Box -->
+            <div class="card-white" style="padding: 2.5cqw; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); margin-bottom: 1cqw; text-transform: uppercase">Phép tính vỡ mộng • Claude Max 20×</div>
+                <div style="font-size: 1.1cqw; line-height: 1.6; color: #444; margin-bottom: 2cqw">
+                    Gói <strong>Claude Max 20×</strong> — $200/tháng, ~225 tin nhắn/5 giờ, không giới hạn cứng total. Nếu dùng hết mức với Sonnet 4.5:
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid #eee; padding-bottom: 1cqw; margin-bottom: 1cqw;">
+                    <div style="font-family: monospace; font-size: 1cqw;">Tương đương API cost</div>
+                    <div style="font-size: 1.1cqw; font-weight: bold; color: var(--text-red)">~$1,200–3,000/tháng</div>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="font-family: monospace; font-size: 1cqw;">Trả subscription</div>
+                    <div style="font-size: 1.1cqw; font-weight: bold; color: #4ade80">$200/tháng</div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); margin-bottom: 1cqw; text-transform: uppercase">3 kịch bản arbitrage phổ biến</div>
+        
+        <!-- Bottom Section: 3 Horizontal Boxes -->
+        <div class="grid-3" style="gap: 2cqw; margin-bottom: 2cqw;">
+            <div class="card-white" style="padding: 1.5cqw; border-top: 0.4cqw solid var(--text-navy)">
+                <div style="font-size: 0.9cqw; color: var(--text-navy); font-family: monospace; margin-bottom: 1cqw">01 • Heavy User</div>
+                <div style="font-weight: bold; margin-bottom: 1cqw; font-size: 1.4cqw">Claude Code + Max 20×<br>subscription</div>
+                <div style="font-size: 0.95cqw; color: #555; line-height: 1.4; margin-bottom: 2cqw">Developer dùng agent chạy full-day thay vì trả API per-token. $200 flat vs $1,000+ API bill/tháng.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: var(--text-navy); font-weight: bold;">→ Tiết kiệm 5–10× so với API</div>
+            </div>
+            
+            <div style="background: #c36124; color: white; padding: 1.5cqw;">
+                <div style="font-size: 0.9cqw; color: #f2e2d9; font-family: monospace; margin-bottom: 1cqw">02 • Burst Coding</div>
+                <div style="font-weight: bold; margin-bottom: 1cqw; font-size: 1.4cqw">Tập trung dùng vào cửa sổ 5 giờ</div>
+                <div style="font-size: 0.95cqw; color: #f2e2d9; line-height: 1.4; margin-bottom: 2cqw">Claude Max reset quota mỗi 5h. Batch work vào phiên tập trung, cache "warm" — tận dụng cả subscription cap và prompt caching.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: #f2e2d9; font-weight: bold;">→ Tối đa 4 phiên/ngày = 900 tin</div>
+            </div>
+            
+            <div class="card-white" style="padding: 1.5cqw; border-top: 0.4cqw solid #6a8c54">
+                <div style="font-size: 0.9cqw; color: #6a8c54; font-family: monospace; margin-bottom: 1cqw">03 • Portfolio Stack</div>
+                <div style="font-weight: bold; margin-bottom: 1cqw; font-size: 1.4cqw">Kết hợp nhiều subscription + free tier</div>
+                <div style="font-size: 0.95cqw; color: #555; line-height: 1.4; margin-bottom: 2cqw">Claude Pro ($20) + Gemini Free + Groq Free + Cursor ($20). Tổng $40/tháng cho stack toàn diện thay vì $500 API.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: #6a8c54; font-weight: bold;">→ Route theo capability, không theo giá</div>
+            </div>
+        </div>
+        
+        <div style="background: #eee; padding: 0.8cqw 1cqw; font-size: 0.85cqw; color: #666;">
+            <span style="color: var(--text-orange)">⚠️ Rủi ro:</span> Anthropic đã siết cache 1-giờ (2026). Provider có thể áp weekly cap hoặc tăng giá bất cứ lúc nào.
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: Anthropic Pricing • TechSpot • Cộng đồng Vibe Coding</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 2 • Kinh tế học Token</span>
+            <span>07 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Landscape định giá • 2026</div>
+        <h1 class="main-title small" style="margin-bottom: 1.5cqw">
+            Giá LLM hiện hành — <span class="title-italic-navy">Paid</span> song hành cùng <span style="color: #6a8c54; font-style: italic;">Free tier</span>.
+        </h1>
+        
+        <div class="grid-60-40" style="gap: 3cqw; margin-bottom: 0; align-items: stretch;">
+            <!-- Left: Paid Table -->
+            <div class="card-white" style="padding: 1.5cqw; display: flex; flex-direction: column;">
+                <div class="card-meta navy-meta" style="margin-bottom: 1cqw">Paid API • USD / 1M tokens (Giá công bố mới nhất)</div>
+                
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9cqw; text-align: left; margin-bottom: 1.5cqw">
+                    <thead>
+                        <tr style="border-bottom: 0.2cqw solid #111; font-family: monospace; color: var(--text-gray)">
+                            <th style="padding: 0.8cqw 0.5cqw;">Model</th>
+                            <th style="padding: 0.8cqw 0.5cqw;">Hạng</th>
+                            <th style="padding: 0.8cqw 0.5cqw; text-align: right">Input</th>
+                            <th style="padding: 0.8cqw 0.5cqw; text-align: right">Output</th>
+                            <th style="padding: 0.8cqw 0.5cqw; text-align: right">Ratio O/I</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-family: var(--font-sans);">
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">Claude Opus 4</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Frontier</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right">$15.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$75.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">5.0×</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">GPT-4o</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Frontier</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right">$2.50</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$10.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">4.0×</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500; color: var(--text-navy)">Claude Sonnet 4.5</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Value</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; font-weight: 500">$3.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$15.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">5.0×</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">Gemini 2.5 Pro</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Value</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right">$1.25</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$10.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">8.0×</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">DeepSeek V3</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Budget</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; font-weight: 500">$0.27</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$1.10</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">4.1×</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">Claude Haiku 4.5</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Budget</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right">$1.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$5.00</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">5.0×</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">Gemini 2.5 Flash</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Budget</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right">$0.30</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$2.50</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">8.3×</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8cqw 0.5cqw; font-weight: 500">GPT-4o mini</td>
+                            <td style="padding: 0.8cqw 0.5cqw; color: #888; font-size: 0.8cqw">Budget</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right">$0.15</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">$0.60</td>
+                            <td style="padding: 0.8cqw 0.5cqw; text-align: right; color: var(--text-gray)">4.0×</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="background: var(--card-navy); color: white; padding: 1cqw; font-size: 1cqw; text-align: center; border-radius: 0.5cqw; margin-top: auto">
+                    Chênh lệch Frontier vs Budget: <strong style="color: var(--text-yellow)">~100× chi phí</strong> cho cùng tác vụ boilerplate
+                </div>
+            </div>
+            
+            <!-- Right: Free tier list -->
+            <!-- Right: Free tier list -->
+            <div style="background: #6a8c54; color: white; padding: 1.5cqw; display: flex; flex-direction: column;">
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #d0ebd0; margin-bottom: 1cqw;">--- Free tier • Ngân sách $0</div>
+                <div style="font-size: 2cqw; font-family: var(--font-serif); margin-bottom: 2cqw">Miễn phí đáng dùng nhất</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 0.8cqw; font-size: 0.9cqw">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">Google Gemini • 2.5 Flash</strong> <span style="color: #d0ebd0; font-family: monospace">1,500 req/ngày</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">Groq • Llama/Qwen/Kimi</strong> <span style="color: #d0ebd0; font-family: monospace">14,400 req/ngày</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">OpenRouter • 20+ model</strong> <span style="color: #d0ebd0; font-family: monospace">Rate limit / model</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">Mistral • La Plateforme</strong> <span style="color: #d0ebd0; font-family: monospace">~1 tỷ tokens/tháng</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">Z.ai (Zhipu GLM)</strong> <span style="color: #d0ebd0; font-family: monospace">5M tokens × 5 ngày</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">DeepSeek • Đăng ký</strong> <span style="color: #d0ebd0; font-family: monospace">5M tokens trial</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">Cerebras • Llama models</strong> <span style="color: #d0ebd0; font-family: monospace">Free tier</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">OpenAI • Data Sharing</strong> <span style="color: #d0ebd0; font-family: monospace">~11M tokens/ngày</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 0.1cqw solid rgba(255,255,255,0.2); padding-bottom: 0.5cqw">
+                        <strong style="color: white">Cohere • Command A 111B</strong> <span style="color: #d0ebd0; font-family: monospace">20 RPM</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <strong style="color: white">Kimi K2 • qua NVIDIA</strong> <span style="color: #d0ebd0; font-family: monospace">Free trial</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.8cqw; color: #d0ebd0; padding-top: 2cqw;">
+                    Chiến lược: Multi-provider routing • Prototype trên free, production trên paid
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer" style="margin-top: 1cqw">
+            <span>Nguồn: Anthropic • OpenAI • Google • Mistral • CloudZero • OpenRouter • Groq (đã kiểm chứng 07/2026)</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 2 • Kinh tế học Tokens</span>
+            <span>08 / 17</span>
+        </div>
+        
+        <div style="color: var(--text-orange); font-family: monospace; font-size: 1cqw; letter-spacing: 0.1cqw; margin-bottom: 1cqw;">Chi phí ẩn • Nợ kỹ thuật</div>
+        
+        <h1 class="main-title" style="font-size: 3.5cqw; margin-bottom: 1.5cqw; font-family: var(--font-sans); font-weight: normal; line-height: 1.2;">
+            Vibe coding <span style="color: var(--text-red); font-style: italic;">có thể tốn chi phí rất lớn</span> — 4 vấn đề gây tốn Tokens.
+        </h1>
+        
+        <div style="width: 4cqw; height: 0.3cqw; background: var(--text-red); margin-bottom: 1.5cqw"></div>
+        
+        <!-- 4 Cards -->
+        <div class="grid-4" style="flex: 1; align-items: stretch; margin-bottom: 2cqw;">
+            <!-- Card 1 -->
+            <div style="background: white; display: flex; flex-direction: column; padding: 1.5cqw; border-top: 0.3cqw solid var(--text-red); border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #eee;">
+                <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-red); margin-bottom: 1cqw">01 • Thuế Thăm dò</div>
+                <div style="font-weight: bold; font-size: 1.8cqw; margin-bottom: 1cqw; line-height: 1.1">Exploration Tax</div>
+                <div style="font-size: 0.9cqw; color: #555; line-height: 1.5; margin-bottom: 2cqw">Chi phí "trả cho việc AI hiểu sai" — mỗi lần AI tạo code sai hướng, bạn vẫn bị tính token cho cả input + output không dùng đến.</div>
+                
+                <div style="margin-top: auto;">
+                    <div style="font-size: 0.8cqw; color: #888; font-family: monospace; margin-bottom: 0.5cqw">Tác động</div>
+                    <div style="font-size: 1.1cqw; font-family: var(--font-serif)">30-50% ngân sách "chìm"</div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div style="background: white; display: flex; flex-direction: column; padding: 1.5cqw; border-top: 0.3cqw solid var(--text-red); border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #eee;">
+                <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-red); margin-bottom: 1cqw">02 • Phình ngữ cảnh</div>
+                <div style="font-weight: bold; font-size: 1.8cqw; margin-bottom: 1cqw; line-height: 1.1">Context Bloat</div>
+                <div style="font-size: 0.9cqw; color: #555; line-height: 1.5; margin-bottom: 2cqw">Agent tự động quét toàn repo mỗi lần trả lời. Việc "đọc" mã này thường chiếm phần lớn token đầu vào — cho một câu hỏi đơn lẻ.</div>
+                
+                <div style="margin-top: auto;">
+                    <div style="font-size: 0.8cqw; color: #888; font-family: monospace; margin-bottom: 0.5cqw">Tác động</div>
+                    <div style="font-size: 1.1cqw; font-family: var(--font-serif)">60–70% input tokens</div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div style="background: white; display: flex; flex-direction: column; padding: 1.5cqw; border-top: 0.3cqw solid var(--text-red); border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-left: 1px solid #eee;">
+                <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-red); margin-bottom: 1cqw">03 • Nợ kỹ thuật</div>
+                <div style="font-weight: bold; font-size: 1.8cqw; margin-bottom: 1cqw; line-height: 1.1">Frankenstein Code</div>
+                <div style="font-size: 0.9cqw; color: #555; line-height: 1.5; margin-bottom: 2cqw">Kiến trúc chắp vá từ các yêu cầu rời rạc, không có ý định thiết kế xuyên suốt → refactor tương lai đắt gấp nhiều lần.</div>
+                
+                <div style="margin-top: auto;">
+                    <div style="font-size: 0.8cqw; color: #888; font-family: monospace; margin-bottom: 0.5cqw">Tác động</div>
+                    <div style="font-size: 1.1cqw; font-family: var(--font-serif)">Chi phí sửa gấp 5–10 lần</div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div style="background: #8b3a3a; color: white; display: flex; flex-direction: column; padding: 1.5cqw;">
+                <div style="font-family: monospace; font-size: 0.8cqw; color: #ffbaba; margin-bottom: 1cqw">04 • Session mất kiểm soát</div>
+                <div style="font-weight: bold; font-size: 1.8cqw; margin-bottom: 1cqw; line-height: 1.1">Runaway Session</div>
+                <div style="font-size: 0.9cqw; color: #eee; line-height: 1.5; margin-bottom: 2cqw">Session dài lê thê không clear/compact — lịch sử hội thoại tích tụ, mỗi lượt tiếp theo trả phí cho toàn bộ quá khứ.</div>
+                
+                <div style="margin-top: auto;">
+                    <div style="font-size: 0.8cqw; color: #ffbaba; font-family: monospace; margin-bottom: 0.5cqw">Tác động</div>
+                    <div style="font-size: 1.1cqw; font-family: var(--font-serif)">Chi phí tăng theo hàm mũ</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Section: 3 Case Studies -->
+        <div style="border-top: 1px solid #ddd; padding-top: 1.2cqw; margin-bottom: 1cqw;">
+            <div style="font-family: monospace; font-size: 0.8cqw; color: #888; margin-bottom: 1cqw">3 case study thực tế</div>
+            
+            <div class="grid-3" style="gap: 2cqw; margin-bottom: 0;">
+                <div>
+                    <div style="font-size: 3cqw; font-family: var(--font-serif); color: var(--text-red); font-weight: bold; margin-bottom: 0.5cqw; line-height: 1">170M</div>
+                    <div style="font-size: 0.9cqw; line-height: 1.5; color: #444"><strong>Người dùng Cursor</strong> — tiêu tốn 170 triệu tokens chỉ trong <strong>2 ngày</strong> làm việc.</div>
+                </div>
+                <div>
+                    <div style="font-size: 3cqw; font-family: var(--font-serif); color: var(--text-red); font-weight: bold; margin-bottom: 0.5cqw; line-height: 1">$62 vs $15</div>
+                    <div style="font-size: 0.9cqw; line-height: 1.5; color: #444"><strong>Claude Code project</strong> — không kế hoạch $62, có kế hoạch giới hạn chỉ <strong>$15</strong>. Chênh 4×.</div>
+                </div>
+                <div>
+                    <div style="font-size: 3cqw; font-family: var(--font-serif); color: var(--text-red); font-weight: bold; margin-bottom: 0.5cqw; line-height: 1">$251</div>
+                    <div style="font-size: 0.9cqw; line-height: 1.5; color: #444"><strong>Một chu kỳ billing</strong> API cá nhân — hoá đơn vượt kỳ vọng vì runaway session.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: Báo cáo "Vibe Coding" — case studies từ Cursor, Claude Code users</span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 3 • Kỷ luật quản trị ngữ cảnh</span>
+            <span>09 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Toolbox tối ưu</div>
+        <h1 class="main-title small" style="margin-bottom: 2cqw">
+            15 kỹ thuật, xếp theo <span class="title-italic-orange" style="text-decoration:none; font-style:italic">% tiết kiệm</span> giảm dần.
+        </h1>
+        
+        <div style="font-family: monospace; font-size: 0.8cqw; margin-bottom: 1cqw; color: var(--text-gray)">
+            Phân tầng: <span style="display:inline-block; width:0.8cqw; height:0.8cqw; background: var(--text-navy); margin: 0 0.2cqw"></span> API &nbsp;
+            <span style="display:inline-block; width:0.8cqw; height:0.8cqw; background: var(--text-orange); margin: 0 0.2cqw"></span> Agent / Kiến trúc &nbsp;
+            <span style="display:inline-block; width:0.8cqw; height:0.8cqw; background: #6b8e23; margin: 0 0.2cqw"></span> Prompt / Output
+        </div>
+        
+        <div class="card-white" style="padding: 0; border: none; background: transparent">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.9cqw; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 0.1cqw solid #ccc; font-family: monospace; color: var(--text-gray)">
+                        <th style="padding: 0.5cqw;">#</th>
+                        <th style="padding: 0.5cqw;">Kỹ thuật</th>
+                        <th style="padding: 0.5cqw; width: 40%">Cơ chế cốt lõi</th>
+                        <th style="padding: 0.5cqw; text-align: right">Tiết kiệm</th>
+                    </tr>
+                </thead>
+                <tbody style="font-family: var(--font-sans);">
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">01</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Code Knowledge Graph</td>
+                        <td style="padding: 0.5cqw; color: #555">Index cấu trúc project → agent tra graph thay vì đọc file (case: giảm 120×)</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: #6b8e23; font-weight: bold">↓ Đến 120×</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">02</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">RAG thay Full-Context</td>
+                        <td style="padding: 0.5cqw; color: #555">Vector search truy xuất ~1K token liên quan thay vì nhồi 100K cả codebase</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: #6b8e23; font-weight: bold">↓ 10–50×</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">03</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Batch API + Prompt Cache</td>
+                        <td style="padding: 0.5cqw; color: #555">Chấp nhận trễ ≤24h cho -50%, kết hợp cache cho -95% (Anthropic/OpenAI)</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: #6b8e23; font-weight: bold">↓ 95%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">04</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Prompt Caching</td>
+                        <td style="padding: 0.5cqw; color: #555">"Burst coding" giữ cache "warm" — cache read $0.30 vs input $3 (Claude)</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: #6b8e23; font-weight: bold">↓ 90%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">05</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Semantic Caching</td>
+                        <td style="padding: 0.5cqw; color: #555">Cache theo ý nghĩa (vector embedding) → reuse cho query tương đương</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-navy); font-weight: bold">↓ 40–86%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">06</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Free-Tier Routing</td>
+                        <td style="padding: 0.5cqw; color: #555">Prototype trên Gemini/Groq/OpenRouter free → prod trên paid có kiểm soát</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-navy); font-weight: bold">↓ Đến 100%*</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">07</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Model Cascading</td>
+                        <td style="padding: 0.5cqw; color: #555">Thử Haiku/Flash trước; fallback lên Sonnet/Opus chỉ khi confidence thấp</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-navy); font-weight: bold">↓ 40–70%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">08</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Sub-agents Delegation</td>
+                        <td style="padding: 0.5cqw; color: #555">Giao dò tìm/research cho sub-agent context riêng, chỉ trả về kết quả cô đọng</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-navy); font-weight: bold">↓ 20–80%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">09</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">LLMLingua Compression</td>
+                        <td style="padding: 0.5cqw; color: #555">Small LM lọc token dư trong prompt — nén ngữ nghĩa 3–20× (Microsoft)</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-navy); font-weight: bold">↓ 3–20×</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">10</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Model Routing (Task-based)</td>
+                        <td style="padding: 0.5cqw; color: #555">DeepSeek Flash cho boilerplate, Opus cho kiến trúc — phân luồng theo độ khó</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-navy); font-weight: bold">↓ 60–80%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">11</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Structured Output tối giản</td>
+                        <td style="padding: 0.5cqw; color: #555">Field names ngắn (id thay customer_identifier) • StructLM giảm 46%</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">↓ 30–50% output</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">12</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Session Discipline (/clear /compact)</td>
+                        <td style="padding: 0.5cqw; color: #555">Dọn "dead weight" khỏi lịch sử; batch related changes trong 1 session</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">↓ 30–50%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee">
+                        <td style="padding: 0.5cqw; color: #888">13</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Output Length Control</td>
+                        <td style="padding: 0.5cqw; color: #555">Set max_tokens chặt • "concise" • tránh giải thích thừa (output đắt 5×)</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">↓ 20–40%</td>
+                    </tr>
+                    <tr style="border-bottom: 0.1cqw solid #eee; background: #fdfaf5">
+                        <td style="padding: 0.5cqw; color: #888">14</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">Lean Configuration</td>
+                        <td style="padding: 0.5cqw; color: #555">CLAUDE.md / .cursorrules dưới 50 dòng — mọi ký tự nhân với số request</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">↓ 10–25%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5cqw; color: #888">15</td>
+                        <td style="padding: 0.5cqw; font-weight: 600">30-second Planning Mode</td>
+                        <td style="padding: 0.5cqw; color: #555">Buộc AI outline kế hoạch trước khi code → giảm exploration tax</td>
+                        <td style="padding: 0.5cqw; text-align: right; color: var(--text-orange); font-weight: bold">↓ 15–30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="bottom-footer" style="margin-top: 1cqw">
+            <span>Nguồn: Anthropic docs • Microsoft LLMLingua • arXiv 2407.16833 • dev.to case study • obviousworks • pointfive • StructLM</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 3 • Kỷ luật quản trị ngữ cảnh</span>
+            <span>10 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Hai kỷ luật cốt lõi</div>
+        <h1 class="main-title small" style="margin-bottom: 2cqw">
+            <span class="title-italic-navy">Context</span> quản trị bộ nhớ, <span class="title-italic-orange" style="text-decoration:none">Harness</span> ràng buộc hành vi.
+        </h1>
+        
+        <div style="background: #111; color: white; padding: 2cqw; text-align: center; margin-bottom: 3cqw; font-size: 3.5cqw; font-family: var(--font-sans)">
+            <span style="color: var(--text-yellow)">Agent</span> = Model + <span style="font-family: var(--font-serif); font-style: italic; color: #d4af37">Harness</span>
+        </div>
+        
+        <div class="grid-50-50" style="gap: 2cqw; margin-bottom: 0;">
+            <div class="card-white" style="border-top: 0.3cqw solid var(--text-navy); padding: 2cqw; justify-content: flex-start">
+                <div class="card-meta navy-meta">Kỷ luật 01</div>
+                <div style="font-size: 2.5cqw; margin-bottom: 1.5cqw; color: var(--text-main)">Context Engineering</div>
+                <div style="font-style: italic; color: #555; font-size: 1.1cqw; margin-bottom: 2cqw">"Nghệ thuật đưa <strong>đúng thông tin</strong>, ở <strong>đúng lượng</strong>, vào đúng vị trí."</div>
+                
+                <div style="font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); margin-bottom: 1cqw; text-transform: uppercase">Trọng tâm</div>
+                <div style="display: flex; flex-direction: column; gap: 0.8cqw; font-size: 1cqw; color: #333">
+                    <div>• Chọn lọc file/section liên quan (repo-map, AST, RAG)</div>
+                    <div>• Nén ngữ nghĩa (LLMLingua, prompt compression)</div>
+                    <div>• Quản trị session lifecycle (/clear, /compact)</div>
+                    <div>• Giữ cache "warm" — burst coding</div>
+                </div>
+            </div>
+            
+            <div class="card-beige" style="background: var(--text-orange); color: white; padding: 2cqw; display: flex; flex-direction: column; justify-content: flex-start">
+                <div class="card-meta" style="color: #ffd8c4">Kỷ luật 02</div>
+                <div style="font-size: 2.5cqw; margin-bottom: 1.5cqw">Harness Engineering</div>
+                <div style="font-style: italic; color: #ffd8c4; font-size: 1.1cqw; margin-bottom: 2cqw">"Bộ khung <strong>công cụ, ràng buộc và vòng phản hồi</strong> bao quanh model."</div>
+                
+                <div style="font-family: monospace; font-size: 0.9cqw; color: #ffd8c4; margin-bottom: 1cqw; text-transform: uppercase">Trọng tâm</div>
+                <div style="display: flex; flex-direction: column; gap: 0.8cqw; font-size: 1cqw">
+                    <div>• Tool selection (ast-grep thay grep, typed tools trước)</div>
+                    <div>• Feedback loops (test, lint, type-check tự động)</div>
+                    <div>• Sub-agents với context riêng, trả về cô đọng</div>
+                    <div>• Structured output ràng buộc format</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: Karpathy — Agentic Engineering framework • Anthropic Sub-agents docs • Packmind Context Engineering</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 3 • Kỷ luật quản trị ngữ cảnh</span>
+            <span>11 / 17</span>
+        </div>
+        
+        <div class="grid-60-40" style="margin-bottom: 1cqw;">
+            <div>
+        <div class="subtitle-orange">Kỷ luật cấp process</div>
+        <h1 class="main-title" style="font-size: 3.5cqw; line-height: 1.2; margin-bottom: 1cqw">
+            Viết <span class="title-italic-navy">spec</span> tiết kiệm nhiều token hơn với kỹ thuật viết <span class="title-italic-orange">prompt.</span>
+        </h1>
+        <div class="text-block-bottom" style="margin-top: 0; max-width: 100%; font-size: 1.1cqw; margin-bottom: 2cqw; color: #555">
+            <strong>Spec-Driven Development (SDD)</strong> đảo ngược quan hệ: spec là source of truth, code là artifact sinh ra và verify được. GitHub, AWS, Anthropic đều chuẩn hoá lại workflow theo hướng này trong 2026.
+        </div>
+        
+        <div class="grid-60-40" style="margin-bottom: 2cqw; align-items: stretch">
+            <!-- Left: Workflow (White card) -->
+            <div class="card-white" style="display: flex; flex-direction: column; justify-content: space-between; padding: 2cqw;">
+                <div>
+                    <div style="font-family: monospace; font-size: 0.8cqw; color: #888; margin-bottom: 1cqw; letter-spacing: 0.1cqw">--- Workflow 4 giai đoạn • GitHub Spec Kit</div>
+                    <div style="font-size: 2.2cqw; font-weight: bold; margin-bottom: 2cqw; font-family: var(--font-sans);">
+                        Specify <span style="color: var(--text-gray)">→</span> Plan <span style="color: var(--text-gray)">→</span> Tasks <span style="color: var(--text-gray)">→</span> Implement
+                    </div>
+                    
+                    <div class="grid-4" style="gap: 1.5cqw; margin-bottom: 2cqw">
+                        <div>
+                            <div style="width: 1cqw; height: 1cqw; border-radius: 50%; background: var(--text-navy); margin-bottom: 1cqw"></div>
+                            <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-navy); margin-bottom: 0.5cqw">01 • /specify</div>
+                            <div style="font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace">Specify</div>
+                            <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">Mô tả <strong>WHAT + WHY</strong>, không đề cập HOW. Cụ thể acceptance criteria.</div>
+                        </div>
+                        <div>
+                            <div style="width: 1cqw; height: 1cqw; border-radius: 50%; background: var(--text-navy); margin-bottom: 1cqw"></div>
+                            <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-navy); margin-bottom: 0.5cqw">02 • /plan</div>
+                            <div style="font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace">Plan</div>
+                            <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">Tech stack, architecture, constraints. Human review + approve trước khi qua bước 3.</div>
+                        </div>
+                        <div>
+                            <div style="width: 1cqw; height: 1cqw; border-radius: 50%; background: var(--text-navy); margin-bottom: 1cqw"></div>
+                            <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-navy); margin-bottom: 0.5cqw">03 • /tasks</div>
+                            <div style="font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace">Tasks</div>
+                            <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">Chia task nhỏ, có dependency graph, mỗi task &lt;200 dòng code, testable độc lập.</div>
+                        </div>
+                        <div>
+                            <div style="width: 1cqw; height: 1cqw; border-radius: 50%; background: var(--text-orange); margin-bottom: 1cqw"></div>
+                            <div style="font-family: monospace; font-size: 0.8cqw; color: var(--text-orange); margin-bottom: 0.5cqw">04 • /implement</div>
+                            <div style="font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace">Implement</div>
+                            <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">AI code từ tasks đã lock. Context <strong>tối thiểu</strong>, kết quả deterministic.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #fdfaf5; padding: 1cqw; border-left: 0.3cqw solid var(--text-orange); font-style: italic; color: #555; font-size: 1cqw">
+                    <span style="color: var(--text-orange); font-family: monospace; font-style: normal; font-weight: bold; margin-right: 0.5cqw">RULE</span>
+                    Không qua giai đoạn N+1 nếu giai đoạn N chưa được human approve. Cắt vòng lặp "AI đoán sai" từ gốc.
+                </div>
+            </div>
+            
+            <!-- Right: 3 framework (Black card) -->
+            <div style="background: #111; color: white; padding: 2cqw; display: flex; flex-direction: column;">
+                <div style="font-family: monospace; font-size: 0.8cqw; color: #888; margin-bottom: 1cqw; letter-spacing: 0.1cqw">--- Landscape công cụ • 2026</div>
+                <div style="font-size: 2cqw; font-weight: bold; margin-bottom: 2cqw; font-family: var(--font-sans);">3 framework chính</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.5cqw; flex: 1; justify-content: center;">
+                    <div style="border-bottom: 1px solid #333; padding-bottom: 1.5cqw; display: flex; justify-content: space-between; align-items: flex-start">
+                        <div>
+                            <div style="color: var(--text-yellow); font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace; font-size: 1cqw">GitHub Spec Kit</div>
+                            <div style="font-size: 0.8cqw; color: #aaa">/specify /plan /tasks /implement • Copilot, Claude, Gemini CLI</div>
+                        </div>
+                        <div style="font-family: monospace; font-size: 0.7cqw; color: #666; text-align: right">OSS<br>MSFT</div>
+                    </div>
+                    
+                    <div style="border-bottom: 1px solid #333; padding-bottom: 1.5cqw; display: flex; justify-content: space-between; align-items: flex-start">
+                        <div>
+                            <div style="color: var(--text-orange); font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace; font-size: 1cqw">Kiro</div>
+                            <div style="font-size: 0.8cqw; color: #aaa">Claude-powered IDE • steering docs • MCP • hooks • human-in-the-loop mọi phase</div>
+                        </div>
+                        <div style="font-family: monospace; font-size: 0.7cqw; color: #666; text-align: right">AWS<br>IDE</div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                        <div>
+                            <div style="color: var(--text-yellow); font-weight: bold; margin-bottom: 0.5cqw; font-family: monospace; font-size: 1cqw">CLAUDE.md / AGENTS.md</div>
+                            <div style="font-size: 0.8cqw; color: #aaa">Spec inline trong repo, tự load mỗi session — nếu &lt;50 dòng</div>
+                        </div>
+                        <div style="font-family: monospace; font-size: 0.7cqw; color: #666; text-align: right">Native</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom: 4 reasons -->
+        <div>
+            <div style="font-family: monospace; font-size: 0.8cqw; color: #888; margin-bottom: 1cqw; border-bottom: 1px solid #eee; padding-bottom: 0.5cqw">Vì sao spec tiết kiệm token — 4 cơ chế</div>
+            
+            <div class="grid-4" style="gap: 2cqw;">
+                <div>
+                    <div style="font-size: 0.8cqw; font-family: monospace; color: var(--text-navy); margin-bottom: 0.5cqw">01 • KHÔNG REWORK</div>
+                    <div style="font-weight: bold; font-size: 0.95cqw; margin-bottom: 0.5cqw">Rework chi phí 5–10× prompt gốc.</div>
+                    <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">Spec locked trước implement → AI không đoán sai kiến trúc.</div>
+                </div>
+                <div>
+                    <div style="font-size: 0.8cqw; font-family: monospace; color: var(--text-navy); margin-bottom: 0.5cqw">02 • CONTEXT TỐI THIỂU</div>
+                    <div style="font-weight: bold; font-size: 0.95cqw; margin-bottom: 0.5cqw">Mỗi task &lt;200 dòng.</div>
+                    <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">AI không cần load toàn repo — chỉ file liên quan tới task hiện tại.</div>
+                </div>
+                <div>
+                    <div style="font-size: 0.8cqw; font-family: monospace; color: var(--text-navy); margin-bottom: 0.5cqw">03 • CACHE HIT CAO</div>
+                    <div style="font-weight: bold; font-size: 0.95cqw; margin-bottom: 0.5cqw">Spec ổn định = prompt prefix ổn định.</div>
+                    <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">Prompt cache đạt hit rate 90%+ suốt phase implement.</div>
+                </div>
+                <div>
+                    <div style="font-size: 0.8cqw; font-family: monospace; color: var(--text-navy); margin-bottom: 0.5cqw">04 • MODEL ROUTING KHẢ THI</div>
+                    <div style="font-weight: bold; font-size: 0.95cqw; margin-bottom: 0.5cqw">Task đã cô lập.</div>
+                    <div style="font-size: 0.85cqw; color: #555; line-height: 1.4">Boilerplate dùng Haiku/Flash, kiến trúc dùng Opus — không lo trộn lẫn context.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer" style="margin-top: auto">
+            <span>Nguồn: github/spec-kit • kiro.dev • AWS Kiro drug-discovery case • TowardsDataScience</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 4 • Hệ sinh thái OSS</span>
+            <span>12 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Landscape mã nguồn mở</div>
+        <h1 class="main-title small" style="margin-bottom: 1.5cqw">
+            15 repository • 4 nhóm chức năng • <span class="title-italic-navy">Toàn bộ đã kiểm chứng.</span>
+        </h1>
+        
+        <div class="grid-4" style="gap: 1.5cqw; margin-bottom: 2cqw; align-items: stretch;">
+            <!-- Nhóm 01 -->
+            <div class="card-white" style="padding: 1.5cqw; border-top: 0.4cqw solid var(--text-navy); display: flex; flex-direction: column;">
+                <div class="card-meta navy-meta" style="margin-bottom: 0.5cqw">Nhóm 01 • 6 repo</div>
+                <div style="font-size: 1.4cqw; font-weight: bold; margin-bottom: 1cqw; color: var(--text-main); font-family: var(--font-sans)">Repo-to-Text Packagers</div>
+                <div style="font-size: 0.8cqw; font-style: italic; color: #666; margin-bottom: 2cqw">Codebase → 1 file cho LLM</div>
+                
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.8cqw; text-align: left;">
+                    <tbody style="font-family: var(--font-sans);">
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">repomix</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">TS</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Tree-sitter compress, XML output, de-facto standard</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">gitingest</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY • Web</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">GitHub URL → text digest + token count</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">code2prompt</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">RUST</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">CLI cực nhanh, Handlebars, .promptignore</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">codefetch</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">TS</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Repo → Markdown có cấu trúc, 1 lệnh</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">ai-digest</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">TS</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Cho Claude Projects / Custom GPTs</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5cqw 0; font-weight: bold">files-to-prompt</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Unix-style, Claude XML — Simon Willison</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Nhóm 02 -->
+            <div class="card-white" style="padding: 1.5cqw; border-top: 0.4cqw solid var(--text-orange); display: flex; flex-direction: column;">
+                <div class="card-meta orange-meta" style="margin-bottom: 0.5cqw">Nhóm 02 • 4 repo</div>
+                <div style="font-size: 1.4cqw; font-weight: bold; margin-bottom: 1cqw; color: var(--text-main); font-family: var(--font-sans)">Smart Code Selectors</div>
+                <div style="font-size: 0.8cqw; font-style: italic; color: #666; margin-bottom: 2cqw">Chọn có chủ đích chỉ phần cần</div>
+                
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.8cqw; text-align: left; margin-bottom: 1cqw">
+                    <tbody style="font-family: var(--font-sans);">
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">aider</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY • ★★★</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Repo-map + AST + PageRank tự chọn context</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">ast-grep</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">RUST</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Structural search theo AST, thay text grep</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">Semgrep</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY/OCAML</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Static analysis + AI AppSec skill cho agent</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5cqw 0; font-weight: bold">treesitter-chunker</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Chunk theo "natural seams" của AST</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: auto; padding-top: 1cqw">
+                    <div style="font-family: monospace; font-size: 0.7cqw; color: #888; margin-bottom: 0.3cqw">Case study</div>
+                    <div style="font-weight: bold; font-size: 0.8cqw; color: var(--text-orange)">Tree-sitter index — giảm 50× context</div>
+                </div>
+            </div>
+            
+            <!-- Nhóm 03 -->
+            <div class="card-white" style="padding: 1.5cqw; border-top: 0.4cqw solid #6b8e23; display: flex; flex-direction: column;">
+                <div class="card-meta" style="color: #6b8e23; margin-bottom: 0.5cqw">Nhóm 03 • 4 repo</div>
+                <div style="font-size: 1.4cqw; font-weight: bold; margin-bottom: 1cqw; color: var(--text-main); font-family: var(--font-sans)">Compressors & Memory</div>
+                <div style="font-size: 0.8cqw; font-style: italic; color: #666; margin-bottom: 2cqw">Nén prompt • Bộ nhớ dài hạn</div>
+                
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.8cqw; text-align: left;">
+                    <tbody style="font-family: var(--font-sans);">
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">LLMLingua</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">MSFT • ★★★</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Nén prompt 3–20× giữ ICL, reasoning</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">context-compressor</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">AI compression cho RAG, giảm 80%</td>
+                        </tr>
+                        <tr style="border-bottom: 0.1cqw solid #eee">
+                            <td style="padding: 0.5cqw 0; font-weight: bold">Headroom</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">OSS</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Layer local giữa agent ↔ provider</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5cqw 0; font-weight: bold">graphiti</td>
+                            <td style="padding: 0.5cqw 0; color: #888; font-size: 0.6cqw; text-align: right; font-family: monospace">PY • NEW</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0 0 0.8cqw 0; color: #555">Zep • Temporal knowledge graph cho agent memory</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: auto; padding-top: 1cqw">
+                    <div style="font-family: monospace; font-size: 0.7cqw; color: #888; margin-bottom: 0.3cqw">Champion</div>
+                    <div style="font-weight: bold; font-size: 0.8cqw; color: #6b8e23">LLMLingua • Microsoft Research</div>
+                </div>
+            </div>
+            
+            <!-- Nhóm 04 -->
+            <div style="background: #111; color: white; padding: 1.5cqw; display: flex; flex-direction: column;">
+                <div style="font-family: monospace; font-size: 0.7cqw; color: #ffd8c4; margin-bottom: 0.5cqw; letter-spacing: 0.1cqw">Nhóm 04 • 1 repo • Breakthrough</div>
+                <div style="font-size: 1.4cqw; font-weight: bold; margin-bottom: 0.5cqw; font-family: var(--font-sans)">Vision Channel<br>Compression</div>
+                <div style="font-size: 0.8cqw; font-style: italic; color: #aaa; margin-bottom: 2cqw">Render text thành PNG, đọc qua vision</div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5cqw">
+                    <div style="font-size: 1cqw; font-weight: bold">pxpipe</div>
+                    <div style="font-family: monospace; font-size: 0.6cqw; color: #888; text-align: right">TS •<br>2026</div>
+                </div>
+                <div style="font-size: 0.75cqw; color: #ccc; margin-bottom: 2cqw">Local proxy nén context thành PNG trước khi gửi Claude Code</div>
+                
+                <div style="background: rgba(255,165,0,0.1); border: 1px solid rgba(255,165,0,0.3); padding: 1cqw; margin-bottom: 2cqw">
+                    <div style="font-family: monospace; font-size: 0.7cqw; color: #ffb84d; margin-bottom: 0.5cqw">Insight</div>
+                    <div style="font-size: 0.8cqw; color: #ddd; line-height: 1.4">Image token có chi phí <strong style="color: #ffb84d">cố định theo pixel</strong>, không theo lượng text bên trong.</div>
+                </div>
+                
+                <div style="font-family: monospace; font-size: 0.7cqw; color: #888; margin-bottom: 1cqw">Số liệu đo được</div>
+                
+                <div style="display: flex; gap: 1cqw; font-size: 0.75cqw; margin-bottom: 0.8cqw; border-bottom: 0.1cqw solid #333; padding-bottom: 0.5cqw">
+                    <div style="flex:1; color: #aaa">Density (chars/token)</div>
+                    <div style="font-weight: bold; color: #ffb84d; font-family: monospace">~3.1× text</div>
+                </div>
+                <div style="display: flex; gap: 1cqw; font-size: 0.75cqw; margin-bottom: 0.8cqw; border-bottom: 0.1cqw solid #333; padding-bottom: 0.5cqw">
+                    <div style="flex:1; color: #aaa">Context capacity gain</div>
+                    <div style="font-weight: bold; color: #ffb84d; font-family: monospace">4.7–5.3×</div>
+                </div>
+                <div style="display: flex; gap: 1cqw; font-size: 0.75cqw; margin-bottom: 0.8cqw; border-bottom: 0.1cqw solid #333; padding-bottom: 0.5cqw">
+                    <div style="flex:1; color: #aaa">End-to-end bill cut</div>
+                    <div style="font-weight: bold; color: #ffb84d; font-family: monospace">~60–70%</div>
+                </div>
+                <div style="display: flex; gap: 1cqw; font-size: 0.75cqw; margin-bottom: 2cqw; border-bottom: 0.1cqw solid #333; padding-bottom: 0.5cqw">
+                    <div style="flex:1; color: #aaa">SWE-bench Lite</div>
+                    <div style="font-weight: bold; color: #ffb84d; font-family: monospace">10/10 khớp</div>
+                </div>
+                
+                <div style="margin-top: auto; border-top: 1px solid #333; padding-top: 1cqw; display: flex; gap: 0.5cqw; font-family: monospace; font-size: 0.65cqw; color: #888">
+                    <div style="color: #ffb84d">⚠️ Lossy</div>
+                    <div>• byte-exact strings (hash, ID) không an toàn — recent turns luôn giữ text.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: GitHub verified • aider.chat • repomix.com • microsoft/LLMLingua • ast-grep • getzep/graphiti • teamchong/pxpipe</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 4 • Hệ sinh thái OSS</span>
+            <span>13 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Deep-dive</div>
+        <h1 class="main-title small" style="margin-bottom: 2cqw">
+            4 tool chủ chốt — <span class="title-italic-navy">cần phải ghi nhớ áp dụng.</span>
+        </h1>
+        
+        <div class="grid-50-50" style="gap: 2cqw; margin-bottom: 2cqw">
+            <div class="card-white" style="padding: 2cqw; border-left: 0.5cqw solid var(--text-navy)">
+                <div class="card-meta navy-meta">01 • Smart Selector champion • Python</div>
+                <div style="font-size: 3.5cqw; font-weight: bold; margin-bottom: 1cqw; font-family: var(--font-sans)">aider</div>
+                <div style="font-size: 1.1cqw; color: #555; line-height: 1.5; margin-bottom: 2cqw">Xây "repo-map" bằng Tree-sitter AST, chọn phần quan trọng nhất qua PageRank trên call graph. AI chỉ thấy đúng những gì cần thấy.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); border-top: 0.1cqw solid #eee; padding-top: 1cqw">
+                    <span style="color: var(--text-navy); font-weight: bold">CƠ CHẾ:</span> AST → call graph → PageRank → token budget fit
+                </div>
+            </div>
+            
+            <div class="card-white" style="padding: 2cqw; border-left: 0.5cqw solid var(--text-orange)">
+                <div class="card-meta" style="color: var(--text-orange)">02 • Packaging de-facto standard • TypeScript</div>
+                <div style="font-size: 3.5cqw; font-weight: bold; margin-bottom: 1cqw; font-family: var(--font-sans)">repomix</div>
+                <div style="font-size: 1.1cqw; color: #555; line-height: 1.5; margin-bottom: 2cqw">Đóng gói cả repo → 1 file XML/Markdown thân thiện với LLM. Tree-sitter loại bỏ chi tiết implementation, chỉ giữ signature.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: var(--text-gray); border-top: 0.1cqw solid #eee; padding-top: 1cqw">
+                    <span style="color: var(--text-orange); font-weight: bold">CƠ CHẾ:</span> Full repo → filter → compress → 1 file XML
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid-50-50" style="gap: 2cqw; margin-bottom: 2cqw">
+            <div style="background: var(--card-navy); color: white; padding: 2cqw; display: flex; flex-direction: column">
+                <div class="card-meta" style="color: #8ba4c7">03 • Compression champion • Microsoft Research</div>
+                <div style="font-size: 3.5cqw; font-weight: bold; margin-bottom: 1cqw; font-family: var(--font-sans)">LLMLingua</div>
+                <div style="font-size: 1.1cqw; color: #ddd; line-height: 1.5; margin-bottom: 2cqw">Small LM chấm điểm từng token, giữ lại chỉ những token có "mật độ thông tin cao". Nén 3–20× mà vẫn giữ ICL, reasoning.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: #8ba4c7; border-top: 0.1cqw solid rgba(255,255,255,0.2); padding-top: 1cqw">
+                    <span style="color: #ffd8c4; font-weight: bold">CƠ CHẾ:</span> Perplexity scoring → token pruning → nén 3-20x
+                </div>
+            </div>
+            
+            <div style="background: #c35c24; color: white; padding: 2cqw; display: flex; flex-direction: column">
+                <div class="card-meta" style="color: #ffd8c4">04 • Game changer 2026 • Rust</div>
+                <div style="font-size: 3.5cqw; font-weight: bold; margin-bottom: 1cqw; font-family: var(--font-sans)">ast-grep</div>
+                <div style="font-size: 1.1cqw; color: #ddd; line-height: 1.5; margin-bottom: 2cqw">Structural search theo AST thay text grep. Agent tìm chính xác — không quét 200 file rác. Anthropic recommend làm skill cho Claude.</div>
+                <div style="margin-top: auto; font-family: monospace; font-size: 0.9cqw; color: #ffd8c4; border-top: 0.1cqw solid rgba(255,255,255,0.2); padding-top: 1cqw">
+                    <span style="color: #ffd8c4; font-weight: bold">CƠ CHẾ:</span> Tree-sitter parse → pattern match theo cấu trúc
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Nguồn: aider.chat • yamadashy/repomix • microsoft/LLMLingua • ast-grep.github.io</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 5 • Tương lai</span>
+            <span>14 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">Cơ chế định giá thế hệ mới</div>
+        <h1 class="main-title small" style="margin-bottom: 3cqw">
+            Định giá đang chuyển <span class="title-italic-navy">từ token</span> sang <span class="title-italic-orange" style="text-decoration:none; font-style:italic">outcome</span>.
+        </h1>
+        
+        <!-- Timeline Line -->
+        <div style="position: relative; margin-top: 5cqw; margin-bottom: 2cqw;">
+            <div style="position: absolute; top: 0.5cqw; left: 2cqw; right: 2cqw; height: 0.2cqw; background: #333; z-index: 1"></div>
+            
+            <div class="grid-3" style="position: relative; z-index: 2; margin-bottom: 0;">
+                <!-- Phase 1 -->
+                <div>
+                    <div style="width: 1.2cqw; height: 1.2cqw; border-radius: 50%; background: #333; margin-bottom: 2cqw; margin-left: 2cqw"></div>
+                    <div class="card-meta" style="color: #888; font-family: monospace; margin-bottom: 0.5cqw">Hiện tại • 2023-2026</div>
+                    <div style="font-size: 2.5cqw; font-weight: bold; font-family: var(--font-sans); margin-bottom: 1.5cqw">Pay-per-Token</div>
+                    <div style="font-size: 1.1cqw; color: #555; line-height: 1.5; margin-bottom: 3cqw">Trả tiền cho <strong>mọi</strong> token — kể cả AI hiểu sai, phải làm lại.<br>Người dùng gánh toàn bộ rủi ro.</div>
+                    
+                    <div style="font-family: monospace; font-size: 0.9cqw; color: #888; margin-bottom: 1cqw; text-transform: uppercase">Ưu • Nhược</div>
+                    <div style="display: flex; flex-direction: column; gap: 0.8cqw; font-size: 1cqw; color: #444">
+                        <div><span style="color: #555">✓</span> Đơn giản, dễ implement</div>
+                        <div><span style="color: #555">✗</span> User trả phí cho exploration tax</div>
+                        <div><span style="color: #555">✗</span> Provider không có động lực cải thiện</div>
+                    </div>
+                </div>
+                
+                <!-- Phase 2 -->
+                <div>
+                    <div style="width: 1.2cqw; height: 1.2cqw; border-radius: 50%; background: var(--text-navy); margin-bottom: 2cqw; margin-left: 2cqw"></div>
+                    <div class="card-meta navy-meta" style="margin-bottom: 0.5cqw">Cầu nối • 2026-2027</div>
+                    <div style="font-size: 2.5cqw; font-weight: bold; font-family: var(--font-sans); margin-bottom: 1.5cqw">Pay-per-Acceptance</div>
+                    <div style="font-size: 1.1cqw; color: #555; line-height: 1.5; margin-bottom: 3cqw">Chỉ trả phí khi user <strong>chấp nhận</strong> code AI. GitHub Copilot đã thí điểm. Provider chia sẻ rủi ro.</div>
+                    
+                    <div style="font-family: monospace; font-size: 0.9cqw; color: #888; margin-bottom: 1cqw; text-transform: uppercase">Ưu • Nhược</div>
+                    <div style="display: flex; flex-direction: column; gap: 0.8cqw; font-size: 1cqw; color: #444">
+                        <div><span style="color: #555">✓</span> Chia sẻ rủi ro hai bên</div>
+                        <div><span style="color: #555">✓</span> Provider ưu tiên chất lượng</div>
+                        <div><span style="color: #555">✗</span> Khó đo "acceptance" khách quan</div>
+                    </div>
+                </div>
+                
+                <!-- Phase 3 -->
+                <div>
+                    <div style="width: 1.2cqw; height: 1.2cqw; border-radius: 50%; background: var(--text-orange); margin-bottom: 2cqw; margin-left: 2cqw"></div>
+                    <div class="card-meta" style="color: var(--text-orange); margin-bottom: 0.5cqw">Tương lai • 2027+</div>
+                    <div style="font-size: 2.5cqw; font-weight: bold; font-family: var(--font-sans); margin-bottom: 1.5cqw">Outcome-Based</div>
+                    <div style="font-size: 1.1cqw; color: #555; line-height: 1.5; margin-bottom: 3cqw">Trả phí theo <strong>kết quả</strong> — feature ship, bug fix, PR merged. AI như một freelancer thực thụ.</div>
+                    
+                    <div style="font-family: monospace; font-size: 0.9cqw; color: #888; margin-bottom: 1cqw; text-transform: uppercase">Ưu • Nhược</div>
+                    <div style="display: flex; flex-direction: column; gap: 0.8cqw; font-size: 1cqw; color: #444">
+                        <div><span style="color: #555">✓</span> Alignment tuyệt đối User ↔ AI</div>
+                        <div><span style="color: #555">✓</span> Chi phí gắn giá trị kinh doanh</div>
+                        <div><span style="color: #555">✗</span> Cần metric outcome chuẩn hoá</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="background: #111; color: white; padding: 1.5cqw; text-align: center; font-style: italic; font-size: 1.5cqw; font-family: var(--font-serif); margin-top: auto">
+            "Token là đơn vị của phép tính. <span style="color: #d4af37">Outcome</span> mới là đơn vị của kinh tế."
+        </div>
+        
+        <div class="bottom-footer" style="margin-top: 1cqw">
+            <span>Nguồn: Báo cáo "Vibe Coding" • GitHub Copilot pricing experiments • a16z LLM economics</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide">
+        <div class="top-header">
+            <span>Phần 6 • Kết luận</span>
+            <span>15 / 17</span>
+        </div>
+        
+        <div class="subtitle-orange">3 nguyên tắc vàng</div>
+        <h1 class="main-title small" style="margin-bottom: 2cqw">
+            Vibe coding <span class="title-italic-orange" style="text-decoration:none; font-style:italic">tăng tốc</span> sáng tạo — nhưng đòi hỏi kỷ luật.
+        </h1>
+        
+        <div class="grid-3" style="gap: 2cqw; margin-bottom: 2cqw">
+            <div class="card-white" style="padding: 2cqw; display: flex; flex-direction: column">
+                <div style="font-size: 7cqw; font-weight: bold; color: var(--text-navy); font-family: var(--font-sans); margin-bottom: 1cqw">01</div>
+                <div class="card-meta navy-meta" style="margin-bottom: 1cqw">Kiến trúc trước tiên</div>
+                <div style="font-size: 1.8cqw; font-family: var(--font-serif); line-height: 1.3; margin-bottom: 2cqw; color: #222">Plan-mode 30 giây tiết kiệm 30 phút debug.</div>
+                <div style="font-size: 1cqw; color: #555; line-height: 1.5">Buộc AI vẽ kế hoạch trước khi viết code. Cost planning = cost engineering. Không có phase design, không có Frankenstein code.</div>
+                <div style="margin-top: 3cqw; height: 0.2cqw; width: 3cqw; background: var(--text-navy)"></div>
+            </div>
+            
+            <div class="card-beige" style="background: var(--text-orange); color: white; padding: 2cqw; display: flex; flex-direction: column">
+                <div style="font-size: 7cqw; font-weight: bold; color: white; font-family: var(--font-sans); margin-bottom: 1cqw; opacity: 0.9">02</div>
+                <div class="card-meta" style="color: #ffd8c4; margin-bottom: 1cqw">Context là ngân sách</div>
+                <div style="font-size: 1.8cqw; font-family: var(--font-serif); line-height: 1.3; margin-bottom: 2cqw; color: white">Mỗi ký tự trong prompt được nhân với số request.</div>
+                <div style="font-size: 1cqw; color: #ffd8c4; line-height: 1.5">Áp dụng repo-map, RAG, LLMLingua để chỉ đưa <strong>đúng thông tin</strong> — không nhồi. Session /clear thường xuyên. Cache "warm" bằng burst coding.</div>
+                <div style="margin-top: 3cqw; height: 0.2cqw; width: 3cqw; background: rgba(255,255,255,0.5)"></div>
+            </div>
+            
+            <div style="background: #111; color: white; padding: 2cqw; display: flex; flex-direction: column">
+                <div style="font-size: 7cqw; font-weight: bold; color: #d4af37; font-family: var(--font-sans); margin-bottom: 1cqw">03</div>
+                <div class="card-meta" style="color: #888; margin-bottom: 1cqw">Danh mục Model</div>
+                <div style="font-size: 1.8cqw; font-family: var(--font-serif); line-height: 1.3; margin-bottom: 2cqw; color: white">Không có một model phù hợp mọi task.</div>
+                <div style="font-size: 1cqw; color: #aaa; line-height: 1.5">Prototype trên free tier (Gemini Flash, Groq). Boilerplate với Haiku/Flash. Chỉ dùng Opus/GPT-4 cho kiến trúc phức tạp. Chênh chi phí có thể đến 100×.</div>
+                <div style="margin-top: 3cqw; height: 0.2cqw; width: 3cqw; background: #d4af37"></div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; font-style: italic; font-size: 1.2cqw; color: #333; margin-top: auto; padding: 2cqw 0">
+            "Từ programmer as author sang programmer as curator — <strong>chưa bao giờ kỷ luật lại đắt giá đến vậy.</strong>"
+        </div>
+        
+        <div class="bottom-footer">
+            <span>Tổng hợp từ báo cáo + kiểm chứng đa nguồn 2026</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide" style="background: #f7f3ed">
+        <div class="top-header">
+            <span>Phụ lục • Nguồn kiểm chứng</span>
+            <span>16 / 17</span>
+        </div>
+        
+        <h1 class="main-title" style="margin-bottom: 1cqw; font-size: 3.5cqw">Nguồn tham khảo</h1>
+        <div style="font-size: 1.1cqw; color: #555; margin-bottom: 3cqw">Mọi số liệu, tên tool và tuyên bố kỹ thuật đều được đối chiếu với ít nhất 2 nguồn công khai.</div>
+        
+        <div class="grid-3" style="gap: 2cqw; font-size: 0.8cqw; color: #666; font-family: var(--font-sans); line-height: 1.4">
+            
+            <!-- Column 1 -->
+            <div>
+                <div style="font-family: monospace; font-size: 0.85cqw; color: var(--text-navy); border-bottom: 0.1cqw solid var(--text-navy); padding-bottom: 0.5cqw; margin-bottom: 1cqw; text-transform: uppercase">Định nghĩa & Nguồn gốc</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[1]</strong> Karpathy A. (02/02/2025). "Vibe coding" — nguyên văn trên X.<br><span style="color: #999; font-size: 0.7cqw">x.com/karpathy/status/1886192184808149383</span></div>
+                <div style="margin-bottom: 0.8cqw"><strong>[2]</strong> Business Insider (12/2025). Karpathy year-in-review LLMs.<br><span style="color: #999; font-size: 0.7cqw">businessinsider.com/andrej-karpathy-...</span></div>
+                <div style="margin-bottom: 0.8cqw"><strong>[3]</strong> SDTimes (2026). "Vibe coding → Agentic Engineering".<br><span style="color: #999; font-size: 0.7cqw">sdtimes.com/ai/andrej-karpathy-...</span></div>
+                <div style="margin-bottom: 2cqw"><strong>[4]</strong> Codemotion. "Rise of Vibe Coding".<br><span style="color: #999; font-size: 0.7cqw">codemotion.com/magazine/ai-ml/vibe-coding</span></div>
+                
+                <div style="font-family: monospace; font-size: 0.85cqw; color: var(--text-navy); border-bottom: 0.1cqw solid var(--text-navy); padding-bottom: 0.5cqw; margin-bottom: 1cqw; text-transform: uppercase">Định giá LLM</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[5]</strong> Anthropic Pricing Docs.<br><span style="color: #999; font-size: 0.7cqw">platform.claude.com/docs/en/about-claude/pricing</span></div>
+                <div style="margin-bottom: 0.8cqw"><strong>[6]</strong> CloudZero. Claude API Pricing 2026 breakdown.<br><span style="color: #999; font-size: 0.7cqw">cloudzero.com/blog/claude-api-pricing</span></div>
+                <div style="margin-bottom: 2cqw"><strong>[7]</strong> OpenAI, Google, Mistral, DeepSeek pricing pages.</div>
+                
+                <div style="font-family: monospace; font-size: 0.85cqw; color: var(--text-navy); border-bottom: 0.1cqw solid var(--text-navy); padding-bottom: 0.5cqw; margin-bottom: 1cqw; text-transform: uppercase">Hạ tầng • Subscription</div>
+                <div><strong>[33]</strong> Red Hat — What is Model-as-a-Service</div>
+                <div><strong>[34]</strong> NeuReality — Rise of AI Token Factory</div>
+                <div><strong>[35]</strong> Cerebras • Groq benchmarks • SemiAnalysis</div>
+                <div><strong>[36]</strong> TechSpot (06/2026) — $200 ChatGPT vs $14K cost</div>
+                <div><strong>[37]</strong> Sam Altman on X — Losing money on Pro</div>
+                <div><strong>[38]</strong> Anthropic Claude Pricing — Pro/Max plans</div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <div style="font-family: monospace; font-size: 0.85cqw; color: var(--text-orange); border-bottom: 0.1cqw solid var(--text-orange); padding-bottom: 0.5cqw; margin-bottom: 1cqw; text-transform: uppercase">Repositories mã nguồn mở</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[8]</strong> aider — Aider-AI/aider • aider.chat/docs/repomap.html</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[9]</strong> repomix — yamadashy/repomix • repomix.com</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[10]</strong> gitingest — gitingest.com</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[11]</strong> code2prompt — raphaelmansuy/code2prompt</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[12]</strong> LLMLingua — microsoft/LLMLingua • llmlingua.com</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[13]</strong> files-to-prompt — simonw/files-to-prompt</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[14]</strong> codefetch — regenrek/codefetch</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[15]</strong> ai-digest — khromov/ai-digest</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[16]</strong> ast-grep — ast-grep.github.io</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[17]</strong> Semgrep — semgrep.dev</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[18]</strong> treesitter-chunker — Consiliency/treesitter-chunker</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[19]</strong> context-compressor — Huzaifa785/context-compressor</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[20]</strong> Headroom — karvedigital.com</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[39]</strong> graphiti — getzep/graphiti (temporal knowledge graph)</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[40]</strong> pxpipe — teamchong/pxpipe (vision compression)</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[41]</strong> GitHub Spec Kit — github/spec-kit</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[42]</strong> Kiro (AWS) — kiro.dev • spec-driven IDE</div>
+                <div style="margin-bottom: 0.5cqw"><strong>[43]</strong> AWS drug-discovery case — 95% code, 80h saved</div>
+            </div>
+            
+            <!-- Column 3 -->
+            <div>
+                <div style="font-family: monospace; font-size: 0.85cqw; color: #6b8e23; border-bottom: 0.1cqw solid #6b8e23; padding-bottom: 0.5cqw; margin-bottom: 1cqw; text-transform: uppercase">Kỹ thuật & Free-tier</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[21]</strong> Anthropic Prompt Caching — 90% cost cut.<br><span style="color: #999; font-size: 0.7cqw">platform.claude.com/docs/build-with-claude/prompt-caching</span></div>
+                <div style="margin-bottom: 0.8cqw"><strong>[22]</strong> Anthropic Batch API — 50% off.<br><span style="color: #999; font-size: 0.7cqw">venturebeat.com/infrastructure/anthropic-batch</span></div>
+                <div style="margin-bottom: 0.8cqw"><strong>[23]</strong> Semantic Caching — arXiv 2411.05276.</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[24]</strong> RAG vs Long Context — arXiv 2407.16833.</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[25]</strong> Code Knowledge Graph 120× — dev.to case.</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[26]</strong> Free LLM APIs 2026 — klymentiev.com/blog/free-llm-api</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[27]</strong> Groq Free Tier — getaiperks.com/en/ai/groq-free-tier-2026</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[28]</strong> OpenRouter Free Models — openrouter.ai/collections/free-models</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[29]</strong> Mistral Free — mistral.ai/pricing</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[30]</strong> Z.ai / Zhipu GLM — zcode.z.ai/en/docs/configuration</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[31]</strong> Sub-agents efficiency — code.claude.com/docs/agent-teams</div>
+                <div style="margin-bottom: 0.8cqw"><strong>[32]</strong> StructLM — nadeesha/structlm (46% giảm output)</div>
+            </div>
+            
+        </div>
+        
+        <div class="bottom-footer" style="margin-top: auto">
+            <span>Toàn bộ URL đã verify tại thời điểm 07/2026 • 43 nguồn primary + authoritative secondary</span>
+            <span></span>
+        </div>
+    </div>
+    
+
+    <div class="slide" style="padding: 0; background: #fff">
+        <!-- We use an absolute path for the image from new_pdf_images/page_17.jpg to ensure it renders -->
+        <img src="./scratch/slides/slide_17.jpg" style="width: 100%; height: 100%; object-fit: cover" alt="Demo hệ thống" />
+    </div>
+    
+
+    <div class="slide" style="background: #111; color: white">
+        <div class="top-header" style="border-bottom: 0.1cqw solid rgba(255,255,255,0.3)">
+            <span style="color: #aaa">Hết báo cáo • Cảm ơn</span>
+            <span style="color: #aaa">17 / 17</span>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center">
+            <div style="font-family: var(--font-serif); font-size: 2.5cqw; font-style: italic; color: #bbb; max-width: 60cqw; line-height: 1.4; margin-bottom: 2cqw">
+                "There's a new kind of coding I call <span style="color: #6495ed">vibe coding</span>, <br/>
+                where you fully give in to the vibes..."
+            </div>
+            <div style="font-family: monospace; font-size: 1.2cqw; color: #888; margin-bottom: 5cqw">
+                —— Andrej Karpathy, 02/2025
+            </div>
+            
+            <div style="font-family: var(--font-serif); font-size: 6cqw; line-height: 1.2">
+                ...nhưng đừng quên <br/>
+                <span style="font-style: italic; color: #d4af37">hoá đơn cuối tháng.</span>
+            </div>
+            <div style="width: 5cqw; height: 0.2cqw; background: #d4af37; margin-top: 3cqw"></div>
+        </div>
+        
+        <div class="bottom-footer" style="border-top: 0.1cqw solid rgba(255,255,255,0.3)">
+            <span style="color: #888">Vibe Coding • Kinh tế Token • Kiến trúc tối ưu • 2026</span>
+            <span style="color: #888">Fin.</span>
+        </div>
+    </div>
+    
+</body>
+</html>
