@@ -8,6 +8,7 @@ const http=require('http');
 (async()=>{
  const browser=await chromium.launch(launchOptions({args:['--no-first-run','--disable-gpu']}));
  const context=await browser.newContext({viewport:{width:1440,height:1000}});
+ await context.addInitScript(()=>{window.OXFORD_AUDIO={enabled:false}});
  const page=await context.newPage();
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  const results=[];

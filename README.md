@@ -1,5 +1,9 @@
 # Oxford Discover 4 — Unit 1–3 review
 
+Merriam-Webster is now the default vocabulary audio provider. In `web/dictionary-config.js`, replace the `MW_CONFIG.MW_API_KEY` placeholder `8xxx` with an Intermediate Dictionary key and keep `REFERENCE: 'sd3'`, then rebuild. Placeholder/missing keys fall back to browser speech. MW spelling suggestions are not played as the requested word. Direct frontend keys are visible in the built page; use a server proxy for confidential keys. MW audio URL rules follow https://dictionaryapi.com/products/json. IPA and child-friendly definitions remain the authored book-based content. Live MW authentication has not been tested without a real key.
+
+Dictionary vocabulary audio is configured in `web/dictionary-config.js`; rebuild after changing it. The default Free Dictionary API needs no key. Optional proxy settings accept an endpoint returning dictionary-compatible phonetics and a public/restricted client token; secret provider keys belong on that proxy server. Vocabulary prefers a US recording when the URL identifies it, otherwise an available recording, then browser TTS. Sentences/readings use browser TTS. Only the clicked word is sent for dictionary lookup; written notes are not sent. All configuration and audio code are embedded in the built HTML, so Pages still needs only `index.html`.
+
 Open `index.html` locally or upload that file to GitHub Pages. It embeds all lesson data, pictures, styles and scripts. No build is needed to view the downloaded page.
 
 ## Rebuild and verify

@@ -57,3 +57,6 @@ document.addEventListener('click',event=>{const button=event.target.closest('[da
 
 const priorClassActivity=renderActivity;
 renderActivity=function(u){const base=priorClassActivity(u);const c=DATA.classwork?.[u.id]?.[state.tab];if(!c)return base;return base+`<section class="panel classwork-panel"><div class="eyebrow">CLASSROOM CONNECTION</div><h3>${esc(c.title)}</h3>${vi(c.vi)}<ol>${c.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>${vi(c.help)}${answerBox(`u${u.id}-class-${state.tab}`,isHybrid()?'My draft / '+String.fromCharCode(66,7843,110,32,110,104,225,112,32,99,7911,97,32,101,109):'My draft',c.prompt)}<p class="classwork-source">Class diary: ${esc(c.source)} ? Authored practice, no automatic grading</p></section>`};
+
+const dictionaryLinkedCard=renderCard;
+renderCard=function(v){let card=dictionaryLinkedCard(v);if(state.studyMode==='recall'&&!state.revealed.has(v.id))return card;const link=`<a class="dictionary-link" href="https://www.merriam-webster.com/dictionary/${encodeURIComponent(v.word)}" target="_blank" rel="noopener noreferrer" aria-label="Open Merriam-Webster for ${esc(v.word)}">Merriam-Webster ↗</a>`;return card.replace('<div class="card-bottom">',link+'<div class="card-bottom">')};

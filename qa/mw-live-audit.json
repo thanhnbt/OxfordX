@@ -1,0 +1,1093 @@
+[
+  {
+    "word": "moon",
+    "entries": [
+      {
+        "id": "moon:1",
+        "headword": "moon",
+        "audio": [
+          "moon0001"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "moon:2",
+        "headword": "moon",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "full moon",
+        "headword": "full moon",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "half-moon",
+        "headword": "half-moon",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "harvest moon",
+        "headword": "harvest moon",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "new moon",
+        "headword": "new moon",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "asteroid",
+    "entries": [
+      {
+        "id": "asteroid",
+        "headword": "as*ter*oid",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "asteroid belt",
+        "headword": "asteroid belt",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "comet",
+    "entries": [
+      {
+        "id": "comet",
+        "headword": "com*et",
+        "audio": [
+          "comet001"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "meteorite",
+    "entries": [
+      {
+        "id": "meteorite",
+        "headword": "me*te*or*ite",
+        "audio": [
+          "meteor04"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "solar system",
+    "entries": [
+      {
+        "id": "solar system",
+        "headword": "solar system",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "stars",
+    "entries": [
+      {
+        "id": "star:1",
+        "headword": "star",
+        "audio": [
+          "star0001"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "star:2",
+        "headword": "star",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "starred"
+          },
+          {
+            "if": "star*ring"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "Stars and Bars",
+        "headword": "Stars and Bars",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "Stars and Stripes",
+        "headword": "Stars and Stripes",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "binary star",
+        "headword": "binary star",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "brittle star",
+        "headword": "brittle star",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "Dog Star",
+        "headword": "Dog Star",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "double star",
+        "headword": "double star",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "evening star",
+        "headword": "evening star",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "falling star",
+        "headword": "falling star",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "galaxy",
+    "entries": [
+      {
+        "id": "galaxy",
+        "headword": "gal*axy",
+        "audio": [
+          "galaxy01"
+        ],
+        "inflections": [
+          {
+            "il": "plural",
+            "if": "gal*ax*ies"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "Milky Way galaxy",
+        "headword": "Milky Way galaxy",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "universe",
+    "entries": [
+      {
+        "id": "universe",
+        "headword": "uni*verse",
+        "audio": [
+          "univer10"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "island universe",
+        "headword": "island universe",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "spacecraft",
+    "entries": [
+      {
+        "id": "spacecraft",
+        "headword": "space*craft",
+        "audio": [
+          "spacec01"
+        ],
+        "inflections": [
+          {
+            "il": "plural",
+            "if": "spacecraft"
+          }
+        ],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "telescope",
+    "entries": [
+      {
+        "id": "telescope:1",
+        "headword": "tele*scope",
+        "audio": [
+          "telesc01"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "telescope:2",
+        "headword": "telescope",
+        "audio": [],
+        "inflections": [
+          {
+            "ifc": "-scoped",
+            "if": "telescoped"
+          },
+          {
+            "ifc": "-scop*ing",
+            "if": "telescop*ing"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "radio telescope",
+        "headword": "radio telescope",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "reflecting telescope",
+        "headword": "reflecting telescope",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "refracting telescope",
+        "headword": "refracting telescope",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "observatory",
+    "entries": [
+      {
+        "id": "observatory",
+        "headword": "ob*ser*va*to*ry",
+        "audio": [
+          "observ08"
+        ],
+        "inflections": [
+          {
+            "il": "plural",
+            "ifc": "-ries",
+            "if": "ob*ser*va*to*ries"
+          }
+        ],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "astronomer",
+    "entries": [
+      {
+        "id": "astronomy",
+        "headword": "as*tron*o*my",
+        "audio": [
+          "astron11"
+        ],
+        "inflections": [
+          {
+            "il": "plural",
+            "ifc": "-mies",
+            "if": "as*tron*o*mies"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "radio astronomy",
+        "headword": "radio astronomy",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "space probe",
+    "entries": [],
+    "suggestions": true,
+    "response_type": "list"
+  },
+  {
+    "word": "core",
+    "entries": [
+      {
+        "id": "CORE",
+        "headword": "CORE",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "core:1",
+        "headword": "core",
+        "audio": [
+          "core0001"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "core:2",
+        "headword": "core",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "cored"
+          },
+          {
+            "if": "cor*ing"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "hard core",
+        "headword": "hard core",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "gravity",
+    "entries": [
+      {
+        "id": "gravity",
+        "headword": "grav*i*ty",
+        "audio": [
+          "gravit07"
+        ],
+        "inflections": [
+          {
+            "il": "plural",
+            "ifc": "-ties",
+            "if": "grav*i*ties"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "acceleration of gravity",
+        "headword": "acceleration of gravity",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "center of gravity",
+        "headword": "center of gravity",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "specific gravity",
+        "headword": "specific gravity",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "zero gravity",
+        "headword": "zero gravity",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "orbit",
+    "entries": [
+      {
+        "id": "orbit:1",
+        "headword": "or*bit",
+        "audio": [
+          "orbit001"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "orbit:2",
+        "headword": "orbit",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "orbit:3",
+        "headword": "orbit",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "matter",
+    "entries": [
+      {
+        "id": "matter:1",
+        "headword": "mat*ter",
+        "audio": [
+          "matter01"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "matter:2",
+        "headword": "matter",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "matter of course",
+        "headword": "matter of course",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "matter-of-fact",
+        "headword": "mat*ter-of-fact",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "gray matter",
+        "headword": "gray matter",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "subject matter",
+        "headword": "subject matter",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "white matter",
+        "headword": "white matter",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "conservation of mass",
+        "headword": "conservation of mass",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "distance",
+    "entries": [
+      {
+        "id": "distance:1",
+        "headword": "dis*tance",
+        "audio": [
+          "distan01"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "distance:2",
+        "headword": "distance",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "dis*tanced"
+          },
+          {
+            "if": "dis*tanc*ing"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "distance:3",
+        "headword": "distance",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "long-distance:1",
+        "headword": "long-dis*tance",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "long-distance:2",
+        "headword": "long-distance",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "long distance",
+        "headword": "long distance",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "keep:1",
+        "headword": "keep",
+        "audio": [
+          "keep0001"
+        ],
+        "inflections": [
+          {
+            "if": "kept",
+            "prs": [
+              {
+                "mw": "ˈkept",
+                "sound": {
+                  "audio": "kept0001"
+                }
+              }
+            ]
+          },
+          {
+            "if": "keep*ing"
+          }
+        ],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "diameter",
+    "entries": [
+      {
+        "id": "diameter",
+        "headword": "di*am*e*ter",
+        "audio": [
+          "diamet01"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "surface",
+    "entries": [
+      {
+        "id": "surface:1",
+        "headword": "sur*face",
+        "audio": [
+          "surfac01"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "surface:2",
+        "headword": "surface",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "sur*faced"
+          },
+          {
+            "if": "sur*fac*ing"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "surface tension",
+        "headword": "surface tension",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "scratch:1",
+        "headword": "scratch",
+        "audio": [
+          "scratc01"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "craters",
+    "entries": [
+      {
+        "id": "crater",
+        "headword": "cra*ter",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "unique",
+    "entries": [
+      {
+        "id": "unique",
+        "headword": "unique",
+        "audio": [
+          "unique01"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "army",
+    "entries": [
+      {
+        "id": "army",
+        "headword": "ar*my",
+        "audio": [
+          "army0001"
+        ],
+        "inflections": [
+          {
+            "il": "plural",
+            "if": "ar*mies"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "army ant",
+        "headword": "army ant",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "general of the army",
+        "headword": "general of the army",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "sergeant major of the army",
+        "headword": "sergeant major of the army",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "soldiers",
+    "entries": [
+      {
+        "id": "soldier:1",
+        "headword": "sol*dier",
+        "audio": [
+          "soldie01"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "soldier:2",
+        "headword": "soldier",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "sol*diered"
+          },
+          {
+            "if": "sol*dier*ing",
+            "prs": [
+              {
+                "mw": "ˌsōlj-(ə-)riŋ",
+                "sound": {
+                  "audio": "soldie04"
+                }
+              }
+            ]
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "foot soldier",
+        "headword": "foot soldier",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "uniform",
+    "entries": [
+      {
+        "id": "uniform:1",
+        "headword": "uni*form",
+        "audio": [
+          "unifor01"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "uniform:2",
+        "headword": "uniform",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "uniform:3",
+        "headword": "uniform",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "uniform resource locator",
+        "headword": "uniform resource locator",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "URL",
+        "headword": "URL",
+        "audio": [
+          "url0001s"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "emperor",
+    "entries": [
+      {
+        "id": "emperor",
+        "headword": "em*per*or",
+        "audio": [
+          "empero01"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "armor",
+    "entries": [
+      {
+        "id": "armor",
+        "headword": "ar*mor",
+        "audio": [
+          "armor001"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "treasure",
+    "entries": [
+      {
+        "id": "treasure:1",
+        "headword": "trea*sure",
+        "audio": [
+          "treasu03",
+          "treasu02"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "treasure:2",
+        "headword": "treasure",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "trea*sured"
+          },
+          {
+            "if": "trea*sur*ing",
+            "prs": [
+              {
+                "mw": "-(ə-)riŋ",
+                "sound": {
+                  "audio": "treasu04"
+                }
+              }
+            ]
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "treasure trove",
+        "headword": "treasure trove",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "archaeologist",
+    "entries": [
+      {
+        "id": "archaeology",
+        "headword": "ar*chae*ol*o*gy",
+        "audio": [],
+        "inflections": [],
+        "variants": [
+          {
+            "vl": "or",
+            "va": "ar*che*ol*o*gy",
+            "prs": [
+              {
+                "mw": "ˌär-kē-ˈäl-ə-jē",
+                "sound": {
+                  "audio": "archae03"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "tomb",
+    "entries": [
+      {
+        "id": "tomb",
+        "headword": "tomb",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "jade",
+    "entries": [
+      {
+        "id": "jade:1",
+        "headword": "jade",
+        "audio": [
+          "jade0001"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "jade:2",
+        "headword": "jade",
+        "audio": [],
+        "inflections": [
+          {
+            "if": "jad*ed"
+          },
+          {
+            "if": "jad*ing"
+          }
+        ],
+        "variants": []
+      },
+      {
+        "id": "jade:3",
+        "headword": "jade",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "jade green",
+        "headword": "jade green",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "clay",
+    "entries": [
+      {
+        "id": "clay",
+        "headword": "clay",
+        "audio": [
+          "clay0001"
+        ],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "clay pigeon",
+        "headword": "clay pigeon",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      },
+      {
+        "id": "china clay",
+        "headword": "china clay",
+        "audio": [],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  },
+  {
+    "word": "peasant",
+    "entries": [
+      {
+        "id": "peasant",
+        "headword": "peas*ant",
+        "audio": [
+          "peasan01"
+        ],
+        "inflections": [],
+        "variants": []
+      }
+    ],
+    "suggestions": false,
+    "response_type": "list"
+  }
+]

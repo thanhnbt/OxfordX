@@ -367,6 +367,7 @@ body{font-family:"Segoe UI",Arial,sans-serif;font-size:16px;background:var(--pap
  }
 }
 @media screen{.classwork-panel{margin-top:16px}.classwork-panel h3{margin:6px 0}.classwork-panel ol{padding-left:24px;margin:12px 0;font-size:17px;line-height:1.6}.classwork-panel li+li{margin-top:6px}.classwork-panel .classwork-source{font-size:12px;color:#61718a;margin:8px 0 0;overflow-wrap:anywhere}}
+@media screen{.dictionary-link{display:inline-block;font-size:13px;font-weight:600;color:#3b5688;text-underline-offset:3px;margin-top:3px;padding:5px 0}.dictionary-link:hover{color:#213b71}.dictionary-link:focus-visible{outline:3px solid #b16c24;outline-offset:3px}}
 </style>
 </head>
 <body>
@@ -432,7 +433,7 @@ function updateVoices(){voices=availableVoices();const select=$('#voice-select')
 function stopSpeech(){speechToken++;if(hasSpeech())speechSynthesis.cancel();activeUtterance=null}
 async function speak(text){if(!hasSpeech()){toast('Voice is not available here. Use the sound clues and ask a grown-up to help.');return}stopSpeech();const token=speechToken;voices=availableVoices();if(!voices.length){await new Promise(resolve=>{let timer;const handler=()=>{speechSynthesis.removeEventListener('voiceschanged',handler);clearTimeout(timer);resolve()};speechSynthesis.addEventListener('voiceschanged',handler);timer=setTimeout(handler,1500) });voices=availableVoices()}if(token!==speechToken)return;if(!voices.length){toast('No English voice is ready. Ask a grown-up to check Audio.');return}const utterance=new SpeechSynthesisUtterance(text);utterance.voice=voices.find(v=>v.voiceURI===progress.voice)||voices.find(v=>/^en-US$/i.test(v.lang))||voices[0];utterance.lang=utterance.voice.lang;utterance.rate=Number(progress.rate)||.8;utterance.pitch=1;utterance.onerror=e=>{if(!['canceled','interrupted'].includes(e.error))toast('The voice could not play. Try another English voice in Audio.')};activeUtterance=utterance;speechSynthesis.speak(utterance)}
 if(hasSpeech())speechSynthesis.addEventListener('voiceschanged',updateVoices);
-function renderParent(){const counts=DATA.units.map(u=>{const book=u.vocabulary.filter(v=>v.visual_role!=='authored-support-diagram').length;return `<tr><td>Unit ${u.id}</td><td>${u.source_pages.vocabulary}</td><td>${u.student_book_page||({1:8,2:16,3:28}[u.id])}</td><td>${u.grammar_name} · TG ${u.grammar_page}</td><td>${book}/11 book crops; ${11-book} support diagrams</td></tr>`}).join('');$('#parent-body').innerHTML=`<p><strong>Learner:</strong> 9 years old · Grade 4 ESL. This is a book-based review, not a record of actual class sessions.</p><p><strong>Source:</strong> ${esc(DATA.source.edition)}. Supplied PDF: ${esc(DATA.source.file)}.</p><p class="mini muted">PDF page numbers match the printed Teacher’s Guide numbers in the inspected scope. A reproduced Student Book spread is a different page reference.</p><div class="table-scroll"><table class="parent-table"><thead><tr><th>Unit</th><th>Vocab PDF/TG</th><th>Student Book</th><th>Grammar</th><th>Vocabulary images</th></tr></thead><tbody>${counts}</tbody></table></div><details><summary><strong>Source map for each strand</strong></summary>${DATA.units.map(u=>`<p class="mini"><strong>Unit ${u.id}</strong>: reading ${u.reading_pages.join('–')}; grammar ${u.grammar_page}; speaking ${u.speaking_page}; writing ${u.writing_page}; word study ${u.word_study.page}; listening script ${u.listening_page}. All references are PDF/TG pages.</p>`).join('')}</details><details><summary><strong>Image provenance & limitations</strong></summary><p class="mini">Unit 1 and Unit 3: 11 original vocabulary pictures each. Unit 2: six supporting book pictures, including a telescope user reused from Unit 1; these are context clues, not dedicated headword pictures. Five neutral diagrams are authored learning aids. The original image of a telescope user does not establish that the pictured person is an astronomer. Surface/craters share a relevant moon image.</p><div class="table-scroll"><table class="parent-table"><thead><tr><th>Word / visual</th><th>Source PDF</th><th>Visual role</th></tr></thead><tbody>${DATA.assets.map(a=>`<tr><td>${esc(a.id)}</td><td>${a.pdf_page_1based||'Authored'}</td><td>${esc(a.match_status)}</td></tr>`).join('')}</tbody></table></div></details><details><summary><strong>Content & pronunciation notes</strong></summary><p class="mini">The short reading reviews, definitions, examples, practice listening passages and questions are authored adaptations based on the supplied source. They do not reproduce the full Student Book texts. All 33 core words, 12 context words and 18 word-study items are included. The paired review/project for Units 1–2 is represented through compare/contrast and drawing choices; this page does not reproduce the full workbook or model-building assignment. Unit 4 is outside scope.</p><p class="mini">IPA is an American-English learning transcription. Sound-it-out is approximate and uses uppercase for primary stress; it does not replace listening. Dictionary reference for the difficult word <a href="https://dictionary.cambridge.org/us/pronunciation/english/archaeologist" target="_blank" rel="noopener">archaeologist</a>. No dictionary API key is included. This portable version uses exact-text browser TTS. Voice availability, quality and offline support depend on the device. English voices are required; no unrelated headword audio is substituted.</p><p class="mini">Science numbers are used as book practice context, not current reference data. The “closed tomb” statement refers to the reading. No extra Wonders/CLC material is included.</p></details><details><summary><strong>Answer keys & open-response guidance</strong></summary>${DATA.units.map(u=>`<h3 style="margin-top:16px">Unit ${u.id}</h3><ol class="mini">${u.quiz.map(([q,opts,ans,why])=>`<li>${esc(q)} <strong>${esc(opts[ans])}</strong> — ${esc(why)}</li>`).join('')}</ol><p class="mini"><strong>Listening:</strong> ${esc(u.listening_answer)}</p><p class="mini"><strong>Grammar:</strong> ${u.grammar_checks.map(q=>esc(q[1][q[2]])).join('; ')}.</p>`).join('')}<p class="mini">Open writing/speaking is not auto-graded. Accept relevant ideas supported by the reading, accurate vocabulary and understandable sentences. Give one helpful correction at a time.</p></details><details><summary><strong>Progress, storage & printing</strong></summary><p class="mini">Practised flags and notes are stored only in this browser when storage is available. They are self-reports, not a mastery score. A new device/browser will not inherit them. No data is sent to a server. Print produces a separate review of all three units, not just the active screen.</p><div class="row"><button class="outline small" data-action="export-notes">Download my notes</button><button class="outline small" data-action="print">Print all three units</button></div></details><p class="mini muted" style="margin-top:20px">Child usability and spoken audio quality still need observation on the learner’s device. Source image crops come from the supplied Oxford book.</p>`}
+function renderParent(){const counts=DATA.units.map(u=>{const book=u.vocabulary.filter(v=>v.visual_role!=='authored-support-diagram').length;return `<tr><td>Unit ${u.id}</td><td>${u.source_pages.vocabulary}</td><td>${u.student_book_page||({1:8,2:16,3:28}[u.id])}</td><td>${u.grammar_name} · TG ${u.grammar_page}</td><td>${book}/11 book crops; ${11-book} support diagrams</td></tr>`}).join('');$('#parent-body').innerHTML=`<p><strong>Learner:</strong> 9 years old · Grade 4 ESL. This is a book-based review, not a record of actual class sessions.</p><p><strong>Source:</strong> ${esc(DATA.source.edition)}. Supplied PDF: ${esc(DATA.source.file)}.</p><p class="mini muted">PDF page numbers match the printed Teacher’s Guide numbers in the inspected scope. A reproduced Student Book spread is a different page reference.</p><div class="table-scroll"><table class="parent-table"><thead><tr><th>Unit</th><th>Vocab PDF/TG</th><th>Student Book</th><th>Grammar</th><th>Vocabulary images</th></tr></thead><tbody>${counts}</tbody></table></div><details><summary><strong>Source map for each strand</strong></summary>${DATA.units.map(u=>`<p class="mini"><strong>Unit ${u.id}</strong>: reading ${u.reading_pages.join('–')}; grammar ${u.grammar_page}; speaking ${u.speaking_page}; writing ${u.writing_page}; word study ${u.word_study.page}; listening script ${u.listening_page}. All references are PDF/TG pages.</p>`).join('')}</details><details><summary><strong>Image provenance & limitations</strong></summary><p class="mini">Unit 1 and Unit 3: 11 original vocabulary pictures each. Unit 2: six supporting book pictures, including a telescope user reused from Unit 1; these are context clues, not dedicated headword pictures. Five neutral diagrams are authored learning aids. The original image of a telescope user does not establish that the pictured person is an astronomer. Surface/craters share a relevant moon image.</p><div class="table-scroll"><table class="parent-table"><thead><tr><th>Word / visual</th><th>Source PDF</th><th>Visual role</th></tr></thead><tbody>${DATA.assets.map(a=>`<tr><td>${esc(a.id)}</td><td>${a.pdf_page_1based||'Authored'}</td><td>${esc(a.match_status)}</td></tr>`).join('')}</tbody></table></div></details><details><summary><strong>Content & pronunciation notes</strong></summary><p class="mini">The short reading reviews, definitions, examples, practice listening passages and questions are authored adaptations based on the supplied source. They do not reproduce the full Student Book texts. All 33 core words, 12 context words and 18 word-study items are included. The paired review/project for Units 1–2 is represented through compare/contrast and drawing choices; this page does not reproduce the full workbook or model-building assignment. Unit 4 is outside scope.</p><p class="mini">IPA is an American-English learning transcription. Sound-it-out is approximate and uses uppercase for primary stress; it does not replace listening. Dictionary reference for the difficult word <a href="https://dictionary.cambridge.org/us/pronunciation/english/archaeologist" target="_blank" rel="noopener">archaeologist</a>. No dictionary API key is included. This portable version uses exact-text browser TTS. Voice availability, quality and offline support depend on the device. English voices are required; no unrelated headword audio is substituted.</p><p class="mini">Science numbers are used as book practice context, not current reference data. The “closed tomb” statement refers to the reading. No extra Wonders/CLC material is included.</p></details><details><summary><strong>Answer keys & open-response guidance</strong></summary>${DATA.units.map(u=>`<h3 style="margin-top:16px">Unit ${u.id}</h3><ol class="mini">${u.quiz.map(([q,opts,ans,why])=>`<li>${esc(q)} <strong>${esc(opts[ans])}</strong> — ${esc(why)}</li>`).join('')}</ol><p class="mini"><strong>Listening:</strong> ${esc(u.listening_answer)}</p><p class="mini"><strong>Grammar:</strong> ${u.grammar_checks.map(q=>esc(q[1][q[2]])).join('; ')}.</p>`).join('')}<p class="mini">Open writing/speaking is not auto-graded. Accept relevant ideas supported by the reading, accurate vocabulary and understandable sentences. Give one helpful correction at a time.</p></details><details><summary><strong>Progress, storage & printing</strong></summary><p class="mini">Practised flags and notes are stored only in this browser when storage is available. They are self-reports, not a mastery score. A new device/browser will not inherit them. When dictionary audio is enabled, the clicked vocabulary word is sent to the configured dictionary service and its audio host. Notes and written answers stay in this browser. Print produces a separate review of all three units, not just the active screen.</p><div class="row"><button class="outline small" data-action="export-notes">Download my notes</button><button class="outline small" data-action="print">Print all three units</button></div></details><p class="mini muted" style="margin-top:20px">Child usability and spoken audio quality still need observation on the learner’s device. Source image crops come from the supplied Oxford book.</p>`}
 function buildPrint(){ $('#print-pack').innerHTML=`<h1>Little Explorer · Units 1–3</h1><p>Oxford Discover 4 · Grade 4 ESL · Book-based review</p>${DATA.units.map(u=>`<section class="print-unit"><h2>Unit ${u.id}: ${esc(u.title)}</h2><p><strong>Big question:</strong> ${esc(u.big_question)}</p><div class="print-grid">${u.vocabulary.map(v=>`<div class="print-word">${image(v.visual,v.word)}<strong>${esc(v.word)}</strong>${v.visual_role==='authored-support-diagram'?'<small>Learning diagram</small>':''}<div class="phonetic">${esc(v.ipa)}</div><div class="sound-out">${esc(v.sound_out)}</div><p>${esc(v.english_meaning)}</p></div>`).join('')}</div><h3>Reading: ${esc(u.reading_title)}</h3><p>${u.reading_chunks.map(c=>esc(c[1])).join(' ')}</p><div class="print-task"><strong>Think:</strong> ${esc(u.thinking_prompt)}<div class="print-lines"></div></div><h3>${esc(u.grammar_name)}</h3><p>${esc(u.grammar_pattern)}</p><p>${esc(u.grammar_example)}</p><div class="print-task"><strong>Your turn:</strong> ${esc(u.grammar_frame)}<div class="print-lines"></div></div><p><strong>Speaking:</strong> ${esc(u.speaking_frame)}</p><p><strong>Writing:</strong> ${esc(u.writing_tip)}</p><p><strong>Word study:</strong> ${u.word_study.words.map(esc).join(', ')}.</p><p><strong>Words in context:</strong> ${u.contexts.map(c=>esc(c[0])+' — '+esc(c[1])).join('; ')}.</p><div class="print-task"><strong>Tell, write or draw:</strong> ${esc(u.express_prompt)}<div class="print-lines"></div></div><p style="font-size:8pt;color:#666">Source: supplied Teacher’s Guide · Vocabulary PDF ${u.source_pages.vocabulary}; reading ${u.reading_pages.join('–')}; grammar ${u.grammar_page}. Pictures are book crops or marked learning diagrams in the web version.</p></section>`).join('')}` }
 document.addEventListener('click',e=>{const button=e.target.closest('[data-action]');if(!button||button.disabled)return;const action=button.dataset.action;const u=currentUnit();switch(action){
 case'home':go(0);break;
@@ -529,6 +530,135 @@ document.addEventListener('click',event=>{const button=event.target.closest('[da
 
 const priorClassActivity=renderActivity;
 renderActivity=function(u){const base=priorClassActivity(u);const c=DATA.classwork?.[u.id]?.[state.tab];if(!c)return base;return base+`<section class="panel classwork-panel"><div class="eyebrow">CLASSROOM CONNECTION</div><h3>${esc(c.title)}</h3>${vi(c.vi)}<ol>${c.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>${vi(c.help)}${answerBox(`u${u.id}-class-${state.tab}`,isHybrid()?'My draft / '+String.fromCharCode(66,7843,110,32,110,104,225,112,32,99,7911,97,32,101,109):'My draft',c.prompt)}<p class="classwork-source">Class diary: ${esc(c.source)} ? Authored practice, no automatic grading</p></section>`};
+
+const dictionaryLinkedCard=renderCard;
+renderCard=function(v){let card=dictionaryLinkedCard(v);if(state.studyMode==='recall'&&!state.revealed.has(v.id))return card;const link=`<a class="dictionary-link" href="https://www.merriam-webster.com/dictionary/${encodeURIComponent(v.word)}" target="_blank" rel="noopener noreferrer" aria-label="Open Merriam-Webster for ${esc(v.word)}">Merriam-Webster ↗</a>`;return card.replace('<div class="card-bottom">',link+'<div class="card-bottom">')};
+
+// Edit this file, then run: python scripts/build_review.py
+/* Điền API key Merriam-Webster Intermediate Dictionary tại MW_API_KEY.
+   Đăng ký: https://dictionaryapi.com/register — product: Intermediate Dictionary.
+   Endpoint: /api/v3/references/sd3/json/{word}
+   Key trong JS/HTML sẽ nhìn thấy được khi publish; dùng proxy nếu cần giữ bí mật. */
+window.MW_CONFIG = Object.assign({
+  MW_API_KEY: '8be396cd-ccca-4b2b-bbc3-884ca4b71e7f',
+  REFERENCE: 'sd3'
+}, window.MW_CONFIG || {});
+window.OXFORD_AUDIO = Object.assign({
+  enabled: true,
+  provider: 'merriam-webster',
+  freeFallback: true,
+  endpoint: 'https://api.dictionaryapi.dev/api/v2/entries/en/{word}',
+  preferAccent: 'us',
+  timeoutMs: 4500,
+  // Optional dictionary proxy. It must return [{ phonetics: [{ audio: 'https://...' }] }].
+  // Put a public/restricted client token here only if your provider supports it.
+  // Secret paid-provider keys belong on your proxy server, never in this file.
+  apiKey: '',
+  apiKeyHeader: 'X-API-Key'
+}, window.OXFORD_AUDIO || {});
+
+// Recorded dictionary audio is used only for a clicked vocabulary headword.
+// Sentence/reading audio remains browser TTS; book IPA and meanings stay intact.
+const dictionaryCache = new Map();
+let dictionaryPlayer = null;
+let dictionaryRequest = null;
+let dictionaryRun = 0;
+const originalStopSpeech = stopSpeech;
+const normalizeDictionaryWord = value => String(value || '').replace(/\*/g, '').replace(/:\d+$/, '').trim().toLowerCase();
+function mwExactAudio(entries, word) {
+  const target = normalizeDictionaryWord(word), result = [];
+  function visit(value) {
+    if (!value || typeof value !== 'object') return;
+    if (Array.isArray(value)) { value.forEach(visit); return; }
+    const names = [value.meta?.id, value.hwi?.hw, value.ure, value.va, value.if, value.drp];
+    if (names.some(name => name && normalizeDictionaryWord(name) === target)) {
+      for (const p of [...(value.hwi?.prs || []), ...(value.prs || [])]) {
+        const url = mwAudioUrl(p.sound?.audio); if (url) result.push(url);
+      }
+    }
+    Object.values(value).forEach(visit);
+  }
+  visit(entries);
+  return [...new Set(result)];
+}
+function mwAudioUrl(name) {
+  if (typeof name !== 'string' || !/^[a-z0-9_-]+$/i.test(name)) return null;
+  const directory = name.startsWith('bix') ? 'bix' : name.startsWith('gg') ? 'gg' : /^[^a-z]/i.test(name) ? 'number' : name[0];
+  return `https://media.merriam-webster.com/audio/prons/en/us/mp3/${directory}/${name}.mp3`;
+}
+stopSpeech = function () {
+  dictionaryRun++;
+  dictionaryRequest?.abort();
+  dictionaryRequest = null;
+  if (dictionaryPlayer) { dictionaryPlayer.pause(); dictionaryPlayer.src = ''; }
+  dictionaryPlayer = null;
+  originalStopSpeech();
+};
+async function playDictionaryWord(word) {
+  stopSpeech();
+  const run = dictionaryRun;
+  const config = window.OXFORD_AUDIO;
+  const button = document.querySelector(`.vocab-heading [data-action="speak"][data-text="${CSS.escape(word)}"]`);
+  button?.setAttribute('aria-busy', 'true');
+  let timer;
+  try {
+    let audioUrl = dictionaryCache.get(word);
+    if (!audioUrl) {
+      const controller = new AbortController(); dictionaryRequest = controller;
+      timer = setTimeout(() => controller.abort(), config.timeoutMs);
+      const mw = config.provider === 'merriam-webster';
+      const mwConfig = window.MW_CONFIG || {};
+      const key = String(mwConfig.MW_API_KEY || '').trim();
+      if (mw && (!key || key === '8xxx')) throw new Error('Configure MW_API_KEY first');
+      const url = mw ? `https://www.dictionaryapi.com/api/v3/references/${encodeURIComponent(mwConfig.REFERENCE || 'sd3')}/json/${encodeURIComponent(word)}?key=${encodeURIComponent(key)}` : config.endpoint.replace('{word}', encodeURIComponent(word));
+      const headers = !mw && config.apiKey ? { [config.apiKeyHeader]: config.apiKey } : {};
+      const response = await fetch(url, { signal: controller.signal, headers });
+      if (!response.ok) throw new Error('Dictionary lookup failed');
+      const entries = await response.json();
+      const objects = (Array.isArray(entries) ? entries : []).filter(e => e && typeof e === 'object');
+      const mwCandidates = mwExactAudio(objects, word);
+      const candidates = mw ? mwCandidates : objects.flatMap(e => e.phonetics || [])
+        .map(p => p.audio).filter(a => typeof a === 'string' && a.length)
+        .map(a => a.startsWith('//') ? 'https:' + a : a).filter(a => a.startsWith('https://'));
+      audioUrl = candidates.find(a => new RegExp('[-_]' + config.preferAccent + '[-_.]', 'i').test(a)) || candidates[0];
+      if (!audioUrl && mw && config.freeFallback !== false) {
+        const fallback = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`, { signal: controller.signal });
+        if (fallback.ok) {
+          const data = await fallback.json();
+          const clips = (Array.isArray(data) ? data : []).filter(e => normalizeDictionaryWord(e.word) === normalizeDictionaryWord(word))
+            .flatMap(e => e.phonetics || []).map(p => p.audio).filter(a => typeof a === 'string' && /^https:\/\//.test(a));
+          audioUrl = clips.find(a => /[-_]us[-_.]/i.test(a)) || clips[0];
+        }
+      }
+      if (!audioUrl) throw new Error('No recorded pronunciation');
+      dictionaryCache.set(word, audioUrl);
+    }
+    clearTimeout(timer);
+    if (run !== dictionaryRun) return;
+    const player = new Audio(audioUrl); dictionaryPlayer = player;
+    player.onended = () => { if (dictionaryPlayer === player) dictionaryPlayer = null; };
+    player.onerror = () => {
+      if (run !== dictionaryRun) return;
+      dictionaryCache.delete(word);
+      toast('Dictionary audio unavailable. Using the browser voice.'); speak(word);
+    };
+    await player.play();
+  } catch (error) {
+    if (run === dictionaryRun) {
+      toast('Dictionary audio unavailable. Using the browser voice.');
+      speak(word);
+    }
+  } finally {
+    clearTimeout(timer);
+    button?.removeAttribute('aria-busy');
+  }
+}
+document.addEventListener('click', event => {
+  const button = event.target.closest('.vocab-heading [data-action="speak"]');
+  if (!button || !window.OXFORD_AUDIO?.enabled) return;
+  event.stopImmediatePropagation();
+  playDictionaryWord(button.dataset.text);
+}, true);
 
 routeFromHash();updateVoices();buildPrint();
 </script>

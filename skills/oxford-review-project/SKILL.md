@@ -32,6 +32,7 @@ Run `npm test` from `qa/` for a release/content-wide update. For a small scoped 
 - `qa/all-words-check.cjs`: 11 cards, image/heading structure and responsive overflow.
 - `qa/connect-check.cjs`: all concept-map stages and readable sizes.
 - `qa/classwork-check.cjs`: eight classroom panels and saved drafts.
+- `qa/dictionary-check.cjs`: mocked recorded-audio choice, caching, fallback and cancellation. Configure dictionary audio in `web/dictionary-config.js`; do not embed secret keys. Keep browser-TTS regression checks separate from dictionary tests. Human listening on the learner device remains necessary for audio quality evidence.
 
 Inspect desktop/mobile screenshots for affected sections; inspect actual print output when print/content changes. Report PASS, FAIL, NOT RUN honestly. Device voice quality and learner observation require separate evidence.
 
