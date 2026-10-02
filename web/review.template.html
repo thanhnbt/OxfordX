@@ -29,6 +29,7 @@
 <script>
 'use strict';
 const DATA=JSON.parse(document.getElementById('review-data').textContent);
+const APP_UNIT_ID=DATA.units.length===1?DATA.units[0].id:0;
 const $=s=>document.querySelector(s);
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const esc=escapeHTML;
@@ -114,7 +115,7 @@ case'export-notes':{const blob=new Blob([JSON.stringify({notes:progress.notes,an
 }});
 document.addEventListener('input',e=>{const target=e.target;if(target.id==='word-search'){const start=target.selectionStart;state.search=target.value;state.page=0;$('#activity').innerHTML=renderWords(currentUnit());const input=$('#word-search');input.focus({preventScroll:true});input.setSelectionRange(start,start);return}let key;if(target.dataset.note){key=`note-${target.dataset.note}`;progress.notes[target.dataset.note]=target.value}else if(target.dataset.answer){key=target.dataset.answer;progress.answers[key]=target.value}else return;const ok=persist();const status=document.querySelector(`[data-save-status="${key}"]`);if(status)status.textContent=ok?'Saved on this browser':'Kept for this visit. Download notes before leaving.'});
 document.addEventListener('change',e=>{if(e.target.dataset.check){progress.answers[`check-${e.target.dataset.check}`]=e.target.checked;persist()}else if(e.target.id==='voice-select'){progress.voice=e.target.value;persist()}else if(e.target.id==='rate-select'){progress.rate=Number(e.target.value);persist()}});
-function routeFromHash(){const hash=location.hash.slice(1);if(hash==='mixed'){if(state.quiz?.mixed)render();else startQuiz(true);return}const m=/^unit-([123])-(map|words|reading|language|express|check)$/.exec(hash);if(m){if(state.unit!==Number(m[1]))resetUnitState(Number(m[1]));state.tab=m[2];if(state.tab!=='check')state.quiz=null}else{resetUnitState(hash==='home'?0:1);state.tab='map';state.quiz=null}render()}
+function routeFromHash(){const hash=location.hash.slice(1);if(hash==='mixed'){if(state.quiz?.mixed)render();else startQuiz(true);return}const m=/^unit-([123])-(map|words|reading|language|express|check)$/.exec(hash);if(m&&DATA.units.some(u=>u.id===Number(m[1]))){if(state.unit!==Number(m[1]))resetUnitState(Number(m[1]));state.tab=m[2];if(state.tab!=='check')state.quiz=null}else{resetUnitState(APP_UNIT_ID||(hash==='home'?0:1));state.tab='map';state.quiz=null}render()}
 window.addEventListener('hashchange',routeFromHash);
 window.addEventListener('beforeprint',()=>buildPrint());
 window.addEventListener('pagehide',stopSpeech);

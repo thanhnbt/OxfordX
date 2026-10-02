@@ -14,3 +14,5 @@ Use the following hierarchy throughout this project:
 - Apply visual changes to maintained source files in web/, rebuild index.html and run the relevant QA scripts. Keep print styles separate.
 
 Current whole-project verification: 276 data, 108 regression, 71 bilingual/grammar, 74 concept-map and 18 vocabulary layout checks. See qa/QA_V2_REPORT.md.
+
+Standalone Unit layout: desktop activity navigation occupies a visible 200px rail; the main learning content uses one column without a second reserved navigation track. Align the unit heading, question and activity to the same workspace inset. On mobile wrap the activity menu and stack breadcrumb above utility controls. Use blue/mint/cream vocabulary headers, 700-weight headwords and regular-weight definitions; retain semantic grammar colors.

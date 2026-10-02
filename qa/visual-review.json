@@ -178,5 +178,25 @@
     "sha256": "e5474d0aeb2046600f90d381f5dabf894cd22a23783bbd18a1de1527c85b1bea",
     "status": "visually-reviewed",
     "evidence": "Direct crop inspection and v2 desktop/mobile home screenshots; Bella and father illustration from PDF page 38"
+  },
+  "reading-soldier": {
+    "sha256": "d113ad47d05ecc3222f6a0ae1237354085020b0e5d57e6566fef6e518b766eec",
+    "status": "visually-reviewed",
+    "evidence": "Compared original SB30-31 embedded source with tmp/qa/book-spread-1440.png and book-spread-390.png; HTML clip masks exclude surrounding printed prose from general/craftsmen art."
+  },
+  "reading-general": {
+    "sha256": "6b3c9d753aa2874d4602d5e5da83ec1715624a351dc3c930ae9696b0ec8056b0",
+    "status": "visually-reviewed",
+    "evidence": "Compared original SB30-31 embedded source with tmp/qa/book-spread-1440.png and book-spread-390.png; HTML clip masks exclude surrounding printed prose from general/craftsmen art."
+  },
+  "reading-army": {
+    "sha256": "6a9ff1b62e2a53862b6890f4b164da0722fda21de05b90a6d664e04d5a5d7ee3",
+    "status": "visually-reviewed",
+    "evidence": "Compared original SB30-31 embedded source with tmp/qa/book-spread-1440.png and book-spread-390.png; HTML clip masks exclude surrounding printed prose from general/craftsmen art."
+  },
+  "reading-craftsmen": {
+    "sha256": "7941118c02f1e9f3c62c3ddd14aa5c2d79e8afd3e805f14a244a6b17221f6f4f",
+    "status": "visually-reviewed",
+    "evidence": "Compared original SB30-31 embedded source with tmp/qa/book-spread-1440.png and book-spread-390.png; HTML clip masks exclude surrounding printed prose from general/craftsmen art."
   }
 }

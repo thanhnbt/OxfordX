@@ -1,0 +1,82 @@
+{
+  "soldier": {
+    "source": "inputdata/Unit3/lesson.html: IMGS[30]",
+    "student_book_pages": [
+      30,
+      31
+    ],
+    "source_size": [
+      3285,
+      1905
+    ],
+    "bbox_pixels": [
+      26,
+      10,
+      480,
+      1800
+    ],
+    "asset_path": "assets/reading/soldier.webp",
+    "sha256": "d113ad47d05ecc3222f6a0ae1237354085020b0e5d57e6566fef6e518b766eec",
+    "source_sha256": "c6685c153472225415ab052ebf7762496a7ed84aa1e2bb06216707c486e2496c"
+  },
+  "general": {
+    "source": "inputdata/Unit3/lesson.html: IMGS[30]",
+    "student_book_pages": [
+      30,
+      31
+    ],
+    "source_size": [
+      3285,
+      1905
+    ],
+    "bbox_pixels": [
+      1186,
+      783,
+      1570,
+      1741
+    ],
+    "asset_path": "assets/reading/general.webp",
+    "sha256": "6b3c9d753aa2874d4602d5e5da83ec1715624a351dc3c930ae9696b0ec8056b0",
+    "source_sha256": "c6685c153472225415ab052ebf7762496a7ed84aa1e2bb06216707c486e2496c"
+  },
+  "army": {
+    "source": "inputdata/Unit3/lesson.html: IMGS[30]",
+    "student_book_pages": [
+      30,
+      31
+    ],
+    "source_size": [
+      3285,
+      1905
+    ],
+    "bbox_pixels": [
+      1633,
+      10,
+      3236,
+      431
+    ],
+    "asset_path": "assets/reading/army.webp",
+    "sha256": "6a9ff1b62e2a53862b6890f4b164da0722fda21de05b90a6d664e04d5a5d7ee3",
+    "source_sha256": "c6685c153472225415ab052ebf7762496a7ed84aa1e2bb06216707c486e2496c"
+  },
+  "craftsmen": {
+    "source": "inputdata/Unit3/lesson.html: IMGS[30]",
+    "student_book_pages": [
+      30,
+      31
+    ],
+    "source_size": [
+      3285,
+      1905
+    ],
+    "bbox_pixels": [
+      2198,
+      459,
+      3127,
+      1189
+    ],
+    "asset_path": "assets/reading/craftsmen.webp",
+    "sha256": "7941118c02f1e9f3c62c3ddd14aa5c2d79e8afd3e805f14a244a6b17221f6f4f",
+    "source_sha256": "c6685c153472225415ab052ebf7762496a7ed84aa1e2bb06216707c486e2496c"
+  }
+}

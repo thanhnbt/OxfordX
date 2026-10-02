@@ -11,7 +11,7 @@ let browser;
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  const capture=async filename=>{await page.evaluate(()=>{window.scrollTo({top:0,behavior:'instant'});document.querySelector('#toast').hidden=true});await page.screenshot({path:filename,fullPage:true})};
  const results=[];const check=(name,value,detail='')=>{results.push({name,status:value?'PASS':'FAIL',detail});assert.ok(value,name+': '+detail)};
- const url=pathToFileURL(path.resolve('index.html')).href;
+ const url=pathToFileURL(path.resolve('tmp/qa/full-review.html')).href;
  await page.goto(url);
  check('Opening the file starts Unit 1 immediately',await page.evaluate(()=>state.unit===1&&state.tab==='map'));
  check('Default screen has working learning activities',await page.locator('.tabs [data-action="tab"]').count()===6);

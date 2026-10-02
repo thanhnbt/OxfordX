@@ -162,6 +162,13 @@ dict(id=3,title='Clues from long ago',subtitle='Look closely. What can old objec
      express_frames=['The soldiers were made from ___.','We learn about the past by ___.','I want to ___ because ___.'],express_prompt='Explain how old objects help us learn about the past.',
      quiz=[('The ancient soldiers in the article were made from ___.',['clay','ice','paper'],0,'The terracotta soldiers were made from clay.'),('Who studies old objects to learn about the past?',['an astronomer','an archaeologist','a tourist'],1,'An archaeologist studies objects from the past.'),('Which sentence tells a fact?',['The soldiers were made of clay.','Please visit the museum!','Imagine a soldier waking up!'],0,'The material is a fact that informs us.'),('Choose the correct sentence.',['I want learn about China.','I want to learn about China.','I want to learning about China.'],1,'Use want + to + base verb.'),('Choose two past-tense verbs.',['studies and found','studied and finds','studied and found'],2,'Keep the past tense consistent: studied and found.'),('What can uniforms help us learn about?',['soldiers’ ranks','the speed of light','a planet’s diameter'],0,'The reading uses uniforms as clues about soldiers’ ranks.')])]
 
+units[2]['reading_student_pages']=[30,31]
+units[2]['reading_full']=[
+    "It is 210 BC and the moment before battle. The Chinese emperor's army is ready to charge. The soldiers—thousands of them—are lined up, row after row, as far as the eye can see. However, the army will never attack. The soldiers are not real. They are the size of real soldiers. But they are made of terracotta, a strong kind of clay. They are more than 2,000 years old. Amazingly, no two soldiers are alike. Their faces are different. Some are old; some are young. Some look tired; some look like they can't wait for the battle to start. Their uniforms are different.",
+    "The uniforms are exact copies of what real soldiers wore. The archers and foot soldiers were the lowest-ranking soldiers, so they have the plainest uniforms. The generals, of course, wore the most elegant uniforms. Some of their caps had feathers. Sometimes their shoes turned up at the toes. Their armor had small iron rings that look like fish scales. Here you see an image of a clay general. It shows how he looked 2,000 years ago. Every single soldier in the emperor's army was painted with bright colors. So were the terracotta horses. Now most of the soldiers have only tiny traces of paint left. Scientists are trying to create a special varnish to brush over painted figures to hold the paint in place.",
+    "Today, craftsmen near the pits where the soldiers were found make copies of the soldiers. This helps archaeologists learn more about how people made the original army. Modern craftsmen have much better kilns than those in ancient times. Kilns are ovens that bake clay until it hardens. Yet no copies ever come out as hard or shiny as the originals. Why? Nobody knows—it is a mystery. An even bigger mystery is what lies inside the emperor's tomb. Nobody knows the answer because the tomb has never been opened. The Chinese government plans to keep it closed for now. Work will not start until archaeologists are sure the tomb can be opened without damaging any of the treasures inside.",
+    "As for the emperor's body, according to historical records, it rests in a heavy, bronze coffin. In ancient times, the custom was to dress the dead body of someone important in a suit the Chinese made from hundreds of pieces of thin jade. At that time, jade was more precious than gold. The emperor died when he was 49 years old. Three years after his death, peasants rose up against the empire. One of their leaders started a new royal family. Yet now, millions of people come to the emperor's burial place. They visit the covered pits to see the clay soldiers. The emperor lives on in the memory of all who see his amazing hidden army."
+]
 hybrid=json.loads((DATA/'hybrid.json').read_text(encoding='utf-8'))
 units[0]['hero']='hero-bella'
 for unit in units:
@@ -205,12 +212,9 @@ payload=dict(source=dict(file=PDF.name,sha256=hashlib.sha256(PDF.read_bytes()).h
 (DATA/'image-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 template=(ROOT/'web'/'review.template.html').read_text(encoding='utf-8')
 packed=dict(**payload,images=images)
-serialized=json.dumps(packed,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
-template=template.replace('__V2_STYLES__',(ROOT/'web/v2.css').read_text(encoding='utf-8'))
-audio_scripts='\n'.join((ROOT/'web'/name).read_text(encoding='utf-8') for name in ('dictionary-config.js','dictionary-audio.js'))
-template=template.replace('__V2_SCRIPT__',(ROOT/'web/v2.js').read_text(encoding='utf-8')+'\n'+audio_scripts)
-(ROOT/'index.html').write_text(template.replace('__REVIEW_DATA__',serialized),encoding='utf-8')
-print(f'Built index.html: {(ROOT/"index.html").stat().st_size:,} bytes, {len(manifest)} visuals, {sum(len(u["vocabulary"]) for u in units)} core words.')
+from build_outputs import build_outputs
+build_outputs(payload, images)
+print(f'Built menu and 3 independent Unit pages: {len(manifest)} visuals, {sum(len(u["vocabulary"]) for u in units)} core words.')
 
 # Contact sheet uses existing book crops without editing their content.
 book=[x for x in manifest if x['source_file']]
